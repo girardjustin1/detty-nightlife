@@ -137,6 +137,33 @@
   --placeholder: linear-gradient(140deg, #c9a45c 0%, #e8643c 55%, #201e1a 100%);
 }
 
+/* Detty Gold × Vybe type (round 2, 5 Nov): Detty Gold's colours and voice
+   with Vybe's typography — Unbounded, heavy, all caps. */
+[data-brand='gold2'] {
+  --bg: #0b0b0c;
+  --surface: #151412;
+  --surface-2: #201e1a;
+  --line: #322d26;
+  --text: #f3ede2;
+  --dim: #b8b0a1;
+  --faint: #736b5f;
+  --accent: #c9a45c;
+  --accent-2: #c6ff3d;
+  --accent-3: #e8643c;
+  --on-accent: #0b0b0c;
+  --success: #c6ff3d;
+  --warning: #f2b544;
+  --danger: #ff6b5b;
+  --font-display: 'Unbounded Variable', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.01em;
+  --display-case: uppercase;
+  --radius-card: 16px;
+  --radius-control: 999px;
+  --hero-overlay: linear-gradient(180deg, rgb(11 11 12 / 0) 25%, rgb(11 11 12 / 0.94) 100%);
+  --placeholder: linear-gradient(140deg, #c9a45c 0%, #e8643c 55%, #201e1a 100%);
+}
+
 :root {
   --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }

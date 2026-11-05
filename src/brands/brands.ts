@@ -2,7 +2,7 @@
 // tokens (src/styles/index.css) and artwork change. Pick one later — every
 // screen story can be viewed in all three from the Storybook toolbar.
 
-export type BrandId = 'detty' | 'aurum' | 'vybe' | 'gold'
+export type BrandId = 'detty' | 'aurum' | 'vybe' | 'gold' | 'gold2'
 
 export type Brand = {
   id: BrandId
@@ -145,6 +145,36 @@ export const brands: Record<BrandId, Brand> = {
       homeGreeting: 'Ete sen, Ama ✨',
       reserveCta: 'Lock it in',
       confirmedTitle: 'You’re outside! Table set ✨',
+      emptyBookings: 'No plans yet. Your squad dey wait.',
+    },
+  },
+  gold2: {
+    id: 'gold2',
+    name: 'Detty',
+    tagline: 'Who’s outside tonight?',
+    promise: 'Accra’s best tables, set properly — for you and your whole squad.',
+    voice: ['Warm and a little cheeky, never loud', 'Pidgin-friendly, never forced', 'Celebrates the group; precise about money and policies'],
+    audience: 'Diaspora and local 21–35s who want the Detty December energy with VIP certainty.',
+    palette: [
+      { name: 'Onyx', hex: '#0B0B0C', role: 'Background' },
+      { name: 'Champagne', hex: '#C9A45C', role: 'Primary action' },
+      { name: 'Lime', hex: '#C6FF3D', role: 'Live, tonight, minimum met' },
+      { name: 'Terracotta', hex: '#E8643C', role: 'Hot moments, earth warmth' },
+      { name: 'Ivory', hex: '#F3EDE2', role: 'Text' },
+    ],
+    type: { display: 'Unbounded (variable, 700, caps) — from Vybe', body: 'System UI stack — zero download' },
+    logo: {
+      mark: `${base}brands/gold2-mark.svg`,
+      lockup: `${base}brands/gold2-lockup.svg`,
+      appIcon: `${base}brands/gold2-app-icon.svg`,
+    },
+    keyArt: `${base}img/detty-keyart.webp`,
+    copy: {
+      welcomeTitle: 'Who’s outside tonight?',
+      welcomeBody: 'Tickets, VIP tables and bottles at Accra’s best rooms — sorted in a minute, shared on WhatsApp.',
+      homeGreeting: 'Ete sen, Ama ✨',
+      reserveCta: 'Lock it in',
+      confirmedTitle: 'You’re outside!',
       emptyBookings: 'No plans yet. Your squad dey wait.',
     },
   },

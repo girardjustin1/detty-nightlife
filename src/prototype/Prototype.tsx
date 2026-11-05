@@ -14,7 +14,7 @@ const parseHash = (): Route => {
 }
 const toHash = (r: Route) => (r.exp ? `#/${r.exp}${r.step ? `/${r.step}` : ''}` : '#/')
 
-const PROTO_BRANDS: BrandId[] = ['aurum', 'gold', 'detty', 'vybe']
+const PROTO_BRANDS: BrandId[] = ['aurum', 'gold', 'gold2', 'detty', 'vybe']
 
 /**
  * Clickable prototype: a menu of four booking experiences (three WhatsApp
@@ -232,7 +232,7 @@ function SidePanel({
         <div className="flex flex-wrap gap-1.5">
           {PROTO_BRANDS.map((b) => (
             <button key={b} onClick={() => onBrand(b)} className={`rounded-full px-3 py-1.5 text-sm ${b === brand ? 'bg-white font-semibold text-black' : 'border border-white/20 text-white/80'}`}>
-              {b === 'gold' ? 'Detty Gold' : brands[b].name}
+              {b === 'gold' ? 'Detty Gold' : b === 'gold2' ? 'Gold × Vybe type' : brands[b].name}
             </button>
           ))}
         </div>

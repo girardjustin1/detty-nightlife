@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { BrandProvider } from './BrandContext'
 import { brands, type BrandId } from './brands'
 import { Discover } from '@/screens/consumer/discover/Discover'
+import { Welcome } from '@/screens/consumer/onboarding/Welcome'
 import { Badge, Button, Chip } from '@/components/ui/primitives'
 import { MinSpendMeter } from '@/components/app/domain'
 
@@ -10,7 +11,7 @@ import { MinSpendMeter } from '@/components/app/domain'
 const ledger: { from: BrandId; kept: string[]; dropped: string[] }[] = [
   { from: 'detty', kept: ['Voice: warm, a little cheeky, Pidgin-friendly', '“Celebrates the group, not the spend”', 'Warm earth tones (coral/sun → terracotta)'], dropped: ['Aubergine / purple background', 'Loud rounded display type'] },
   { from: 'aurum', kept: ['Onyx background', 'Champagne as the primary action', 'Elegant serif display (Playfair)', 'Precise about money and policies'], dropped: ['Fully understated voice', 'Square, formal controls'] },
-  { from: 'vybe', kept: ['Lime for live energy: “tonight”, “minimum met”', 'Music-first details (DJs, genres)'], dropped: ['Void + violet palette', 'All-caps wide display type'] },
+  { from: 'vybe', kept: ['Lime for live energy: “tonight”, “minimum met”', 'Music-first details (DJs, genres)'], dropped: ['Void + violet palette', 'All-caps wide display type (brought back in round 2)'] },
 ]
 
 const feedback = [
@@ -64,12 +65,12 @@ function MiniBrand({ id, dim }: { id: BrandId; dim?: boolean }) {
   )
 }
 
-function Phone({ id }: { id: BrandId }) {
+function Phone({ id, screen = 'discover' }: { id: BrandId; screen?: 'discover' | 'welcome' }) {
   return (
     <BrandProvider brand={id}>
       <div style={{ width: 390, height: 844, borderRadius: 44, overflow: 'hidden', boxShadow: '0 0 0 8px #1c1c22', transform: 'translateZ(0)' }}>
         <div data-brand={id} className="h-full text-left">
-          <Discover />
+          {screen === 'welcome' ? <Welcome /> : <Discover />}
         </div>
       </div>
     </BrandProvider>
@@ -79,7 +80,7 @@ function Phone({ id }: { id: BrandId }) {
 function Evolution() {
   const gold = brands.gold
   return (
-    <div className="min-h-screen bg-[#0d0d10] p-10 text-white" style={{ minWidth: 1200 }}>
+    <div className="min-h-screen bg-[#0d0d10] p-10 text-white" style={{ minWidth: 1720 }}>
       <div className="text-xs font-semibold tracking-widest text-white/50 uppercase">Brand · Evolution</div>
       <h1 className="mt-1 text-4xl font-bold">From three directions to one look</h1>
       <p className="mt-3 max-w-3xl text-white/70">
@@ -182,8 +183,64 @@ function Evolution() {
         </div>
       </Section>
 
-      <Section n={6} title="Still to decide">
+      <Section n={6} title="Round 2: Vybe’s type on Detty Gold">
+        <blockquote className="max-w-3xl rounded-xl border-l-4 border-[#c6ff3d] bg-white/5 px-4 py-3 text-white/85">
+          Vybe’s fonts looked better. Love the current direction of Detty. One more exploration to see what that looks like.
+        </blockquote>
+        <div className="mt-6 grid grid-cols-2 gap-5">
+          {(['gold', 'gold2'] as BrandId[]).map((id) => (
+            <BrandProvider key={id} brand={id}>
+              <div data-brand={id} className="rounded-card border border-line p-6">
+                <div className="text-xs font-bold tracking-wider text-faint uppercase">{id === 'gold' ? 'Detty Gold · Playfair Display' : 'Detty Gold × Vybe type · Unbounded'}</div>
+                <div className="display mt-4 text-[34px]">Afrobeats Til Dawn</div>
+                <div className="display mt-2 text-xl">VIP booth B3 · ₵6,000</div>
+                <p className="mt-3 text-sm text-dim">Body stays the system font on both — zero extra download. Only the display face changes.</p>
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  <Button>{brands[id].copy.reserveCta}</Button>
+                  <Chip selected>Amapiano</Chip>
+                  <Badge tone="live">Selling fast</Badge>
+                </div>
+              </div>
+            </BrandProvider>
+          ))}
+        </div>
+        <h3 className="mt-8 text-lg font-semibold">Wordmark options for the new type</h3>
+        <div className="mt-3 grid grid-cols-2 gap-5">
+          {[
+            { tag: 'Option A (in use): ivory extra-wide, bold starburst', mark: 'gold2-mark', lockup: 'gold2-lockup', icon: 'gold2-app-icon' },
+            { tag: 'Option B: champagne wordmark, rounded lime sun', mark: 'gold2b-mark', lockup: 'gold2b-lockup', icon: 'gold2b-app-icon' },
+          ].map((o) => (
+            <div key={o.tag} className="rounded-2xl bg-[#0b0b0c] p-6 ring-1 ring-white/10">
+              <div className="text-xs text-white/50">{o.tag}</div>
+              <div className="mt-4 flex items-center gap-6">
+                <img src={`${import.meta.env.BASE_URL}brands/${o.mark}.svg`} alt="" className="h-12 w-auto" />
+                <img src={`${import.meta.env.BASE_URL}brands/${o.lockup}.svg`} alt="Detty" className="h-9 w-auto" />
+                <img src={`${import.meta.env.BASE_URL}brands/${o.icon}.svg`} alt="" className="size-14" />
+              </div>
+            </div>
+          ))}
+        </div>
+        <h3 className="mt-8 text-lg font-semibold">Side by side</h3>
+        <div className="mt-3 flex gap-8">
+          {(
+            [
+              ['gold', 'discover'],
+              ['gold2', 'discover'],
+              ['gold', 'welcome'],
+              ['gold2', 'welcome'],
+            ] as const
+          ).map(([id, screen]) => (
+            <div key={id + screen} className="text-center">
+              <div className="mb-3 text-sm font-semibold text-white/70">{id === 'gold' ? 'Detty Gold' : 'Gold × Vybe type'}</div>
+              <Phone id={id} screen={screen} />
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section n={7} title="Still to decide">
         <ul className="list-disc space-y-1 pl-6 text-white/75">
+          <li>Display type: Playfair (Detty Gold) or Unbounded caps (round 2) — and wordmark A or B.</li>
           <li>Final name (Detty vs a new name) and a trademark search in Ghana and key diaspora markets.</li>
           <li>Whether Vybe’s cyan stays as an info colour, or lime carries all the energy.</li>
           <li>English + Pidgin copy rules (where Pidgin appears, where it never does — payments and policies stay plain).</li>
