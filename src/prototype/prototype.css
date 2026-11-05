@@ -1,0 +1,27 @@
+/* Prototype hint ring: the prefilled next step glows so testers can tap straight through. */
+@keyframes proto-hot {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgb(56 189 248 / 0.95),
+      0 0 0 6px rgb(56 189 248 / 0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgb(56 189 248 / 0.95),
+      0 0 0 11px rgb(56 189 248 / 0);
+  }
+}
+
+.proto-hints [data-hot],
+.proto-hints [data-hot-auto] {
+  animation: proto-hot 1.5s ease-in-out infinite;
+  border-radius: max(10px, var(--radius-control, 10px));
+  position: relative;
+  z-index: 1;
+}
+
+/* Full-bleed on real phones. */
+.proto-root {
+  height: 100dvh;
+}

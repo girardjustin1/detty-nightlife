@@ -3,7 +3,7 @@
  * WhatsApp colours are hard-coded here on purpose (partner-mark exception in CLAUDE.md).
  * Only the business avatar and name come from the active brand.
  */
-import { Fragment, type CSSProperties, type ReactNode } from 'react'
+import { Fragment, type CSSProperties, type ReactNode, type Ref } from 'react'
 import { ArrowLeft, BadgeCheck, Camera, Check, CheckCheck, ChevronDown, Copy, EllipsisVertical, ExternalLink, FileText, Forward, List, Lock, Mic, Paperclip, Phone, Reply, Smile, Video, X } from 'lucide-react'
 import { useBrand } from '@/brands/BrandContext'
 import { initials } from '@/lib/format'
@@ -149,15 +149,41 @@ function Composer({ draft }: { draft?: string }) {
 }
 
 /** Full phone screen: status bar, chat header, wallpaper, composer. Messages stick to the bottom like a real chat. */
-export function WaScreen({ peer, clock = '14:02', children, overlay, draft, toast }: { peer: ChatPeer; clock?: string; children: ReactNode; overlay?: ReactNode; draft?: string; toast?: string }) {
+export function WaScreen({
+  peer,
+  clock = '14:02',
+  children,
+  overlay,
+  draft,
+  toast,
+  composer,
+  bodyRef,
+}: {
+  peer: ChatPeer
+  clock?: string
+  children: ReactNode
+  overlay?: ReactNode
+  draft?: string
+  toast?: string
+  /** Prototype: replace the static composer with a live one. */
+  composer?: ReactNode
+  /** Prototype: makes the chat body scrollable and exposes it (for auto-scroll). */
+  bodyRef?: Ref<HTMLDivElement>
+}) {
   return (
     <div className="relative flex h-full flex-col" style={{ fontFamily: WA.font, color: WA.ink }}>
       <StatusBar clock={clock} />
       <ChatHeader peer={peer} />
-      <div className="flex min-h-0 flex-1 flex-col justify-end overflow-hidden px-2 pt-2 pb-1" style={wallpaper}>
-        {children}
-      </div>
-      <Composer draft={draft} />
+      {bodyRef ? (
+        <div ref={bodyRef} className="no-scrollbar min-h-0 flex-1 overflow-y-auto px-2 pt-2 pb-1" style={wallpaper}>
+          <div className="flex min-h-full flex-col justify-end">{children}</div>
+        </div>
+      ) : (
+        <div className="flex min-h-0 flex-1 flex-col justify-end overflow-hidden px-2 pt-2 pb-1" style={wallpaper}>
+          {children}
+        </div>
+      )}
+      {composer ?? <Composer draft={draft} />}
       {toast && (
         <div className="absolute inset-x-0 bottom-24 flex justify-center">
           <span className="rounded-full px-4 py-2 text-[14px] text-white shadow" style={{ background: '#323739' }}>
@@ -240,6 +266,7 @@ export function Bubble({
   sender,
   width,
   pressed,
+  onButton,
 }: {
   from: 'me' | 'them'
   time: string
@@ -257,6 +284,8 @@ export function Bubble({
   width?: number | string
   /** Label of a quick-reply that has already been tapped (greys it out). */
   pressed?: string
+  /** Prototype: makes the attached buttons tappable. */
+  onButton?: (b: WaButton) => void
 }) {
   const me = from === 'me'
   const bg = me ? WA.outBubble : WA.inBubble
@@ -317,10 +346,17 @@ export function Bubble({
             const Icon = buttonIcon[b.type]
             const done = pressed === b.label
             return (
-              <div key={b.label} className="flex h-11 items-center justify-center gap-2 text-[15px] font-medium" style={{ borderTop: `1px solid ${WA.divider}`, color: done ? '#B3BEC4' : WA.link }}>
+              <button
+                type="button"
+                key={b.label}
+                disabled={!onButton || done}
+                onClick={() => onButton?.(b)}
+                className="flex h-11 w-full items-center justify-center gap-2 text-[15px] font-medium disabled:cursor-default"
+                style={{ borderTop: `1px solid ${WA.divider}`, color: done ? '#B3BEC4' : WA.link }}
+              >
                 <Icon size={17} />
                 {b.label}
-              </div>
+              </button>
             )
           })}
         </div>
@@ -370,13 +406,15 @@ export function FlowResponse({ time, title }: { time: string; title: string }) {
 
 // ---------- WhatsApp Flow sheet ----------
 
-export function FlowSheet({ title, children, cta, step }: { title: string; children: ReactNode; cta: string; step?: string }) {
+export function FlowSheet({ title, children, cta, step, onCta, onClose }: { title: string; children: ReactNode; cta: string; step?: string; onCta?: () => void; onClose?: () => void }) {
   const brand = useBrand()
   return (
     <div className="absolute inset-0 z-40 flex flex-col justify-end" style={{ background: 'rgba(11,20,26,.45)' }}>
       <div className="flex h-[88%] flex-col rounded-t-2xl" style={{ background: '#fff', fontFamily: WA.font, color: WA.ink }}>
         <div className="flex h-14 shrink-0 items-center gap-3 px-4" style={{ borderBottom: `1px solid ${WA.divider}` }}>
-          <X size={22} />
+          <button type="button" aria-label="Close" onClick={onClose} className="-m-2 p-2">
+            <X size={22} />
+          </button>
           <div className="flex-1 text-[17px] font-medium">{title}</div>
           {step && (
             <span className="text-[12.5px]" style={{ color: WA.sub }}>
@@ -385,11 +423,11 @@ export function FlowSheet({ title, children, cta, step }: { title: string; child
           )}
           <EllipsisVertical size={20} />
         </div>
-        <div className="min-h-0 flex-1 overflow-hidden px-5 pt-4">{children}</div>
+        <div className={`min-h-0 flex-1 px-5 pt-4 ${onCta ? 'no-scrollbar overflow-y-auto pb-4' : 'overflow-hidden'}`}>{children}</div>
         <div className="shrink-0 px-5 pt-3 pb-7" style={{ borderTop: `1px solid ${WA.divider}` }}>
-          <div className="flex h-11 items-center justify-center rounded-full text-[15px] font-medium text-white" style={{ background: WA.green }}>
+          <button type="button" onClick={onCta} className="flex h-11 w-full items-center justify-center rounded-full text-[15px] font-medium text-white" style={{ background: WA.green }}>
             {cta}
-          </div>
+          </button>
           <div className="mt-2.5 text-center text-[12px]" style={{ color: WA.sub }}>
             Managed by {brand.name}. <span style={{ color: WA.link }}>Learn more</span>
           </div>
