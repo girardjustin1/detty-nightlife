@@ -1,0 +1,94 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Planning/Recommendations" />
+
+# Recommendations
+
+Written 5 Nov 2026 from the Mobbin research (`docs/research/`) and integrations research
+(`docs/integrations/`, sources cited there). Items the research could not verify are flagged
+there as **unverified**.
+
+## 1. Product shape
+
+- **One consumer app, two ways in.** Discover shows the same nights as **Events** (SeatGeek:
+  poster cards by when) or **Clubs & lounges** (Resy: venue cards with bookable table tiers;
+  "Notify me" when full). Event and venue pages borrow OpenTable's structure: sticky section
+  tabs, icon fact rows, "Notes for tonight", and a **Music & vibe** block.
+- **Tickets path:** tiers → one-sheet checkout → pay → QR in wallet.
+- **Table path (the heart):** party & time → **floor plan** → **bottles toward the minimum**
+  → guests → **review & commit (policy first)** → pay deposit → confirmed. Optional extras
+  (occasion, requests) come after the commit, never before.
+- **Guests join from WhatsApp** without installing anything: a web invite page, a phone code,
+  accept or pay a share, and get a guest pass.
+- **Promoter app** (separate tab set, same design system): tonight dashboard, live floor,
+  reservations, approvals, door check-in that works offline, events, inventory, payouts, and
+  WhatsApp broadcasts.
+
+## 2. Tech
+
+| Decision | Recommendation | Why |
+|---|---|---|
+| App type (v1) | **PWA** (installable web app) for consumer and door | No app-store download on metered data; opens straight from WhatsApp links; about 70% of users are on Android |
+| UI | React 19 + Tailwind v4 + this Storybook | Small bundles (no UI kit), three brands from one set of tokens |
+| Budgets | First load ≤ 150 KB; card images 15–25 KB WebP/AVIF; system body font | Data costs roughly $0.40–0.96 per GB |
+| Data saver | On by default on 2G/3G; gradients instead of photos | Already built into `Img` |
+| Offline | Signed QR passes cached on the device; the door app verifies offline and syncs later | Signal in a packed club is unreliable |
+| Floor plans | Venue art as one SVG (10–20 KB) with vector table hit targets on top | Crisp at any zoom, almost free to ship, editable per venue |
+| Native app | Later (Expo), only if PWA usage justifies it | Gains: zero-tap OTP, better iOS push, native wallets |
+
+## 3. Auth: "login with WhatsApp"
+
+There is **no consumer "Sign in with WhatsApp"** (no OAuth). What works:
+
+1. The user enters a phone number (🇬🇭 +233 by default).
+2. We send a code with a **WhatsApp authentication template** (copy-code button). **SMS is the
+   fallback**, formatted for Android WebOTP autofill.
+3. One-tap and zero-tap autofill exist only in native Android apps. On iOS 26+, the keyboard
+   suggests the code from the notification.
+4. Age: the user declares their date of birth and confirms 18+/21+. **Door staff check ID.** A
+   Ghana Card check (Smile ID) is optional in v2. **Never store ID images** (NIA rules).
+
+## 4. WhatsApp: can we push to it?
+
+Yes, through the **Meta Cloud API directly**:
+
+- **Utility templates** (confirmed, receipt, reminder, changed, cancelled/refund, ticket
+  ready): about **$0.0046 each** for Ghana (Rest of Africa rate), roughly **$0.018 per
+  booking**. Since 1 Oct 2026 these are charged even inside the 24-hour window.
+- **Marketing templates** (event drops): about **$0.026 each**, **opt-in only**.
+- **Guest invites** go as **`wa.me` share links sent from the host's own WhatsApp**. Guests
+  haven't opted in to us yet, so we can't message them first.
+- **WhatsApp Flows** can collect an RSVP or party size in-chat, but **payment must hand off to a
+  Paystack link** (WhatsApp Pay isn't available in Ghana).
+- **Blocking: start Meta Business Verification now.** Unverified businesses are capped at 250 new
+  users a day.
+
+## 5. Payments & deposits
+
+- **Paystack Ghana** as the single primary rail: MTN MoMo, Telecel Cash, AT Money, cards, Apple
+  Pay. Flat **1.95%**. Payouts to MoMo cost ₵1. Hubtel is the v2 fallback.
+- **Deposits are charged, not held.** Mobile money can't be pre-authorised, and card holds work
+  only in South Africa. So we **charge the deposit now and refund it under a published policy**.
+  That is why the policy block comes first on Review and repeats on the booking and the cancel
+  sheet.
+- **Ask counsel:** can we hold deposits and pay venues after the event (Payment Systems Act)? If
+  not, split the payment to the venue's subaccount at checkout.
+
+## 6. Bitcoin & bitchat
+
+- **Not in v1.** Ghana's virtual-asset law (Act 1154) has passed, but **licensing hasn't
+  opened**, and regulators have **banned public crypto advertising**. Even showing a "Pay with
+  Bitcoin" button needs a legal opinion.
+- **v2 option:** a feature-flagged **Lightning deposit** through a partner that settles to us in
+  cedis (Bitnob is the most relevant local candidate). Refunds go back as a Lightning payment or
+  to MoMo. The Pay screens include this as **Beta** so we can test the experience.
+- **bitchat:** real (a Bluetooth-mesh / Nostr messenger) and it can redeem Cashu ecash tokens
+  through an external wallet, but there's **no SDK**. Offline tokens aren't final until someone
+  redeems them online ("first redeemer wins"), so they're unsafe for door payments.
+  **Recommendation: don't integrate.** Signed offline QR passes solve the "no signal at the
+  door" problem better.
+
+## 7. Email
+
+**Resend + React Email**, previewed as Storybook stories (**Emails**). Email is the record;
+WhatsApp is the nudge. Set up SPF, DKIM and DMARC from day one.

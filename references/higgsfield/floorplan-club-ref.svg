@@ -1,0 +1,171 @@
+<svg viewBox="0 0 880 1168" xmlns="http://www.w3.org/2000/svg" width="880" height="1168">
+  <title>Nightclub floor plan</title>
+  <desc>Top-down nightclub with a central dance floor, raised DJ stage, left-side bar and four high-top tables, six curved VIP booths, three elevated lounge tables, two restrooms, and a bottom-left entrance.</desc>
+  <defs>
+    <linearGradient id="platform" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#50505f" />
+      <stop offset="1" stop-color="#424250" />
+    </linearGradient>
+    <linearGradient id="furniture" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d0cfd7" />
+      <stop offset="1" stop-color="#b9b9c5" />
+    </linearGradient>
+  </defs>
+  <rect width="880" height="1168" fill="#202127" />
+  <g id="raised-dj-stage" stroke-linejoin="round">
+    <path d="M291 163H669V214Q669 264 618 264H342Q291 264 291 214Z" fill="#454553" stroke="#747481" stroke-width="5" />
+    <path d="M263 126H696V181Q696 206 671 222L648 236Q637 242 617 242H343Q323 242 307 232L280 214Q263 203 263 184Z" fill="#444451" stroke="#777785" stroke-width="5" />
+    <path d="M263 43H696V157Q696 180 678 192L651 210Q637 219 615 219H345Q325 219 309 210L282 192Q263 181 263 158Z" fill="url(#platform)" stroke="#91919e" stroke-width="2" />
+    <path d="M354 113Q354 106 364 107Q378 138 409 139H551Q580 139 595 107Q605 105 605 113V153Q605 195 558 200H403Q354 194 354 153Z" fill="#17181e" />
+    <rect x="393" y="88" width="174" height="64" rx="7" fill="#24252d" stroke="#c1c0ca" stroke-width="2" />
+    <path d="M451 89V139M509 89V139" fill="none" stroke="#8d8d9b" />
+    <g fill="#30313a" stroke="#d3d2db" stroke-width="1.4">
+      <circle cx="420" cy="112" r="18" />
+      <circle cx="539" cy="112" r="18" />
+      <circle cx="420" cy="112" r="4" fill="#bfc0cb" />
+      <circle cx="539" cy="112" r="4" fill="#bfc0cb" />
+    </g>
+    <g stroke="#d0d0da" stroke-linecap="round">
+      <path d="M463 100V126M474 100V126M485 100V126M496 100V126" />
+      <path d="M463 105V114M474 115V121M485 103V112M496 111V120" stroke-width="3" />
+    </g>
+    <path d="M355 112Q355 106 365 108Q379 139 409 140H551Q581 140 595 108Q604 105 604 113V151Q604 190 558 195H403Q355 190 355 151Z" fill="#aaaab8" stroke="#c7c6d0" stroke-width="1.5" />
+    <path d="M361 113Q376 141 408 141H551Q582 141 599 113" fill="none" stroke="#d0cfd8" stroke-width="9" stroke-linecap="round" />
+  </g>
+  <rect id="dance-floor" x="263" y="291" width="434" height="554" rx="50" fill="#363743" />
+  <g id="restrooms">
+    <path d="M24 41H203V180H24Z" fill="#23242b" />
+    <g fill="url(#furniture)" stroke="#dddce4" stroke-width="0.8">
+      <rect x="53" y="55" width="35" height="13" rx="3" />
+      <ellipse cx="70" cy="87" rx="14" ry="17" />
+      <rect x="142" y="55" width="35" height="13" rx="3" />
+      <ellipse cx="159" cy="87" rx="14" ry="17" />
+    </g>
+    <path d="M115 40V180M203 41V181H191M25 181H57M102 181H146" fill="none" stroke="#c7c6cf" stroke-width="9" stroke-linejoin="round" />
+    <g fill="none" stroke="#c7c6d0" stroke-width="2">
+      <path d="M57 178Q50 159 70 139L102 177Z" />
+      <path d="M146 178Q139 159 158 139L191 177Z" />
+    </g>
+  </g>
+  <g id="bar">
+    <g fill="url(#furniture)" stroke="#24252d" stroke-width="1.5">
+      <rect x="106" y="324" width="22" height="32" rx="8" />
+      <rect x="106" y="371" width="22" height="32" rx="8" />
+      <rect x="106" y="418" width="22" height="32" rx="8" />
+      <rect x="106" y="465" width="22" height="32" rx="8" />
+      <rect x="106" y="512" width="22" height="32" rx="8" />
+      <rect x="106" y="559" width="22" height="32" rx="8" />
+      <rect x="106" y="606" width="22" height="32" rx="8" />
+      <rect x="106" y="653" width="22" height="32" rx="8" />
+      <rect x="106" y="700" width="22" height="32" rx="8" />
+      <rect x="106" y="747" width="22" height="32" rx="8" />
+    </g>
+    <path d="M34 281H65Q108 281 108 324V801Q108 844 68 844H34Z" fill="#8d8d9d" stroke="#a6a6b4" />
+    <path d="M34 266H65Q109 266 109 311V786Q109 830 67 830H34V803H46Q68 803 68 776V319Q68 291 45 291H34Z" fill="url(#furniture)" stroke="#292a32" stroke-width="1.5" />
+    <path d="M34 303H44Q64 303 64 325V774Q64 794 45 794H34Z" fill="#585866" />
+  </g>
+  <g id="high-top-tables" fill="url(#furniture)" stroke="#24252b" stroke-width="1.5">
+    <path d="M176 367L187 382L176 395Q169 401 161 391Q155 384 162 377Z" />
+    <path d="M222 367L212 382L224 395Q231 401 239 390Q244 382 237 376Z" />
+    <circle cx="200" cy="363" r="24" />
+    <path d="M176 483L187 498L176 511Q169 517 161 507Q155 500 162 493Z" />
+    <path d="M222 483L212 498L224 511Q231 517 239 506Q244 498 237 492Z" />
+    <circle cx="200" cy="479" r="24" />
+    <path d="M176 599L187 614L176 627Q169 633 161 623Q155 616 162 609Z" />
+    <path d="M222 599L212 614L224 627Q231 633 239 622Q244 614 237 608Z" />
+    <circle cx="200" cy="595" r="24" />
+    <path d="M176 715L187 730L176 743Q169 749 161 739Q155 732 162 725Z" />
+    <path d="M222 715L212 730L224 743Q231 749 239 738Q244 730 237 724Z" />
+    <circle cx="200" cy="711" r="24" />
+  </g>
+  <g id="right-wall-vip-booths" stroke-linecap="round" stroke-linejoin="round">
+    <g id="booth-one">
+      <path d="M746 151V146Q746 132 763 132H791Q832 132 832 172V194Q832 224 796 224" fill="none" stroke="#17181e" stroke-width="24" transform="translate(0 5)" />
+      <path d="M746 151V146Q746 132 763 132H791Q832 132 832 172V194Q832 224 796 224" fill="none" stroke="url(#furniture)" stroke-width="20" />
+      <path d="M746 151V146Q746 132 763 132H791Q832 132 832 172V194Q832 224 796 224" fill="none" stroke="#737380" stroke-width="1.5" />
+      <path d="M760 132V156M790 133V157M809 175L832 167M809 209L828 219" fill="none" stroke="#777784" />
+      <circle cx="776" cy="189" r="23" fill="url(#furniture)" stroke="#1d1e25" stroke-width="2" />
+    </g>
+    <g id="booth-two">
+      <path d="M746 275V270Q746 256 763 256H791Q832 256 832 296V318Q832 348 796 348" fill="none" stroke="#17181e" stroke-width="24" transform="translate(0 5)" />
+      <path d="M746 275V270Q746 256 763 256H791Q832 256 832 296V318Q832 348 796 348" fill="none" stroke="url(#furniture)" stroke-width="20" />
+      <path d="M746 275V270Q746 256 763 256H791Q832 256 832 296V318Q832 348 796 348" fill="none" stroke="#737380" stroke-width="1.5" />
+      <path d="M760 256V280M790 257V281M809 299L832 291M809 333L828 343" fill="none" stroke="#777784" />
+      <circle cx="776" cy="313" r="23" fill="url(#furniture)" stroke="#1d1e25" stroke-width="2" />
+    </g>
+    <g id="booth-three">
+      <path d="M746 399V394Q746 380 763 380H791Q832 380 832 420V442Q832 472 796 472" fill="none" stroke="#17181e" stroke-width="24" transform="translate(0 5)" />
+      <path d="M746 399V394Q746 380 763 380H791Q832 380 832 420V442Q832 472 796 472" fill="none" stroke="url(#furniture)" stroke-width="20" />
+      <path d="M746 399V394Q746 380 763 380H791Q832 380 832 420V442Q832 472 796 472" fill="none" stroke="#737380" stroke-width="1.5" />
+      <path d="M760 380V404M790 381V405M809 423L832 415M809 457L828 467" fill="none" stroke="#777784" />
+      <circle cx="776" cy="437" r="23" fill="url(#furniture)" stroke="#1d1e25" stroke-width="2" />
+    </g>
+    <g id="booth-four">
+      <path d="M746 523V518Q746 504 763 504H791Q832 504 832 544V566Q832 596 796 596" fill="none" stroke="#17181e" stroke-width="24" transform="translate(0 5)" />
+      <path d="M746 523V518Q746 504 763 504H791Q832 504 832 544V566Q832 596 796 596" fill="none" stroke="url(#furniture)" stroke-width="20" />
+      <path d="M746 523V518Q746 504 763 504H791Q832 504 832 544V566Q832 596 796 596" fill="none" stroke="#737380" stroke-width="1.5" />
+      <path d="M760 504V528M790 505V529M809 547L832 539M809 581L828 591" fill="none" stroke="#777784" />
+      <circle cx="776" cy="561" r="23" fill="url(#furniture)" stroke="#1d1e25" stroke-width="2" />
+    </g>
+    <g id="booth-five">
+      <path d="M746 648V643Q746 629 763 629H791Q832 629 832 669V691Q832 721 796 721" fill="none" stroke="#17181e" stroke-width="24" transform="translate(0 5)" />
+      <path d="M746 648V643Q746 629 763 629H791Q832 629 832 669V691Q832 721 796 721" fill="none" stroke="url(#furniture)" stroke-width="20" />
+      <path d="M746 648V643Q746 629 763 629H791Q832 629 832 669V691Q832 721 796 721" fill="none" stroke="#737380" stroke-width="1.5" />
+      <path d="M760 629V653M790 630V654M809 672L832 664M809 706L828 716" fill="none" stroke="#777784" />
+      <circle cx="776" cy="686" r="23" fill="url(#furniture)" stroke="#1d1e25" stroke-width="2" />
+    </g>
+    <g id="booth-six">
+      <path d="M746 773V768Q746 754 763 754H791Q832 754 832 794V816Q832 846 796 846" fill="none" stroke="#17181e" stroke-width="24" transform="translate(0 5)" />
+      <path d="M746 773V768Q746 754 763 754H791Q832 754 832 794V816Q832 846 796 846" fill="none" stroke="url(#furniture)" stroke-width="20" />
+      <path d="M746 773V768Q746 754 763 754H791Q832 754 832 794V816Q832 846 796 846" fill="none" stroke="#737380" stroke-width="1.5" />
+      <path d="M760 754V778M790 755V779M809 797L832 789M809 831L828 841" fill="none" stroke="#777784" />
+      <circle cx="776" cy="811" r="23" fill="url(#furniture)" stroke="#1d1e25" stroke-width="2" />
+    </g>
+  </g>
+  <g id="elevated-lounge">
+    <path d="M151 1008H847V1089Q847 1111 825 1111H176Q151 1111 151 1086Z" fill="#42424f" />
+    <path d="M151 1065V986Q151 952 170 952H201V947Q201 895 252 895H741Q793 895 793 952H826Q849 952 849 984V1065Q849 1085 825 1085H176Q151 1085 151 1065Z" fill="url(#platform)" stroke="#a7a6b3" stroke-width="8" stroke-linejoin="round" />
+    <g fill="#686877" stroke="#30313c" stroke-width="1.5">
+      <path d="M154 1042H200V958H168Q154 965 154 987Z" />
+      <path d="M797 1042H845V986Q845 963 830 959H797Z" />
+    </g>
+    <g stroke="#9999a7" stroke-width="6">
+      <path d="M156 1033H198M156 1019H198M156 1005H198M156 991H198M160 977H198" />
+      <path d="M799 1033H844M799 1019H844M799 1005H844M799 991H844M799 977H840" />
+    </g>
+    <g id="lounge-one">
+      <path d="M242 1016V994Q242 964 274 964H341Q377 964 377 998V1016" fill="none" stroke="#272832" stroke-width="34" stroke-linecap="round" transform="translate(0 4)" />
+      <path d="M242 1014V994Q242 960 276 960H340Q376 960 376 996V1014" fill="none" stroke="url(#furniture)" stroke-width="32" stroke-linecap="round" />
+      <path d="M235 1017V994Q235 953 276 953H340Q383 953 383 997V1017M283 945V984M336 945V984M244 973L268 991M373 974L349 992" fill="none" stroke="#7c7c89" stroke-width="1.4" />
+      <rect x="269" y="997" width="81" height="54" rx="26" fill="#17181e" />
+      <rect x="269" y="994" width="81" height="51" rx="25" fill="url(#furniture)" stroke="#2a2b33" stroke-width="2" />
+    </g>
+    <g id="lounge-two" transform="translate(190 0)">
+      <path d="M242 1016V994Q242 964 274 964H341Q377 964 377 998V1016" fill="none" stroke="#272832" stroke-width="34" stroke-linecap="round" transform="translate(0 4)" />
+      <path d="M242 1014V994Q242 960 276 960H340Q376 960 376 996V1014" fill="none" stroke="url(#furniture)" stroke-width="32" stroke-linecap="round" />
+      <path d="M235 1017V994Q235 953 276 953H340Q383 953 383 997V1017M283 945V984M336 945V984M244 973L268 991M373 974L349 992" fill="none" stroke="#7c7c89" stroke-width="1.4" />
+      <rect x="269" y="997" width="81" height="54" rx="26" fill="#17181e" />
+      <rect x="269" y="994" width="81" height="51" rx="25" fill="url(#furniture)" stroke="#2a2b33" stroke-width="2" />
+    </g>
+    <g id="lounge-three" transform="translate(380 0)">
+      <path d="M242 1016V994Q242 964 274 964H341Q377 964 377 998V1016" fill="none" stroke="#272832" stroke-width="34" stroke-linecap="round" transform="translate(0 4)" />
+      <path d="M242 1014V994Q242 960 276 960H340Q376 960 376 996V1014" fill="none" stroke="url(#furniture)" stroke-width="32" stroke-linecap="round" />
+      <path d="M235 1017V994Q235 953 276 953H340Q383 953 383 997V1017M283 945V984M336 945V984M244 973L268 991M373 974L349 992" fill="none" stroke="#7c7c89" stroke-width="1.4" />
+      <rect x="269" y="997" width="81" height="54" rx="26" fill="#17181e" />
+      <rect x="269" y="994" width="81" height="51" rx="25" fill="url(#furniture)" stroke="#2a2b33" stroke-width="2" />
+    </g>
+  </g>
+  <g id="outer-walls" fill="none" stroke="#c8c7d0" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M22 281V38H204" />
+    <path d="M205 37H261M305 36H655M699 37H858V1119H148" />
+    <path d="M22 326V1115H33" />
+  </g>
+  <g id="wall-thresholds" fill="none" stroke="#93939f" stroke-width="2">
+    <path d="M268 35H298M268 40H298M662 35H692M662 40H692M20 289V318M25 289V318" />
+  </g>
+  <g id="entrance" fill="none" stroke="#cccbd5" stroke-width="2">
+    <path d="M41 1116V1146H138V1117" />
+    <path d="M42 1144V1093Q89 1096 90 1144Q91 1096 137 1093V1144Z" />
+    <path d="M38 1118V1149H141V1118" stroke="#777783" />
+  </g>
+</svg>

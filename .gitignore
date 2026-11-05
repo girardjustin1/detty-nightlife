@@ -7,3 +7,6 @@ storybook-static
 .DS_Store
 *.log
 references/private
+# Raw generations (full-size originals) stay local; compressed copies live in public/
+references/higgsfield/*.webp
+*.tsbuildinfo
