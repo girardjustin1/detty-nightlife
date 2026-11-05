@@ -64,6 +64,7 @@ const preview: Preview = {
           { value: 'detty', title: 'Detty — loud & joyful' },
           { value: 'aurum', title: 'Aurum — luxe VIP' },
           { value: 'vybe', title: 'Vybe — neon, music-first' },
+          { value: 'gold', title: 'Detty Gold — the blend' },
         ],
         dynamicTitle: true,
       },

@@ -90,4 +90,6 @@ export const paystack = {
 export const addressPlaceholder = '[Legal entity name] · [Registered address], Accra, Ghana · [Business reg. no.]'
 
 /** Per-brand copy helper: pick a line in the brand's voice. */
-export const voice = <T>(brand: Brand, v: Record<Brand['id'], T>) => v[brand.id]
+/** Per-brand copy. Detty Gold shares Detty's voice unless it has its own line. */
+export const voice = <T>(brand: Brand, v: Record<Exclude<Brand['id'], 'gold'>, T> & { gold?: T }) =>
+  brand.id === 'gold' ? (v.gold ?? v.detty) : v[brand.id]

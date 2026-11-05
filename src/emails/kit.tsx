@@ -57,6 +57,7 @@ export function emailTheme(brand: Brand) {
         detty: { fontWeight: 800, letterSpacing: '-0.01em' },
         aurum: { fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, letterSpacing: '0.005em' },
         vybe: { fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.01em' },
+        gold: { fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 600, letterSpacing: '0' },
       } satisfies Record<Brand['id'], CSSProperties>
     )[brand.id] as CSSProperties,
     radius: brand.id === 'aurum' ? 4 : brand.id === 'vybe' ? 6 : 14,

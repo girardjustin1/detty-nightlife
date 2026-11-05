@@ -91,12 +91,15 @@ function BrandCard({ brand }: { brand: Brand }) {
 function Overview() {
   return (
     <div className="min-h-screen bg-[#0d0d10] p-8 text-white">
-      <h1 className="text-3xl font-bold">Three brand directions</h1>
+      <h1 className="text-3xl font-bold">Four brand directions</h1>
       <p className="mt-2 max-w-3xl text-white/70">
         Same product, same screens — only tokens, artwork and voice change. Logos and key art were generated with Higgsfield (Ideogram Vector for logos,
         GPT Image 2.6 for art), then split, compressed and tokenised. Use the <b>Brand</b> toolbar menu to see any screen in any direction.
       </p>
-      <div className="mt-8 grid grid-cols-3 gap-6" style={{ minWidth: 1100 }}>
+      <p className="mt-2 max-w-3xl text-white/70">
+        <b className="text-white">New — Detty Gold</b> (5 Nov review): Detty’s Pidgin-friendly voice, without the purple; Aurum’s onyx + champagne for the elegant, regal feel; Vybe’s lime for live energy; terracotta for warm earth tones.
+      </p>
+      <div className="mt-8 grid grid-cols-4 gap-6" style={{ minWidth: 1480 }}>
         {brandList.map((b) => (
           <BrandCard key={b.id} brand={b} />
         ))}
@@ -113,7 +116,7 @@ function Phone({ children }: { children: ReactNode }) {
 
 function SameScreen() {
   return (
-    <div className="flex min-h-screen gap-10 bg-[#0d0d10] p-10" style={{ minWidth: 1340 }}>
+    <div className="flex min-h-screen gap-10 bg-[#0d0d10] p-10" style={{ minWidth: 1780 }}>
       {brandList.map((b) => (
         <div key={b.id} className="text-center">
           <div className="mb-3 text-sm font-semibold text-white/70">{b.name}</div>
