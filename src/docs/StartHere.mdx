@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Start Here" />
+
+# Detty Nightlife — Storybook drafts
+
+Mobile-first booking for Accra nightlife: **event tickets, VIP tables, bottles toward a table
+minimum, guests, and deposits** — plus a **promoter app** to run the night. Phase 1 is every
+screen as a story. Nothing here talks to a server; all venues, artists, people and prices are
+**fictional sample data**.
+
+## How to look around
+
+- **Toolbar → Brand** switches every screen between the three directions: **Detty** (loud,
+  joyful), **Aurum** (luxe VIP) and **Vybe** (neon, music-first). See **Brand / Directions**.
+- **Toolbar → Data saver** shows what the app looks like with photos off (the default on slow
+  networks).
+- Every important state has its own story: empty, loading, error, sold out, minimum not met…
+
+## Map of the stories
+
+| Section | What's in it |
+|---|---|
+| **Brand** | Three directions side by side; the same screen in all three |
+| **Components** | Floor plan (interactive), cards, meters |
+| **Consumer / 01 Onboarding** | Welcome, phone + WhatsApp code, profile, preferences |
+| **Consumer / 02 Discover** | Events view ↔ Clubs & lounges view, search, filters, map |
+| **Consumer / 03 Event** | Event detail: lineup, music & vibe, entry, tickets/table CTAs |
+| **Consumer / 04 Venue** | Club detail: tables, events, bottles, reviews, details |
+| **Consumer / 05 Book Tickets** | Tiers, checkout |
+| **Consumer / 06 Book a Table** | Party & time → floor plan → bottles → guests → review & commit |
+| **Consumer / 07 Pay** | MoMo, card, Lightning (beta), pending/failed, confirmation |
+| **Consumer / 08 My Bookings** | Wallet, booking detail, modify, cancel, transfer, receipts |
+| **Consumer / 09 Guests** | Invite landing (from WhatsApp), guest pass, host collection |
+| **Consumer / 10 Profile** | Profile, payment methods, account, help |
+| **Promoter** | Tonight dashboard, live floor, reservations, door check-in, events, payouts |
+| **Emails** | Transactional emails (React components, ready to port to React Email) |
+| **WhatsApp** | Message mockups + template catalogue |
+| **Planning** | Product plan, tech, integrations, open questions |
+
+## The core idea
+
+Resy's **commit** model, applied to a club table: pick the table on the map, pre-order bottles
+until the **minimum-spend meter** fills, add your squad, see the **policy first** (exact cedi
+refund by exact time), pay a deposit by **mobile money**, and get a QR that works offline.

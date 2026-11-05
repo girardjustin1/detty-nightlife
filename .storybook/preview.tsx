@@ -8,6 +8,7 @@ import type { BrandId } from '../src/brands/brands'
  *   'phone' (default) — 390 × 844 device frame, for every screen story
  *   'none'            — plain canvas on the brand background (components, docs)
  *   'email'           — light canvas for email templates
+ *   'raw'             — no wrapper (multi-brand comparison pages set their own)
  */
 const withBrand: Decorator = (Story, ctx) => {
   const brand = (ctx.globals.brand ?? 'detty') as BrandId
@@ -18,6 +19,7 @@ const withBrand: Decorator = (Story, ctx) => {
       <Story />
     </BrandProvider>
   )
+  if (frame === 'raw') return <Story />
   if (frame === 'email') return <div style={{ background: '#f1f1f4', minHeight: '100vh', padding: 24 }}>{inner}</div>
   if (frame === 'none')
     return (
