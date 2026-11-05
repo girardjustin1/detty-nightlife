@@ -15,6 +15,19 @@ Things only the owner can decide or do. The build keeps going with sensible defa
 - [ ] **Legal questions for counsel**: holding deposits and paying venues later (Act 987); Bitcoin
   acceptance under Act 1154 plus the crypto advertising ban; Data Protection Commission registration.
 
+### Product rules the drafts assumed (confirm or change)
+- [ ] Venue cancels → booking fee refunded too? *(draft: yes)*
+- [ ] After the night: is an unspent minimum charged, and is service charged on the billed amount? *(draft: yes, yes)*
+- [ ] Making a booking smaller: the unrefunded part of the deposit stays as credit toward the bar tab? *(draft: yes)*
+- [ ] Split deposit: the share is (deposit + fee) ÷ party size, and the host absorbs rounding? *(draft: yes; the Pay screens have the host pay the fee)*
+- [ ] Lock guest invite links to the invited phone number, so a forwarded link can't take the spot? *(draft: not locked)*
+- [ ] Promoter broadcasts send from our one booking number, so they affect its WhatsApp quality rating. OK, or give venues their own numbers?
+- [ ] When does a large party need venue approval? *(draft: the 12-guest lounge tier)*
+- [ ] Venue terms: platform fee 5%, promoter commission 10%, 2-day settlement *(all draft, in `promoter/promoterData.ts`)*
+- [ ] Ticket rules: max 6 per order, promo DETTYDEC 10% *(draft)*
+- [ ] Draft promises in the copy: replies within an hour at night, at most one promo a week, deletion undoable for 30 days.
+- [ ] Confirm the USSD help codes for a missed MoMo prompt with each network *(only MTN `*170#` is known)*.
+
 ## LATER
 - [ ] Real venue partners: floor plans, table tiers, minimums, bottle menus.
 - [ ] Decide on English-only vs adding Twi or Pidgin copy.

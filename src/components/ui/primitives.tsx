@@ -197,12 +197,12 @@ export function Img({ src, alt, className, rounded = true }: { src: string; alt:
   const dataSaver = useDataSaver()
   const [failed, setFailed] = useState(false)
   return (
-    <div className={cx(!className?.includes('absolute') && 'relative', 'overflow-hidden bg-surface-2', rounded && 'rounded-card', className)} style={{ backgroundImage: 'var(--placeholder)' }}>
+    <div className={cx(!className?.includes('absolute') && 'relative', '@container overflow-hidden bg-surface-2', rounded && 'rounded-card', className)} style={{ backgroundImage: 'var(--placeholder)' }}>
       {!dataSaver && !failed && (
         <img src={src} alt={alt} loading="lazy" decoding="async" onError={() => setFailed(true)} className="absolute inset-0 size-full object-cover" />
       )}
       {(dataSaver || failed) && (
-        <span className="absolute right-2 bottom-2 inline-flex items-center gap-1 rounded-full bg-black/40 px-2 py-0.5 text-[10px] text-white/80">
+        <span className="absolute right-2 bottom-2 inline-flex items-center gap-1 rounded-full bg-black/40 px-2 py-0.5 text-[10px] text-white/80 @max-[110px]:hidden">
           <ImageOff className="size-3" /> {failed ? 'Offline' : 'Data saver'}
         </span>
       )}
@@ -253,9 +253,9 @@ export function TextField({
   prefix,
   className,
   ...rest
-}: InputHTMLAttributes<HTMLInputElement> & { label?: string; hint?: string; error?: string; prefix?: ReactNode }) {
+}: Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix'> & { label?: string; hint?: string; error?: string; prefix?: ReactNode }) {
   return (
-    <label className={cx('block', className)}>
+    <label className={cx('block min-w-0', className)}>
       {label && <span className="mb-1.5 block text-sm font-medium text-dim">{label}</span>}
       <span
         className={cx(
