@@ -119,7 +119,7 @@ function SameScreen() {
           <div className="mb-3 text-sm font-semibold text-white/70">{b.name}</div>
           <BrandProvider brand={b.id}>
             <Phone>
-              <div data-brand={b.id} className="h-full">
+              <div data-brand={b.id} className="h-full text-left">
                 <Discover />
               </div>
             </Phone>
