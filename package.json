@@ -1,0 +1,36 @@
+{
+  "name": "detty-nightlife",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5330 --strictPort --host",
+    "build": "tsc -b && vite build",
+    "storybook": "storybook dev -p 6026 --no-open",
+    "build-storybook": "storybook build --quiet",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "packageManager": "pnpm@9.1.0",
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "@fontsource-variable/unbounded": "^5.3.0",
+    "lucide-react": "^1.69.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.6",
+    "@storybook/addon-docs": "^10.6.6",
+    "@storybook/react-vite": "^10.6.6",
+    "@tailwindcss/vite": "^4.3.4",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "storybook": "^10.6.6",
+    "tailwindcss": "^4.3.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6"
+  }
+}

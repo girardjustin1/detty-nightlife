@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/bricolage-grotesque/wght.css';
+@import '@fontsource-variable/playfair-display/wght.css';
+@import '@fontsource-variable/unbounded/wght.css';
+
+/*
+ * Brand tokens. Every screen reads these through Tailwind utilities
+ * (bg-bg, text-dim, border-line, bg-accent …), so a brand swap is one
+ * attribute: <div data-brand="detty|aurum|vybe">.
+ *
+ * Body text uses the system stack on purpose: zero font bytes on a metered
+ * connection. Only the display face is downloaded (one variable file, latin).
+ */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-dim: var(--dim);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --color-on-accent: var(--on-accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-whatsapp: #25d366;
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --radius-card: var(--radius-card);
+  --radius-control: var(--radius-control);
+}
+
+:root,
+[data-brand='detty'] {
+  --bg: #1a0b1e;
+  --surface: #26122b;
+  --surface-2: #341a3a;
+  --line: #4a2a52;
+  --text: #fff4e8;
+  --dim: #d3bccf;
+  --faint: #8f7590;
+  --accent: #ff4d2e;
+  --accent-2: #ffc531;
+  --accent-3: #e6197e;
+  --on-accent: #1a0b1e;
+  --success: #3ddc97;
+  --warning: #ffc531;
+  --danger: #ff5a6e;
+  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.02em;
+  --display-case: none;
+  --radius-card: 22px;
+  --radius-control: 999px;
+  --hero-overlay: linear-gradient(180deg, rgb(26 11 30 / 0) 30%, rgb(26 11 30 / 0.92) 100%);
+  --placeholder: linear-gradient(135deg, #ff4d2e 0%, #e6197e 55%, #341a3a 100%);
+}
+
+[data-brand='aurum'] {
+  --bg: #0b0b0c;
+  --surface: #141413;
+  --surface-2: #1d1c1a;
+  --line: #2e2b26;
+  --text: #f3ede2;
+  --dim: #b3ab9c;
+  --faint: #6f695e;
+  --accent: #c9a45c;
+  --accent-2: #e7d3a1;
+  --accent-3: #8a6d3b;
+  --on-accent: #0b0b0c;
+  --success: #8fc79a;
+  --warning: #e7c46a;
+  --danger: #e0796b;
+  --font-display: 'Playfair Display Variable', ui-serif, Georgia, serif;
+  --display-weight: 500;
+  --display-tracking: 0.01em;
+  --display-case: none;
+  --radius-card: 8px;
+  --radius-control: 6px;
+  --hero-overlay: linear-gradient(180deg, rgb(11 11 12 / 0) 25%, rgb(11 11 12 / 0.95) 100%);
+  --placeholder: linear-gradient(160deg, #2e2b26 0%, #141413 60%, #0b0b0c 100%);
+}
+
+[data-brand='vybe'] {
+  --bg: #07070a;
+  --surface: #111118;
+  --surface-2: #1a1a25;
+  --line: #2a2a3a;
+  --text: #f4f4f8;
+  --dim: #a2a2b8;
+  --faint: #62627a;
+  --accent: #c6ff3d;
+  --accent-2: #22d3ee;
+  --accent-3: #7c3aed;
+  --on-accent: #07070a;
+  --success: #c6ff3d;
+  --warning: #ffd23d;
+  --danger: #ff4d6d;
+  --font-display: 'Unbounded Variable', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.01em;
+  --display-case: uppercase;
+  --radius-card: 16px;
+  --radius-control: 12px;
+  --hero-overlay: linear-gradient(180deg, rgb(7 7 10 / 0) 30%, rgb(7 7 10 / 0.94) 100%);
+  --placeholder: linear-gradient(135deg, #7c3aed 0%, #22d3ee 60%, #c6ff3d 100%);
+}
+
+:root {
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  text-transform: var(--display-case);
+  line-height: 1.05;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-brand] {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
