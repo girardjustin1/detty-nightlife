@@ -176,9 +176,9 @@ export const events: AccraEvent[] = [
     title: 'Highlife & Champagne',
     venueId: 'koko',
     photo: img('venue-koko'),
-    startsAt: '2026-12-17T20:00:00Z',
-    endsAt: '2026-12-18T01:00:00Z',
-    doorsAt: '2026-12-17T19:30:00Z',
+    startsAt: '2026-12-24T20:00:00Z',
+    endsAt: '2026-12-25T01:00:00Z',
+    doorsAt: '2026-12-24T19:30:00Z',
     genres: ['Highlife', 'Live Band'],
     lineup: [
       { name: 'The Adinkra Seven', role: 'Live' },
@@ -258,6 +258,28 @@ export const events: AccraEvent[] = [
     ticketTiers: tiers(600),
     hot: true,
     sellingFast: true,
+  },
+]
+
+/** Past nights, kept out of `events` so discovery lists only show what's bookable. */
+export const pastEvents: AccraEvent[] = [
+  {
+    id: 'koko-jazz-supper',
+    title: 'Jazz & Jollof Supper',
+    venueId: 'koko',
+    photo: img('venue-koko'),
+    startsAt: '2026-12-10T20:00:00Z',
+    endsAt: '2026-12-11T01:00:00Z',
+    doorsAt: '2026-12-10T19:30:00Z',
+    genres: ['Live Band', 'R&B'],
+    lineup: [{ name: 'The Adinkra Seven', role: 'Live' }],
+    description: 'Past night: live jazz-highlife and a jollof tasting menu.',
+    dressCode: 'Elegant',
+    minAge: 21,
+    ticketsFrom: null,
+    tablesFrom: 4000,
+    tags: ['Past'],
+    ticketTiers: [],
   },
 ]
 
@@ -361,7 +383,7 @@ export const bookings: Booking[] = [
     id: 'b3',
     ref: 'DTY-9C1A',
     kind: 'table',
-    eventId: 'highlife-champagne',
+    eventId: 'koko-jazz-supper',
     venueId: 'koko',
     tableId: 'S2',
     tierId: 'stage-booth',
@@ -379,5 +401,5 @@ export const bookings: Booking[] = [
 ]
 
 export const venueById = (id: string) => venues.find((v) => v.id === id)!
-export const eventById = (id: string) => events.find((e) => e.id === id)!
+export const eventById = (id: string) => (events.find((e) => e.id === id) ?? pastEvents.find((e) => e.id === id))!
 export const bottleById = (id: string) => bottles.find((b) => b.id === id)!

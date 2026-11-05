@@ -33,9 +33,10 @@ export function Screen({
   )
 }
 
-export function StatusBar({ tone = 'default' }: { tone?: 'default' | 'overlay' }) {
+/** `overlay`: white text pinned over a photo. `inline` keeps it in flow (used inside an already-floating AppBar). */
+export function StatusBar({ tone = 'default', inline }: { tone?: 'default' | 'overlay'; inline?: boolean }) {
   return (
-    <div className={cx('flex h-11 shrink-0 items-center justify-between px-7 text-[13px] font-semibold', tone === 'overlay' ? 'absolute inset-x-0 top-0 z-30 text-white' : 'text-text')}>
+    <div className={cx('flex h-11 shrink-0 items-center justify-between px-7 text-[13px] font-semibold', tone === 'overlay' ? cx(!inline && 'absolute inset-x-0 top-0 z-30', 'text-white') : 'text-text')}>
       <span>9:41</span>
       <span className="flex items-center gap-1.5 text-[11px]">
         <span>4G</span>
@@ -72,7 +73,7 @@ export function AppBar({
   const back = onBack ?? (() => {})
   return (
     <div className={cx('z-20 shrink-0', transparent ? 'absolute inset-x-0 top-0' : 'bg-bg')}>
-      <StatusBar tone={transparent ? 'overlay' : 'default'} />
+      <StatusBar tone={transparent ? 'overlay' : 'default'} inline />
       <div className="flex h-12 items-center gap-2 px-3">
         {onClose ? (
           <IconButton label="Close" tone={transparent ? 'glass' : 'plain'} onClick={onClose}>
@@ -146,10 +147,10 @@ export function Sheet({ title, children, onClose, open = true, footer }: { title
   return (
     <div className="absolute inset-0 z-40 flex flex-col justify-end">
       <button aria-label="Close sheet" className="absolute inset-0 bg-black/60" onClick={onClose} />
-      <div className="relative max-h-[88%] overflow-hidden rounded-t-[28px] border-t border-line bg-surface">
-        <div className="mx-auto mt-2.5 h-1 w-10 rounded-full bg-line" />
+      <div className="relative flex max-h-[88%] flex-col overflow-hidden rounded-t-[28px] border-t border-line bg-surface">
+        <div className="mx-auto mt-2.5 h-1 w-10 shrink-0 rounded-full bg-line" />
         {title && (
-          <div className="flex items-center justify-between px-5 pt-3 pb-2">
+          <div className="flex shrink-0 items-center justify-between px-5 pt-3 pb-2">
             <h3 className="display text-xl">{title}</h3>
             {onClose && (
               <IconButton label="Close" onClick={onClose}>
@@ -158,8 +159,8 @@ export function Sheet({ title, children, onClose, open = true, footer }: { title
             )}
           </div>
         )}
-        <div className="no-scrollbar max-h-[60vh] overflow-y-auto px-5 pb-4">{children}</div>
-        {footer && <div className="border-t border-line px-5 pt-3 pb-8">{footer}</div>}
+        <div className="no-scrollbar min-h-0 flex-1 overflow-y-auto px-5 pb-4">{children}</div>
+        {footer && <div className="shrink-0 border-t border-line px-5 pt-3 pb-8">{footer}</div>}
       </div>
     </div>
   )
