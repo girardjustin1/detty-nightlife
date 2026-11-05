@@ -304,7 +304,7 @@ export const bottles: Bottle[] = [
 
 export const guests: Guest[] = [
   { id: 'g0', name: 'Ama Owusu', phone: '+233 24 555 0142', status: 'host' },
-  { id: 'g1', name: 'Kojo Mensah', phone: '+233 20 555 0187', status: 'accepted', paidShare: 600 },
+  { id: 'g1', name: 'Kojo Mensah', phone: '+233 20 555 0187', status: 'accepted', paidShare: 1112 },
   { id: 'g2', name: 'Efua Asante', phone: '+233 54 555 0123', status: 'accepted' },
   { id: 'g3', name: 'Yaw Boateng', phone: '+233 27 555 0199', status: 'invited' },
   { id: 'g4', name: 'Akosua Darko', phone: '+233 55 555 0164', status: 'invited' },
@@ -369,7 +369,7 @@ export const bookings: Booking[] = [
     bottles: [{ bottleId: 'veuve', qty: 2 }],
     guests: guests.slice(0, 4),
     subtotal: 5600,
-    serviceFee: 280,
+    serviceFee: 168,
     depositPaid: 5880,
     balanceDue: 0,
     status: 'completed',

@@ -5,14 +5,32 @@ import { cedis, cx } from '@/lib/format'
 
 export type FloorStatus = Table['status'] | 'arrived' | 'late'
 
-const statusStyle: Record<FloorStatus, { fill: string; stroke: string; text: string; dash?: string }> = {
+type Style = { fill: string; stroke: string; text: string; dash?: string }
+
+// Consumer: only "available" carries the brand accent; everything else is neutral,
+// so no brand's accent can be mistaken for another state.
+const consumerStyle: Record<FloorStatus, Style> = {
   available: { fill: 'color-mix(in srgb, var(--accent) 28%, transparent)', stroke: 'var(--accent)', text: 'var(--text)' },
-  held: { fill: 'color-mix(in srgb, var(--warning) 18%, transparent)', stroke: 'var(--warning)', text: 'var(--warning)', dash: '10 8' },
+  held: { fill: 'rgb(255 255 255 / 0.06)', stroke: 'rgb(255 255 255 / 0.55)', text: 'rgb(255 255 255 / 0.7)', dash: '10 8' },
   booked: { fill: 'rgb(0 0 0 / 0.55)', stroke: 'rgb(255 255 255 / 0.18)', text: 'rgb(255 255 255 / 0.4)' },
   unavailable: { fill: 'rgb(0 0 0 / 0.55)', stroke: 'rgb(255 255 255 / 0.12)', text: 'rgb(255 255 255 / 0.3)' },
-  arrived: { fill: 'color-mix(in srgb, var(--success) 30%, transparent)', stroke: 'var(--success)', text: 'var(--text)' },
-  late: { fill: 'color-mix(in srgb, var(--danger) 25%, transparent)', stroke: 'var(--danger)', text: 'var(--text)' },
+  arrived: { fill: 'rgb(0 0 0 / 0.55)', stroke: 'rgb(255 255 255 / 0.18)', text: 'rgb(255 255 255 / 0.4)' },
+  late: { fill: 'rgb(0 0 0 / 0.55)', stroke: 'rgb(255 255 255 / 0.18)', text: 'rgb(255 255 255 / 0.4)' },
 }
+
+// Promoter: fixed operational colours, independent of brand, so door staff read
+// the floor the same way whichever brand the app ships under.
+const op = (hex: string, dash?: string): Style => ({ fill: `color-mix(in srgb, ${hex} 32%, transparent)`, stroke: hex, text: '#fff', dash })
+const promoterStyle: Record<FloorStatus, Style> = {
+  available: { fill: 'rgb(255 255 255 / 0.08)', stroke: 'rgb(255 255 255 / 0.75)', text: '#fff' },
+  booked: op('#3b82f6'),
+  arrived: op('#22c55e'),
+  late: op('#ef4444'),
+  held: op('#f59e0b', '10 8'),
+  unavailable: { fill: 'rgb(0 0 0 / 0.6)', stroke: 'rgb(255 255 255 / 0.12)', text: 'rgb(255 255 255 / 0.3)' },
+}
+
+const styleFor = (mode: 'consumer' | 'promoter', s: FloorStatus) => (mode === 'promoter' ? promoterStyle : consumerStyle)[s]
 
 export const floorLegend: Record<'consumer' | 'promoter', { status: FloorStatus; label: string }[]> = {
   consumer: [
@@ -73,7 +91,7 @@ export function FloorPlan({
           ))}
         {plan.tables.map((t) => {
           const status: FloorStatus = statuses?.[t.id] ?? t.status
-          const s = statusStyle[status]
+          const s = styleFor(mode, status)
           const isSel = selected === t.id
           const dimmed = tierFilter && t.tierId !== tierFilter
           const clickable = mode === 'promoter' || status === 'available'
@@ -153,7 +171,7 @@ export function FloorLegend({ mode = 'consumer', className }: { mode?: 'consumer
     <div className={cx('flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-dim', className)}>
       {floorLegend[mode].map((l) => (
         <span key={l.status} className="inline-flex items-center gap-1.5">
-          <span className="size-3 rounded-full border-2" style={{ background: statusStyle[l.status].fill, borderColor: statusStyle[l.status].stroke }} />
+          <span className="size-3 rounded-full border-2" style={{ background: styleFor(mode, l.status).fill, borderColor: styleFor(mode, l.status).stroke, borderStyle: styleFor(mode, l.status).dash ? 'dashed' : 'solid' }} />
           {l.label}
         </span>
       ))}
