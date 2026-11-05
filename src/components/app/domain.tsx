@@ -242,6 +242,14 @@ export function PolicyBlock({ items, tone = 'neutral' }: { items: { title: strin
   )
 }
 
+const qrEye = (x: number, y: number) => (
+  <g key={`${x}-${y}-eye`}>
+    <rect x={x} y={y} width={7} height={7} fill="#000" />
+    <rect x={x + 1} y={y + 1} width={5} height={5} fill="#fff" />
+    <rect x={x + 2} y={y + 2} width={3} height={3} fill="#000" />
+  </g>
+)
+
 /** Deterministic fake QR for drafts (not scannable). Real build: signed, rotating token. */
 export function FakeQR({ seed, size = 200, className }: { seed: string; size?: number; className?: string }) {
   const n = 25
@@ -250,21 +258,14 @@ export function FakeQR({ seed, size = 200, className }: { seed: string; size?: n
   const cells: [number, number][] = []
   const finder = (x: number, y: number) => (x < 7 && y < 7) || (x >= n - 7 && y < 7) || (x < 7 && y >= n - 7)
   for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) if (!finder(x, y) && rnd() > 0.52) cells.push([x, y])
-  const Eye = ({ x, y }: { x: number; y: number }) => (
-    <g>
-      <rect x={x} y={y} width={7} height={7} fill="#000" />
-      <rect x={x + 1} y={y + 1} width={5} height={5} fill="#fff" />
-      <rect x={x + 2} y={y + 2} width={3} height={3} fill="#000" />
-    </g>
-  )
   return (
     <svg viewBox={`-2 -2 ${n + 4} ${n + 4}`} width={size} height={size} className={cx('rounded-xl bg-white', className)} shapeRendering="crispEdges" role="img" aria-label="Entry QR code">
       {cells.map(([x, y]) => (
         <rect key={`${x}-${y}`} x={x} y={y} width={1} height={1} fill="#000" />
       ))}
-      <Eye x={0} y={0} />
-      <Eye x={n - 7} y={0} />
-      <Eye x={0} y={n - 7} />
+      {qrEye(0, 0)}
+      {qrEye(n - 7, 0)}
+      {qrEye(0, n - 7)}
     </svg>
   )
 }

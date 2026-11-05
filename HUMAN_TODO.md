@@ -3,7 +3,7 @@
 Things only the owner can decide or do. The build keeps going with sensible defaults meanwhile.
 
 ## REQUIRED (decide soon)
-- [ ] **Pick a brand direction** (Detty / Aurum / Vybe), or a mix. See Storybook → Brand / Directions.
+- [ ] **Confirm the brand**: Detty Gold (the blend) or one of Detty / Aurum / Vybe. See Brand / Evolution. See Storybook → Brand / Directions.
   Also run a trademark search on the chosen name for Ghana and the main diaspora markets.
 - [ ] **Share the "previous experience"** you mentioned (screens, links or a deck). It wasn't attached,
   so these drafts don't build on it yet.
@@ -32,8 +32,10 @@ Things only the owner can decide or do. The build keeps going with sensible defa
 - [ ] Real venue partners: floor plans, table tiers, minimums, bottle menus.
 - [ ] Decide on English-only vs adding Twi or Pidgin copy.
 - [ ] Whether the promoter app is the same PWA with a role switch (recommended) or a separate app.
-- [ ] GitHub: the repo `girardjustin1/detty-nightlife` is **public**. Make it private before pushing,
-  or confirm public is fine. Nothing has been pushed yet.
+- [x] GitHub: the repo `girardjustin1/detty-nightlife` and its Pages site are **public** (owner asked to deploy
+  on 5 Nov). The booking WhatsApp line (`src/config/contact.ts`) is visible there. Everything else is sample data.
+- [ ] Pick the booking channel to lead with: WhatsApp menu bot, Flows, AI concierge, or the app. Compare them in the prototype.
+- [ ] Ticket wallet in the app prototype shows a different sample booking than the one just bought (screen has no booking prop yet).
 
 ## OPTIONAL
 - [ ] Higgsfield: more venue art, per-venue floor plans, and motion key art for the promo site.
