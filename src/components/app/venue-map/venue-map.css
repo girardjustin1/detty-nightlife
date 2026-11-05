@@ -1,0 +1,67 @@
+/* Availability colours applied to shapes inside the inline venue SVG.
+   The map keeps SeatGeek's light, neutral look in every brand; only the
+   selected shape and the pins change. */
+.vmap-light {
+  --vm-canvas: #eef0f4;
+  --vm-open: #c2ccbc;
+  --vm-open-stroke: #9aa894;
+  --vm-sel: #2f6fed;
+  --vm-held: #f3e2b8;
+  --vm-sold: #e6e6e9;
+  background: var(--vm-canvas);
+}
+.vmap-night {
+  --vm-canvas: #121214;
+  --vm-open: color-mix(in srgb, var(--accent) 45%, #2a2a2e);
+  --vm-open-stroke: var(--accent);
+  --vm-sel: var(--accent);
+  --vm-held: #5a4a22;
+  --vm-sold: #2a2a2e;
+  background: var(--vm-canvas);
+}
+.vmap-night .vmap-svg svg {
+  filter: invert(0.92) hue-rotate(180deg) saturate(0.6);
+}
+
+.vmap-svg [data-vm] :is(rect, path, circle, ellipse, polygon),
+.vmap-svg :is(rect, path, circle, ellipse, polygon)[data-vm] {
+  transition: fill 0.2s;
+}
+.vmap-svg [data-vm='open'] :is(rect, path, circle, ellipse, polygon):not([fill='none']),
+.vmap-svg :is(rect, path, circle, ellipse, polygon)[data-vm='open'] {
+  fill: var(--vm-open);
+  stroke: var(--vm-open-stroke);
+}
+.vmap-svg [data-vm='selected'] :is(rect, path, circle, ellipse, polygon):not([fill='none']),
+.vmap-svg :is(rect, path, circle, ellipse, polygon)[data-vm='selected'] {
+  fill: color-mix(in srgb, var(--vm-sel) 30%, white);
+  stroke: var(--vm-sel);
+  stroke-width: 3;
+}
+.vmap-svg [data-vm='held'] :is(rect, path, circle, ellipse, polygon):not([fill='none']),
+.vmap-svg :is(rect, path, circle, ellipse, polygon)[data-vm='held'] {
+  fill: var(--vm-held);
+  stroke-dasharray: 6 4;
+}
+.vmap-svg [data-vm='sold'] :is(rect, path, circle, ellipse, polygon):not([fill='none']),
+.vmap-svg :is(rect, path, circle, ellipse, polygon)[data-vm='sold'],
+.vmap-svg [data-vm='muted'] :is(rect, path, circle, ellipse, polygon):not([fill='none']),
+.vmap-svg :is(rect, path, circle, ellipse, polygon)[data-vm='muted'] {
+  fill: var(--vm-sold);
+}
+.vmap-svg [data-vm='sold'] text {
+  opacity: 0.45;
+}
+
+/* Thumbnails: whole venue fitted, centred. */
+.vmap-fit .vmap-svg,
+.vmap-fit .vmap-svg + *,
+.vmap-fit > div,
+.vmap-fit > div > div {
+  height: 100%;
+}
+.vmap-fit .vmap-svg svg {
+  height: 100% !important;
+  width: auto !important;
+  margin: 0 auto;
+}
