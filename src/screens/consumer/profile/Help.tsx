@@ -7,6 +7,7 @@ import { Button, Chip } from '@/components/ui/primitives'
 import { cx } from '@/lib/format'
 import { WhatsAppGlyph } from '../onboarding/parts'
 import { Group, Row } from './parts'
+import { BOOKING_WHATSAPP, whatsappLink } from '@/config/contact'
 
 export const faqs = [
   {
@@ -61,9 +62,18 @@ export function Help({
         <div className="rounded-card border border-line bg-surface p-4">
           <div className="font-semibold">Talk to a person</div>
           <p className="mt-0.5 text-sm text-dim">Our team answers on WhatsApp, every night from 6pm until the last venue closes.</p>
-          <Button variant="whatsapp" block className="mt-3" icon={<WhatsAppGlyph className="size-5" />}>
+          <Button
+            variant="whatsapp"
+            block
+            className="mt-3"
+            icon={<WhatsAppGlyph className="size-5" />}
+            onClick={() => window.open(whatsappLink(`Hi ${brand.name}, I need help with`), '_blank')}
+          >
             Chat with us on WhatsApp
           </Button>
+          <div className="mt-1.5 text-center text-xs text-faint">
+            {brand.name} bookings · {BOOKING_WHATSAPP.display}
+          </div>
           <div className="mt-3 border-t border-line pt-3 text-sm">
             <div className="text-dim">About tonight’s booking?</div>
             <button className="mt-1 flex w-full items-center gap-2 text-left font-semibold">

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { whatsappLink } from '@/config/contact'
 import { Bell, Check, MessageCircle, Users } from 'lucide-react'
 import type { FloorPlanId } from '@/data/types'
 import { Screen, BottomBar } from '@/components/app/chrome'
@@ -81,7 +82,11 @@ export function PartyTime({
       </div>
       {party >= maxCap && (
         <p className="mx-5 mt-2 flex items-center gap-1.5 text-xs text-dim">
-          <MessageCircle className="size-3.5" /> More than {maxCap}? Message {venue.name} on WhatsApp for a buy-out.
+          <MessageCircle className="size-3.5" /> More than {maxCap}?{' '}
+          <a className="font-semibold text-accent" href={whatsappLink(`Hi! I'd like a buy-out for more than ${maxCap} people at ${venue.name}.`)} target="_blank" rel="noreferrer">
+            Message us on WhatsApp
+          </a>{' '}
+          for a buy-out.
         </p>
       )}
 

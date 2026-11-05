@@ -3,6 +3,7 @@ import { Screen, StatusBar } from '@/components/app/chrome'
 import { Button } from '@/components/ui/primitives'
 import { WhatsAppGlyph } from '../onboarding/parts'
 import { StateBlock } from './parts'
+import { whatsappLink } from '@/config/contact'
 
 /** App-wide error with retry. Says whose fault it is and that money is safe. */
 export function AppError({
@@ -27,7 +28,7 @@ export function AppError({
             <Button block size="lg" loading={retrying} icon={<RefreshCw className="size-4" />}>
               {retrying ? 'Trying again…' : 'Try again'}
             </Button>
-            <Button block variant="ghost" icon={<WhatsAppGlyph className="size-5 text-whatsapp" />}>
+            <Button block variant="ghost" icon={<WhatsAppGlyph className="size-5 text-whatsapp" />} onClick={() => window.open(whatsappLink('Hi, the app showed me an error'), '_blank')}>
               Chat with us on WhatsApp
             </Button>
           </>
