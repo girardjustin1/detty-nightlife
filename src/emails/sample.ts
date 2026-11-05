@@ -50,7 +50,7 @@ export function maskPhone(e164: string) {
 }
 
 /** Placeholder domain per brand direction (the integration docs use detty.app). */
-export const domainFor = (brand: Brand) => `${brand.id}.app`
+export const domainFor = (brand: Brand) => `${brand.id === 'gold' || brand.id === 'gold2' ? 'detty' : brand.id}.app`
 
 export const shortRef = booking.ref.replace('DTY-', '')
 
