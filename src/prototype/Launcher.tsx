@@ -107,7 +107,7 @@ export function Launcher({ brand, onBrand, onStart, hints, onHints }: { brand: B
 
         <h2 className="display mt-8 text-xl">Brand</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {(['aurum', 'gold', 'gold2', 'detty', 'vybe'] as BrandId[]).map((id) => (
+          {(['gold2', 'gold', 'aurum', 'detty', 'vybe'] as BrandId[]).map((id) => (
             <button
               key={id}
               onClick={() => onBrand(id)}

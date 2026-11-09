@@ -14,7 +14,7 @@ const parseHash = (): Route => {
 }
 const toHash = (r: Route) => (r.exp ? `#/${r.exp}${r.step ? `/${r.step}` : ''}` : '#/')
 
-const PROTO_BRANDS: BrandId[] = ['aurum', 'gold', 'gold2', 'detty', 'vybe']
+const PROTO_BRANDS: BrandId[] = ['gold2', 'gold', 'aurum', 'detty', 'vybe']
 
 /**
  * Clickable prototype: a menu of four booking experiences (three WhatsApp
@@ -24,7 +24,7 @@ const PROTO_BRANDS: BrandId[] = ['aurum', 'gold', 'gold2', 'detty', 'vybe']
 export function Prototype({ embedded = false, initialBrand }: { embedded?: boolean; initialBrand?: BrandId }) {
   const [route, setRoute] = useState<Route>(() => (embedded ? { exp: null } : parseHash()))
   const [history, setHistory] = useState<string[]>([])
-  const [brand, setBrand] = useState<BrandId>(() => initialBrand ?? ((localStorage.getItem('proto-brand') as BrandId) || 'aurum'))
+  const [brand, setBrand] = useState<BrandId>(() => initialBrand ?? ((localStorage.getItem('proto-brand') as BrandId) || 'gold2'))
   const [hints, setHints] = useState(() => localStorage.getItem('proto-hints') !== 'off')
   const [run, setRun] = useState(0)
   const [taps, setTaps] = useState(0)

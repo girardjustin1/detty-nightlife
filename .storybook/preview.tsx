@@ -85,7 +85,7 @@ const preview: Preview = {
           { value: 'aurum', title: 'Aurum — luxe VIP' },
           { value: 'vybe', title: 'Vybe — neon, music-first' },
           { value: 'gold', title: 'Detty Gold — the blend' },
-          { value: 'gold2', title: 'Detty Gold × Vybe type — round 2' },
+          { value: 'gold2', title: 'Detty Gold × Vybe type (default)' },
         ],
         dynamicTitle: true,
       },
@@ -119,7 +119,7 @@ const preview: Preview = {
       },
     },
   },
-  initialGlobals: { brand: 'detty', dataSaver: 'off', type: 'brand' },
+  initialGlobals: { brand: 'gold2', dataSaver: 'off', type: 'brand' },
   parameters: {
     layout: 'fullscreen',
     controls: { expanded: true },
