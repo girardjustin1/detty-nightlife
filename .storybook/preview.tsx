@@ -10,16 +10,35 @@ import type { BrandId } from '../src/brands/brands'
  *   'email'           — light canvas for email templates
  *   'raw'             — no wrapper (multi-brand comparison pages set their own)
  */
+/** Toolbar → Type: try a display face on every screen without touching brand tokens. */
+const typeOverrides: Record<string, string> = {
+  'unbounded-caps': "--font-display: 'Unbounded Variable', sans-serif; --display-weight: 700; --display-case: uppercase; --display-tracking: -0.01em;",
+  'unbounded-sentence': "--font-display: 'Unbounded Variable', sans-serif; --display-weight: 650; --display-case: none; --display-tracking: -0.02em;",
+  'unbounded-light': "--font-display: 'Unbounded Variable', sans-serif; --display-weight: 500; --display-case: uppercase; --display-tracking: 0;",
+  playfair: "--font-display: 'Playfair Display Variable', serif; --display-weight: 600; --display-case: none; --display-tracking: 0;",
+  bricolage: "--font-display: 'Bricolage Grotesque Variable', sans-serif; --display-weight: 800; --display-case: none; --display-tracking: -0.02em;",
+}
+const TypeOverride = ({ type }: { type?: string }) =>
+  type && typeOverrides[type] ? <style>{`[data-brand] { ${typeOverrides[type].replace(/;/g, ' !important;')} }`}</style> : null
+
 const withBrand: Decorator = (Story, ctx) => {
   const brand = (ctx.globals.brand ?? 'detty') as BrandId
   const dataSaver = ctx.globals.dataSaver === 'on'
   const frame = ctx.parameters.frame ?? 'phone'
+  const type = ctx.globals.type as string | undefined
   const inner = (
     <BrandProvider brand={brand} dataSaver={dataSaver}>
+      <TypeOverride type={type} />
       <Story />
     </BrandProvider>
   )
-  if (frame === 'raw') return <Story />
+  if (frame === 'raw')
+    return (
+      <>
+        <TypeOverride type={type} />
+        <Story />
+      </>
+    )
   if (frame === 'email') return <div style={{ background: '#f1f1f4', minHeight: '100vh', padding: 24 }}>{inner}</div>
   if (frame === 'none')
     return (
@@ -41,6 +60,7 @@ const withBrand: Decorator = (Story, ctx) => {
         }}
       >
         <BrandProvider brand={brand} dataSaver={dataSaver}>
+          <TypeOverride type={type} />
           <div data-brand={brand} style={{ height: '100%' }}>
             <Story />
           </div>
@@ -65,6 +85,23 @@ const preview: Preview = {
           { value: 'aurum', title: 'Aurum — luxe VIP' },
           { value: 'vybe', title: 'Vybe — neon, music-first' },
           { value: 'gold', title: 'Detty Gold — the blend' },
+          { value: 'gold2', title: 'Detty Gold × Vybe type (default)' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+    type: {
+      description: 'Display type override (fonts exploration)',
+      toolbar: {
+        title: 'Type',
+        icon: 'paragraph',
+        items: [
+          { value: 'brand', title: 'Type: brand default' },
+          { value: 'unbounded-caps', title: 'Unbounded · bold caps (Vybe)' },
+          { value: 'unbounded-sentence', title: 'Unbounded · sentence case' },
+          { value: 'unbounded-light', title: 'Unbounded · medium caps' },
+          { value: 'playfair', title: 'Playfair Display (Aurum / Detty Gold)' },
+          { value: 'bricolage', title: 'Bricolage Grotesque (Detty)' },
         ],
         dynamicTitle: true,
       },
@@ -82,7 +119,7 @@ const preview: Preview = {
       },
     },
   },
-  initialGlobals: { brand: 'detty', dataSaver: 'off' },
+  initialGlobals: { brand: 'gold2', dataSaver: 'off', type: 'brand' },
   parameters: {
     layout: 'fullscreen',
     controls: { expanded: true },

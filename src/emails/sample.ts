@@ -50,7 +50,7 @@ export function maskPhone(e164: string) {
 }
 
 /** Placeholder domain per brand direction (the integration docs use detty.app). */
-export const domainFor = (brand: Brand) => `${brand.id}.app`
+export const domainFor = (brand: Brand) => `${brand.id === 'gold' || brand.id === 'gold2' ? 'detty' : brand.id}.app`
 
 export const shortRef = booking.ref.replace('DTY-', '')
 
@@ -90,6 +90,6 @@ export const paystack = {
 export const addressPlaceholder = '[Legal entity name] · [Registered address], Accra, Ghana · [Business reg. no.]'
 
 /** Per-brand copy helper: pick a line in the brand's voice. */
-/** Per-brand copy. Detty Gold shares Detty's voice unless it has its own line. */
-export const voice = <T>(brand: Brand, v: Record<Exclude<Brand['id'], 'gold'>, T> & { gold?: T }) =>
-  brand.id === 'gold' ? (v.gold ?? v.detty) : v[brand.id]
+/** Per-brand copy. The Detty Gold directions share Detty's voice unless they have their own line. */
+export const voice = <T>(brand: Brand, v: Record<Exclude<Brand['id'], 'gold' | 'gold2'>, T> & { gold?: T; gold2?: T }) =>
+  brand.id === 'gold' || brand.id === 'gold2' ? (v[brand.id] ?? v.detty) : v[brand.id]

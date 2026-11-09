@@ -19,7 +19,7 @@ export type ProtoApi = {
 }
 
 export const ProtoCtx = createContext<ProtoApi>({
-  brand: 'aurum',
+  brand: 'gold2',
   go: () => {},
   back: () => {},
   menu: () => {},

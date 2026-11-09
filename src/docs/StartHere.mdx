@@ -1,68 +1,52 @@
 import { Meta } from '@storybook/addon-docs/blocks'
+import { Hero, Prototypes, Journey, Features, EmailsAndBrand, StoryMap } from './StartHereVisuals'
 
 <Meta title="Start Here" />
 
 # Detty Nightlife: Storybook drafts
 
-Mobile-first booking for Accra nightlife: **event tickets, VIP tables, bottles toward a table
-minimum, guests and deposits**, plus a **promoter app** to run the night. Phase 1 is every screen
-as a story. Nothing here talks to a server, and all venues, artists, people and prices are
-**fictional sample data**.
+<Hero />
+
+A mobile-first booking app for Accra nightlife: **event tickets, VIP tables, bottles toward a table minimum, guests and
+deposits**, plus a **promoter app** to run the night. This Storybook is phase 1: every screen as a story, before any
+backend exists. Nothing here talks to a server, and every venue, artist, person and price is **fictional sample data**.
+
+**Why it exists:** to agree on the product (the flows, the rules, the money and the look) cheaply, while changing it
+is still a quick edit.
 
 ## Try the clickable prototype
 
-Four ways to book the same night. Everything is prefilled, so tap whatever glows. The launcher
-compares them side by side.
+Four ways to book the same night, side by side. Everything is prefilled, so just tap whatever glows. The question
+they answer: **how much of a booking can live in WhatsApp, and what does an app add?**
 
-| Experience | Open it |
-|---|---|
-| **Menu of all four** (start here) | [girardjustin1.github.io/detty-nightlife](https://girardjustin1.github.io/detty-nightlife/) |
-| WhatsApp · Menu bot: buttons and lists | [Open](https://girardjustin1.github.io/detty-nightlife/#/wa-menu/chat) |
-| WhatsApp · Flows: in-chat forms | [Open](https://girardjustin1.github.io/detty-nightlife/#/wa-flows/chat) |
-| WhatsApp · AI concierge: just type it | [Open](https://girardjustin1.github.io/detty-nightlife/#/wa-ai/chat) |
-| Consumer app, start to finish | [Open](https://girardjustin1.github.io/detty-nightlife/#/app/welcome) |
+<Prototypes />
 
-On a phone, open the same links for the full-screen version. Locally, run `pnpm dev` and open
-http://localhost:5330. The prototype also lives in this Storybook under **Prototype / Click-through**.
+On a phone, open the same links for the full-screen version. Locally, run `pnpm dev` and open http://localhost:5330.
+The prototype also lives here under **Prototype / Click-through**.
+
+## One night, end to end
+
+The consumer app is built on Resy's **commit** model, applied to a club table: pick it on the map, fill the
+**minimum-spend meter** with bottles, add your squad, see the **refund policy in cedis** before you pay, pay a deposit
+by **mobile money**, and get a QR that works offline.
+
+<Journey />
+
+## What we made, and why
+
+<Features />
+
+<EmailsAndBrand />
 
 ## How to look around
 
-- **Toolbar → Brand** switches every screen between four directions: **Detty** (loud, joyful),
-  **Aurum** (luxe VIP), **Vybe** (neon, music-first) and **Detty Gold**, the consolidated look
-  from the first review. See **Brand / Directions** and **Brand / Evolution**.
+- **Toolbar → Brand** switches every screen between the directions. The default is **Detty Gold × Vybe type**,
+  the current look. The others are **Detty Gold** (the blend from the first review, with Playfair) and the three
+  originals: **Detty** (loud, joyful), **Aurum** (luxe VIP) and **Vybe** (neon, music-first).
+- **Toolbar → Type** tries a different display font on any screen without changing the brand.
 - **Toolbar → Data saver** shows the app with photos off, which is the default on slow networks.
 - Every important state has its own story: empty, loading, error, sold out, minimum not met…
 
 ## Map of the stories
 
-| Section | What's in it |
-|---|---|
-| **Brand / Directions** | All four directions side by side; the same screen in each |
-| **Brand / Evolution** | How three directions became Detty Gold: feedback, what we kept and dropped, before and after |
-| **Components** | Floor plan, SeatGeek-style venue map (price pins, 🔥 going fast, price-rise tooltips), cards, meters |
-| **Consumer / 01 Onboarding** | Welcome, phone number with a WhatsApp code, profile, preferences |
-| **Consumer / 02 Discover** | Events view and Clubs & lounges view, search, filters, map |
-| **Consumer / 03 Event** | Event detail: lineup, music and vibe, entry, ticket and table buttons |
-| **Consumer / 04 Venue** | Club detail: tables, events, bottles, reviews, details |
-| **Consumer / 05 Book Tickets** | Tiers, checkout, arena and beach maps (SeatGeek style) |
-| **Consumer / 06 Book a Table** | Party and time → map or floor plan → bottles → guests → review and commit |
-| **Consumer / 07 Pay** | MoMo, card, Lightning (beta), pending and failed states, confirmation |
-| **Consumer / 08 My Bookings** | Wallet, booking detail, modify, cancel, transfer, receipts |
-| **Consumer / 09 Guests** | Invite page (from WhatsApp), guest pass, host collection |
-| **Consumer / 10 Profile** | Profile, payment methods, account, help |
-| **Promoter** | Tonight dashboard, live floor, reservations, door check-in, events, payouts |
-| **Prototype** | The clickable four-way comparison |
-| **Emails** | Transactional emails (React components, ready to port to React Email) |
-| **WhatsApp** | Message mockups and the template catalogue |
-| **Planning** | Product plan, tech, integrations, open questions |
-
-## The core idea
-
-Resy's **commit** model, applied to a club table:
-
-1. Pick the table on the map.
-2. Pre-order bottles until the **minimum-spend meter** fills.
-3. Add your squad.
-4. See the **policy first**: the exact refund in cedis, by the exact time.
-5. Pay a deposit by **mobile money**.
-6. Get a QR that works offline.
+<StoryMap />

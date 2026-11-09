@@ -107,13 +107,13 @@ export function Launcher({ brand, onBrand, onStart, hints, onHints }: { brand: B
 
         <h2 className="display mt-8 text-xl">Brand</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {(['aurum', 'gold', 'detty', 'vybe'] as BrandId[]).map((id) => (
+          {(['gold2', 'gold', 'aurum', 'detty', 'vybe'] as BrandId[]).map((id) => (
             <button
               key={id}
               onClick={() => onBrand(id)}
               className={`rounded-control border px-3.5 py-2 text-sm font-semibold ${id === brand ? 'border-accent bg-accent text-on-accent' : 'border-line text-text'}`}
             >
-              {id === 'gold' ? 'Detty Gold' : brands[id].name}
+              {id === 'gold' ? 'Detty Gold' : id === 'gold2' ? 'Gold × Vybe type' : brands[id].name}
             </button>
           ))}
         </div>

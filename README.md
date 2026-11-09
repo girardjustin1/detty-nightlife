@@ -19,20 +19,21 @@ is **fictional sample data**.
 | ↳ Consumer app, start to finish | https://girardjustin1.github.io/detty-nightlife/#/app/welcome |
 | **Storybook** (all screens, brands, emails, WhatsApp, promoter app) | https://girardjustin1.github.io/detty-nightlife/storybook/ |
 | ↳ Brand directions | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/brand-directions--side-by-side |
-| ↳ Brand evolution (3 directions → Detty Gold) | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/brand-evolution--three-directions-to-one |
+| ↳ Brand evolution (3 directions → Detty Gold → Vybe type) | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/brand-evolution--three-directions-to-one |
 
 In the prototype every input is prefilled: tap whatever glows. On a laptop, a side panel shows taps,
 time, a brand switch and "Jump to". On a phone, use the **☰ Menu** pill at the top.
 
 ## What's inside
 
-- **Four brand directions:**
-  - Detty (loud, joyful)
-  - Aurum (luxe VIP)
-  - Vybe (neon, music-first)
-  - Detty Gold (the consolidated look after the first review)
+- **Brand directions:**
+  - **Detty Gold × Vybe type** (the current look and the default): Detty Gold's onyx, champagne and lime,
+    with Vybe's Unbounded bold caps for display type
+  - Detty Gold (the consolidated look after the first review, with Playfair)
+  - The three original directions: Detty (loud, joyful), Aurum (luxe VIP) and Vybe (neon, music-first)
 
-  The **Brand** menu in the Storybook toolbar switches any screen between them.
+  The **Brand** menu in the Storybook toolbar switches any screen between them, and the **Type** menu
+  tries other display fonts on any screen.
 - **Consumer app:**
   - Onboarding (phone number with a WhatsApp code)
   - Discover, with an events view and a clubs view
