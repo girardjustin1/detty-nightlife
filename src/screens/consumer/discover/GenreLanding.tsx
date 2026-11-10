@@ -14,7 +14,7 @@ export function GenreLanding({ genre = 'Amapiano', alertsOn, loading }: { genre?
     title: `${genre} in Accra`,
     blurb: `Every ${genre} night we know about in Accra, in one place.`,
     soundsLike: [],
-    photo: `${import.meta.env.BASE_URL}img/detty-keyart.webp`,
+    photo: `${import.meta.env.BASE_URL}img/event-afrobeats.webp`,
   }
   const nights = upcoming(events.filter((e) => e.genres.includes(genre)))
   const rooms = venues.filter((v) => v.genres.includes(genre))

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Check, ChevronRight, KeyRound, Lock, MessageCircle, ShieldCheck, X } from 'lucide-react'
+import { useBrand } from '@/brands/BrandContext'
 import { StatusBar } from '@/components/app/chrome'
 import { Badge, Button, Img, TextField } from '@/components/ui/primitives'
 import { venueById } from '@/data/fixtures'
@@ -26,6 +27,7 @@ export function SignIn({ step = 'phone', error, sending }: { step?: SignInStep; 
 }
 
 function PhoneStep({ sending }: { sending?: boolean }) {
+  const brand = useBrand()
   return (
     <div className="flex flex-1 flex-col px-5 pt-10 pb-8">
       <h1 className="display text-[32px]">Run your night from your phone.</h1>
@@ -49,7 +51,7 @@ function PhoneStep({ sending }: { sending?: boolean }) {
           <ChevronRight className="size-4 text-faint" />
         </button>
         <p className="flex items-center justify-center gap-1.5 text-xs text-faint">
-          <Lock className="size-3.5" /> Staff accounts only. Guests use the Detty app.
+          <Lock className="size-3.5" /> Staff accounts only. Guests use the {brand.name} app.
         </p>
       </div>
     </div>

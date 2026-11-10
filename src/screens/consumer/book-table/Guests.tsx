@@ -19,7 +19,7 @@ const statusBadge: Record<Guest['status'], { label: string; tone: 'success' | 'w
 
 /** WhatsApp click-to-chat intent with a prefilled invite. Link domain is a placeholder. */
 export const inviteLink = (venueName: string, eventTitle: string, when: string, table: string) =>
-  `https://wa.me/?text=${encodeURIComponent(`Join my table at ${venueName} 🍾 ${eventTitle}, ${when}, table ${table}. Tap to accept: https://detty.example/i/hold-${table.toLowerCase()}`)}`
+  `https://wa.me/?text=${encodeURIComponent(`Join my table at ${venueName} 🍾 ${eventTitle}, ${when}, table ${table}. Tap to accept: https://book.example/i/hold-${table.toLowerCase()}`)}`
 
 /**
  * Step 4 — host plus open slots up to capacity. Add from contacts, by phone, or

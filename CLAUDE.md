@@ -13,8 +13,12 @@ https://girardjustin1.github.io/detty-nightlife/ (Storybook under `/storybook/`)
 the app must stay small for metered mobile data.
 
 ## Brands
-Four candidate brands share one codebase: `detty` (loud/joyful), `aurum` (luxe VIP),
-`vybe` (neon, music-first) and `gold` (Detty Gold, the consolidated look). Tokens live in `src/styles/index.css` as CSS variables, keyed
+Six candidate brands share one codebase (rebrand round, 10 Nov 2026): `jama` (light theme, the default via
+`DEFAULT_BRAND`), `fiada`, `akonnwa`, `kpanlogo`, `harmattan`, `anadwo`. The earlier `detty`, `aurum`, `vybe`,
+`gold`, `gold2` are archived (`era: 'archive'`): their name and black + gold look sit too close to an existing
+events app, so never use "Detty" as the product name in screens or copy; use `brand.name`. One brand is light,
+so never assume a dark background. After a look change, retake the Start Here screenshots with
+`scripts/start-here-shots.mjs`. Tokens live in `src/styles/index.css` as CSS variables, keyed
 on `data-brand`. **Only use token utilities** — `bg-bg bg-surface bg-surface-2 border-line
 text-text text-dim text-faint bg-accent text-on-accent text-accent-2 text-accent-3
 text-success text-warning text-danger rounded-card rounded-control` and the `display`

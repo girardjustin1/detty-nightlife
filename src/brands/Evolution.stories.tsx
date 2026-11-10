@@ -81,6 +81,7 @@ function Evolution() {
   const gold = brands.gold
   return (
     <div className="min-h-screen bg-[#0d0d10] p-10 text-white" style={{ minWidth: 1720 }}>
+      <div className="mb-4 max-w-3xl rounded-xl border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-sm text-amber-100"><b>Archived.</b> This is how the earlier look came together. It was set aside on 10 Nov 2026 because its name and black + gold look are too close to an existing events app. The current work is under Brand / New Directions.</div>
       <div className="text-xs font-semibold tracking-widest text-white/50 uppercase">Brand · Evolution</div>
       <h1 className="mt-1 text-4xl font-bold">From three directions to one look</h1>
       <p className="mt-3 max-w-3xl text-white/70">
@@ -250,7 +251,7 @@ function Evolution() {
   )
 }
 
-const meta = { title: 'Brand/Evolution', parameters: { frame: 'raw', layout: 'fullscreen' } } satisfies Meta
+const meta = { title: 'Brand/Archive/Evolution', parameters: { frame: 'raw', layout: 'fullscreen' } } satisfies Meta
 export default meta
 type Story = StoryObj<typeof meta>
 

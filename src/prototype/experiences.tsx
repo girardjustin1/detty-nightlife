@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
     blurb: 'Type what you want in your own words. The AI reads live availability and prices, offers options and books — with a human on standby.',
     start: 'chat',
     render: () => <BrandedChat make={aiBot} />,
-    strengths: ['Most natural, handles Pidgin & slang', 'One message can carry the whole order', 'Scales for Detty December'],
+    strengths: ['Most natural, handles Pidgin & slang', 'One message can carry the whole order', 'Scales for December in Accra'],
     tradeoffs: ['Needs guardrails: prices only from the system', 'Model cost per chat', 'Must hand off to a human cleanly'],
   },
   {

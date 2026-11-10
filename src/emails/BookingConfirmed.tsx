@@ -21,7 +21,7 @@ export function BookingConfirmed({ method = booking.paymentMethod, withGuests = 
     <EmailLayout
       refCode={booking.ref}
       meta={{
-        subject: `${voice(brand, { detty: 'You’re outside! ', aurum: '', vybe: 'Locked in: ' })}${tableLabel} at ${venue.name}, ${dayLong(event.startsAt)}`,
+        subject: `${voice(brand, { detty: 'You’re in! ', aurum: '', vybe: 'Locked in: ' })}${tableLabel} at ${venue.name}, ${dayLong(event.startsAt)}`,
         preheader: `Deposit ${cedis(quote.deposit)} paid. ${cedis(quote.balanceAtVenue)} balance at the venue. Arrive by ${time(arrivalCutoff)}.`,
       }}
     >

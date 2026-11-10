@@ -1,5 +1,5 @@
 import { createContext, useContext, type ReactNode } from 'react'
-import { brands, type Brand, type BrandId } from './brands'
+import { brands, DEFAULT_BRAND, type Brand, type BrandId } from './brands'
 
 type AppSettings = {
   brand: Brand
@@ -7,10 +7,10 @@ type AppSettings = {
   dataSaver: boolean
 }
 
-const Ctx = createContext<AppSettings>({ brand: brands.detty, dataSaver: false })
+const Ctx = createContext<AppSettings>({ brand: brands[DEFAULT_BRAND], dataSaver: false })
 
 export function BrandProvider({
-  brand = 'detty',
+  brand = DEFAULT_BRAND,
   dataSaver = false,
   children,
 }: {

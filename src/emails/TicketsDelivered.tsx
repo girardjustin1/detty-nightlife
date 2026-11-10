@@ -12,7 +12,7 @@ export function TicketsDelivered({ count = ticketTotals.count }: { count?: numbe
   const holders = ticketBooking.guests.slice(0, count)
   const subtotal = ticketTier.price * count
   const fee = count === ticketTotals.count ? ticketTotals.fee : Math.round((subtotal * RULES.ticketFeePct) / 100)
-  const code = (i: number) => `${ticketBooking.ref.replace('DTY-', '')}-${String(i + 1).padStart(2, '0')}`
+  const code = (i: number) => `${ticketBooking.ref.replace('ACC-', '')}-${String(i + 1).padStart(2, '0')}`
   return (
     <EmailLayout
       refCode={ticketBooking.ref}

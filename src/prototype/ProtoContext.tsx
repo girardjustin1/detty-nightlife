@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react'
-import type { BrandId } from '@/brands/brands'
+import { DEFAULT_BRAND, type BrandId } from '@/brands/brands'
 
 export type ExperienceId = 'wa-menu' | 'wa-flows' | 'wa-ai' | 'app'
 
@@ -19,7 +19,7 @@ export type ProtoApi = {
 }
 
 export const ProtoCtx = createContext<ProtoApi>({
-  brand: 'gold2',
+  brand: DEFAULT_BRAND,
   go: () => {},
   back: () => {},
   menu: () => {},

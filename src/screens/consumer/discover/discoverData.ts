@@ -68,7 +68,7 @@ export const genreCopy: Partial<Record<Genre, { title: string; blurb: string; so
   },
   Afrobeats: {
     title: 'Afrobeats in Accra',
-    blurb: 'The sound of Detty December. Big rooms, bigger singalongs, and at least one surprise guest every Friday.',
+    blurb: 'The sound of December in Accra. Big rooms, bigger singalongs, and at least one surprise guest every Friday.',
     soundsLike: ['Afro-pop anthems', 'Azonto throwbacks', 'Amapiano crossover', 'Singalong hooks'],
     photo: `${import.meta.env.BASE_URL}img/event-afrobeats.webp`,
   },

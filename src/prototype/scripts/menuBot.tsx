@@ -130,7 +130,7 @@ export const menuBot = (b: Brand): ChatScript => ({
     guests: {
       bot: [
         {
-          text: `Who’s coming? Share this link in your group chat — your ${guestNames.length} guests tap it to join the table.\n\n${b.name.toLowerCase()}.app/i/${ref.slice(4).toLowerCase()}`,
+          text: `Who’s coming? Share this link in your group chat — your ${guestNames.length} guests tap it to join the table.\n\n${b.name.toLowerCase()}.example/i/${ref.slice(4).toLowerCase()}`,
           buttons: [
             { type: 'reply', label: 'Shared it ✅' },
             { type: 'reply', label: 'Later' },

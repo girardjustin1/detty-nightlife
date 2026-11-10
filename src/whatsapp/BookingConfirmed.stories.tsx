@@ -6,7 +6,7 @@ const meta = {
   component: BookingConfirmedThread,
   parameters: {
     docs: {
-      description: { component: '`booking_confirmed` **utility** template, sent on Paystack `charge.success`, right after the login code. Buttons: View booking / Get directions (URL). Amounts from `tableQuote` for DTY-7Q4K.' },
+      description: { component: '`booking_confirmed` **utility** template, sent on Paystack `charge.success`, right after the login code. Buttons: View booking / Get directions (URL). Amounts from `tableQuote` for ACC-7Q4K.' },
     },
   },
 } satisfies Meta<typeof BookingConfirmedThread>

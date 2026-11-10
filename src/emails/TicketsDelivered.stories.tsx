@@ -9,7 +9,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Email #4 (ticket delivery). One QR and text code per ticket, "works offline in the app". Uses fixture booking DTY-2M8P (3 × GA, Tidal: Beach Rave) and `ticketQuote`. Pairs with the `ticket_ready` WhatsApp utility template. Open question: is the "screenshots may be refused" line true for our signed, rotating passes?',
+          'Email #4 (ticket delivery). One QR and text code per ticket, "works offline in the app". Uses fixture booking ACC-2M8P (3 × GA, Tidal: Beach Rave) and `ticketQuote`. Pairs with the `ticket_ready` WhatsApp utility template. Open question: is the "screenshots may be refused" line true for our signed, rotating passes?',
       },
     },
   },

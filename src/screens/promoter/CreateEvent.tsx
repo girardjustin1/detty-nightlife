@@ -1,4 +1,5 @@
 import { Check, Eye, GripVertical, ImagePlus, Lock, Plus, Sparkles, Users } from 'lucide-react'
+import { useBrand } from '@/brands/BrandContext'
 import { AppBar, BottomBar, Screen } from '@/components/app/chrome'
 import { GenreTags } from '@/components/app/domain'
 import { Avatar, Button, Chip, Img, Segmented, TextField, Toggle } from '@/components/ui/primitives'
@@ -217,11 +218,12 @@ function Tables() {
 }
 
 function Publish({ published }: { published?: boolean }) {
+  const brand = useBrand()
   return (
     <div className="space-y-4">
       {published && (
         <div className="flex items-center gap-2 rounded-card border border-success/40 bg-success/10 px-3 py-2.5 text-sm">
-          <Check className="size-4 text-success" /> <b>Live on Detty.</b> <span className="text-dim">Now share it.</span>
+          <Check className="size-4 text-success" /> <b>Live on {brand.name}.</b> <span className="text-dim">Now share it.</span>
         </div>
       )}
       <div className="overflow-hidden rounded-card border border-line bg-surface">

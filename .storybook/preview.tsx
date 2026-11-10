@@ -1,7 +1,7 @@
 import type { Decorator, Preview } from '@storybook/react-vite'
 import '../src/styles/index.css'
 import { BrandProvider } from '../src/brands/BrandContext'
-import type { BrandId } from '../src/brands/brands'
+import { DEFAULT_BRAND, newBrands, type BrandId } from '../src/brands/brands'
 
 /**
  * parameters.frame:
@@ -17,12 +17,15 @@ const typeOverrides: Record<string, string> = {
   'unbounded-light': "--font-display: 'Unbounded Variable', sans-serif; --display-weight: 500; --display-case: uppercase; --display-tracking: 0;",
   playfair: "--font-display: 'Playfair Display Variable', serif; --display-weight: 600; --display-case: none; --display-tracking: 0;",
   bricolage: "--font-display: 'Bricolage Grotesque Variable', sans-serif; --display-weight: 800; --display-case: none; --display-tracking: -0.02em;",
+  syne: "--font-display: 'Syne Variable', sans-serif; --display-weight: 700; --display-case: none; --display-tracking: -0.02em;",
+  fraunces: "--font-display: 'Fraunces Variable', serif; --display-weight: 500; --display-case: none; --display-tracking: -0.01em;",
+  'big-shoulders': "--font-display: 'Big Shoulders Display Variable', sans-serif; --display-weight: 800; --display-case: uppercase; --display-tracking: 0.01em;",
 }
 const TypeOverride = ({ type }: { type?: string }) =>
   type && typeOverrides[type] ? <style>{`[data-brand] { ${typeOverrides[type].replace(/;/g, ' !important;')} }`}</style> : null
 
 const withBrand: Decorator = (Story, ctx) => {
-  const brand = (ctx.globals.brand ?? 'detty') as BrandId
+  const brand = (ctx.globals.brand ?? DEFAULT_BRAND) as BrandId
   const dataSaver = ctx.globals.dataSaver === 'on'
   const frame = ctx.parameters.frame ?? 'phone'
   const type = ctx.globals.type as string | undefined
@@ -81,11 +84,12 @@ const preview: Preview = {
         title: 'Brand',
         icon: 'paintbrush',
         items: [
-          { value: 'detty', title: 'Detty — loud & joyful' },
-          { value: 'aurum', title: 'Aurum — luxe VIP' },
-          { value: 'vybe', title: 'Vybe — neon, music-first' },
-          { value: 'gold', title: 'Detty Gold — the blend' },
-          { value: 'gold2', title: 'Detty Gold × Vybe type (default)' },
+          ...newBrands.map((b) => ({ value: b.id, title: `${b.name} — ${b.tagline}` })),
+          { value: 'gold2', title: 'Archive · Detty Gold × Vybe type' },
+          { value: 'gold', title: 'Archive · Detty Gold' },
+          { value: 'detty', title: 'Archive · Detty' },
+          { value: 'aurum', title: 'Archive · Aurum' },
+          { value: 'vybe', title: 'Archive · Vybe' },
         ],
         dynamicTitle: true,
       },
@@ -97,11 +101,14 @@ const preview: Preview = {
         icon: 'paragraph',
         items: [
           { value: 'brand', title: 'Type: brand default' },
-          { value: 'unbounded-caps', title: 'Unbounded · bold caps (Vybe)' },
+          { value: 'bricolage', title: 'Bricolage Grotesque (Jama)' },
+          { value: 'syne', title: 'Syne (Fiada)' },
+          { value: 'playfair', title: 'Playfair Display (Akonnwa)' },
+          { value: 'unbounded-caps', title: 'Unbounded · bold caps (Kpanlogo)' },
+          { value: 'fraunces', title: 'Fraunces (Harmattan)' },
+          { value: 'big-shoulders', title: 'Big Shoulders · caps (Anadwo)' },
           { value: 'unbounded-sentence', title: 'Unbounded · sentence case' },
           { value: 'unbounded-light', title: 'Unbounded · medium caps' },
-          { value: 'playfair', title: 'Playfair Display (Aurum / Detty Gold)' },
-          { value: 'bricolage', title: 'Bricolage Grotesque (Detty)' },
         ],
         dynamicTitle: true,
       },
@@ -119,7 +126,7 @@ const preview: Preview = {
       },
     },
   },
-  initialGlobals: { brand: 'gold2', dataSaver: 'off', type: 'brand' },
+  initialGlobals: { brand: DEFAULT_BRAND, dataSaver: 'off', type: 'brand' },
   parameters: {
     layout: 'fullscreen',
     controls: { expanded: true },
@@ -128,6 +135,8 @@ const preview: Preview = {
         order: [
           'Start Here',
           'Brand',
+          ['New Directions', 'Archive'],
+          'Research',
           'Foundations',
           'Components',
           'Consumer',

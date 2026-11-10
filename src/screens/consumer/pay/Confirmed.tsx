@@ -10,7 +10,7 @@ import { canonicalTable, RULES, tableQuote, ticketQuote } from '@/lib/pricing'
 import { Steps } from './PayParts'
 import { canonicalEvent, canonicalTier, canonicalVenue, defaultTicketSelection, depositPolicy, loungeTier, otherGuests, ticketEvent, ticketLines } from './payData'
 
-const occasions = ['Birthday', 'Detty December', 'Anniversary', 'Corporate', 'Just because']
+const occasions = ['Birthday', 'December in Accra', 'Anniversary', 'Corporate', 'Just because']
 
 function Hero({ photo, title, kicker, sub, tone = 'success' }: { photo: string; title: ReactNode; kicker: ReactNode; sub: ReactNode; tone?: 'success' | 'warning' }) {
   return (
@@ -87,7 +87,7 @@ export function ConfirmedTable({ occasion, partySize = canonicalTier.capacity }:
   const brand = useBrand()
   const q = tableQuote(canonicalTier, canonicalTable.lines)
   const ev = canonicalEvent
-  const ref = 'DTY-7Q4K'
+  const ref = 'ACC-7Q4K'
   const invite = otherGuests.slice(0, partySize - 1)
   const arriveBy = new Date(new Date(ev.doorsAt).getTime() + RULES.holdMinutesAfterDoors * 60_000).toISOString()
   return (

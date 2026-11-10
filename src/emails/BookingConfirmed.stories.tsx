@@ -10,7 +10,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Sent on Paystack `charge.success` for a table deposit (email #2 in docs/integrations/email.md). The record of the booking: table, date, deposit paid, balance at the venue, policy summary, calendar link and the entry QR with a text code. Amounts come from `tableQuote` for the canonical booking (The Vault · booth B3 · DTY-7Q4K). Paired with the `booking_confirmed` WhatsApp utility template.',
+          'Sent on Paystack `charge.success` for a table deposit (email #2 in docs/integrations/email.md). The record of the booking: table, date, deposit paid, balance at the venue, policy summary, calendar link and the entry QR with a text code. Amounts come from `tableQuote` for the canonical booking (The Vault · booth B3 · ACC-7Q4K). Paired with the `booking_confirmed` WhatsApp utility template.',
       },
     },
   },

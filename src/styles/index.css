@@ -2,6 +2,9 @@
 @import '@fontsource-variable/bricolage-grotesque/wght.css';
 @import '@fontsource-variable/playfair-display/wght.css';
 @import '@fontsource-variable/unbounded/wght.css';
+@import '@fontsource-variable/syne';
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/big-shoulders-display';
 
 /*
  * Brand tokens. Every screen reads these through Tailwind utilities
@@ -162,6 +165,166 @@
   --radius-control: 999px;
   --hero-overlay: linear-gradient(180deg, rgb(11 11 12 / 0) 25%, rgb(11 11 12 / 0.94) 100%);
   --placeholder: linear-gradient(140deg, #c9a45c 0%, #e8643c 55%, #201e1a 100%);
+}
+
+/* ── Rebrand round (10 Nov): six new directions that move away from the old
+   name and from black + gold. Same product and screens; only tokens, voice
+   and artwork change. See Brand / New Directions. ───────────────────────── */
+
+/* Jama: the squad. The only light theme: cream paper, tomato red, cobalt. */
+[data-brand='jama'] {
+  --bg: #fff6ea;
+  --surface: #ffffff;
+  --surface-2: #f7eadb;
+  --line: #e6d5c0;
+  --text: #1b1320;
+  --dim: #5e5261;
+  --faint: #978b93;
+  --accent: #ee3b24;
+  --accent-2: #1f4fff;
+  --accent-3: #ff5fa2;
+  --on-accent: #ffffff;
+  --success: #0e8f62;
+  --warning: #b26a00;
+  --danger: #d92d20;
+  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.03em;
+  --display-case: none;
+  --radius-card: 20px;
+  --radius-control: 14px;
+  --hero-overlay: linear-gradient(180deg, rgb(27 19 32 / 0) 30%, rgb(27 19 32 / 0.88) 100%);
+  --placeholder: linear-gradient(135deg, #ee3b24 0%, #ff5fa2 50%, #1f4fff 100%);
+}
+
+/* Fiada: Friday in Twi. Dusk sky: indigo, coral, periwinkle. */
+[data-brand='fiada'] {
+  --bg: #12102b;
+  --surface: #1b1840;
+  --surface-2: #262255;
+  --line: #37327a;
+  --text: #f7eff3;
+  --dim: #bab3d8;
+  --faint: #7d77a8;
+  --accent: #ff7a6b;
+  --accent-2: #9db4ff;
+  --accent-3: #ff4f8b;
+  --on-accent: #1a1033;
+  --success: #7fe0b0;
+  --warning: #ffc078;
+  --danger: #ff6b81;
+  --font-display: 'Syne Variable', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.02em;
+  --display-case: none;
+  --radius-card: 28px;
+  --radius-control: 999px;
+  --hero-overlay: linear-gradient(180deg, rgb(18 16 43 / 0) 30%, rgb(18 16 43 / 0.94) 100%);
+  --placeholder: linear-gradient(180deg, #37327a 0%, #ff4f8b 60%, #ff7a6b 100%);
+}
+
+/* Akonnwa: seat in Twi. The table-first members' club. Bottle green, cream, rose. */
+[data-brand='akonnwa'] {
+  --bg: #0c1f17;
+  --surface: #12291f;
+  --surface-2: #1a3528;
+  --line: #2b4b3a;
+  --text: #f4efe3;
+  --dim: #b6c3b5;
+  --faint: #75897b;
+  --accent: #ff8fa3;
+  --accent-2: #bfe3c8;
+  --accent-3: #ff5a7a;
+  --on-accent: #0c1f17;
+  --success: #8fd9a8;
+  --warning: #f0b970;
+  --danger: #ff7b6b;
+  --font-display: 'Playfair Display Variable', ui-serif, Georgia, serif;
+  --display-weight: 600;
+  --display-tracking: 0;
+  --display-case: none;
+  --radius-card: 6px;
+  --radius-control: 6px;
+  --hero-overlay: linear-gradient(180deg, rgb(12 31 23 / 0) 25%, rgb(12 31 23 / 0.95) 100%);
+  --placeholder: linear-gradient(160deg, #2b4b3a 0%, #12291f 60%, #0c1f17 100%);
+}
+
+/* Kpanlogo: Accra's own rhythm. Electric blue on navy with lime; keeps the Unbounded caps. */
+[data-brand='kpanlogo'] {
+  --bg: #050a1f;
+  --surface: #0c1433;
+  --surface-2: #141f4a;
+  --line: #24326b;
+  --text: #f2f5ff;
+  --dim: #a8b3db;
+  --faint: #6774a7;
+  --accent: #3d7bff;
+  --accent-2: #c6ff3d;
+  --accent-3: #ff4d9d;
+  --on-accent: #ffffff;
+  --success: #c6ff3d;
+  --warning: #ffd23d;
+  --danger: #ff5a6e;
+  --font-display: 'Unbounded Variable', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.01em;
+  --display-case: uppercase;
+  --radius-card: 14px;
+  --radius-control: 10px;
+  --hero-overlay: linear-gradient(180deg, rgb(5 10 31 / 0) 30%, rgb(5 10 31 / 0.94) 100%);
+  --placeholder: linear-gradient(135deg, #141f4a 0%, #3d7bff 60%, #c6ff3d 100%);
+}
+
+/* Harmattan: the December haze. Cocoa, terracotta, sand, sage. */
+[data-brand='harmattan'] {
+  --bg: #1f130e;
+  --surface: #2a1a13;
+  --surface-2: #38241a;
+  --line: #523728;
+  --text: #f7ebdd;
+  --dim: #cfbaa6;
+  --faint: #907968;
+  --accent: #e2673b;
+  --accent-2: #a8cdb0;
+  --accent-3: #f09a7e;
+  --on-accent: #1f130e;
+  --success: #a8cdb0;
+  --warning: #f0b970;
+  --danger: #ff7b6b;
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --display-weight: 500;
+  --display-tracking: -0.01em;
+  --display-case: none;
+  --radius-card: 12px;
+  --radius-control: 12px;
+  --hero-overlay: linear-gradient(180deg, rgb(31 19 14 / 0) 25%, rgb(31 19 14 / 0.95) 100%);
+  --placeholder: linear-gradient(160deg, #e2673b 0%, #8a3f24 55%, #2a1a13 100%);
+}
+
+/* Anadwo: night in Twi. Black and white with one signal red; square corners. */
+[data-brand='anadwo'] {
+  --bg: #000000;
+  --surface: #0e0e0e;
+  --surface-2: #1a1a1a;
+  --line: #2e2e2e;
+  --text: #ffffff;
+  --dim: #a9a9a9;
+  --faint: #6c6c6c;
+  --accent: #ffffff;
+  --accent-2: #ff2a1f;
+  --accent-3: #ff2a1f;
+  --on-accent: #000000;
+  --success: #ffffff;
+  --warning: #ff9d1f;
+  --danger: #ff2a1f;
+  --font-display: 'Big Shoulders Display Variable', ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 800;
+  --display-tracking: 0.01em;
+  --display-case: uppercase;
+  --radius-card: 0px;
+  --radius-control: 0px;
+  --hero-overlay: linear-gradient(180deg, rgb(0 0 0 / 0) 30%, rgb(0 0 0 / 0.96) 100%);
+  --placeholder: linear-gradient(135deg, #2e2e2e 0%, #0e0e0e 70%, #ff2a1f 130%);
 }
 
 :root {

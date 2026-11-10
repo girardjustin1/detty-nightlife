@@ -86,7 +86,7 @@ export const packages: { id: string; name: string; blurb: string; lines: Line[] 
       { bottleId: 'redbull', qty: 1 },
     ],
   },
-  { id: 'starter', name: 'Detty starter', blurb: 'Moët, Hennessy, Jameson, chichinga', lines: canonicalTable.lines },
+  { id: 'starter', name: 'Squad starter', blurb: 'Moët, Hennessy, Jameson, chichinga', lines: canonicalTable.lines },
   {
     id: 'big-night',
     name: 'Big night',
@@ -113,7 +113,7 @@ export const guestSets: Record<'justMe' | 'partial' | 'full', Guest[]> = {
   full: [host, fixtureGuests[1], fixtureGuests[2], fixtureGuests[3], fixtureGuests[4], extra],
 }
 
-export const occasions = ['Birthday', 'Detty December', 'Anniversary', 'Corporate', 'Proposal'] as const
+export const occasions = ['Birthday', 'December in Accra', 'Anniversary', 'Corporate', 'Proposal'] as const
 export type Occasion = (typeof occasions)[number]
 
 export const viewPhoto = (planId: FloorPlanId, tierId: string) => {

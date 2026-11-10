@@ -147,7 +147,7 @@ export function SplitPaymentThread({ view = 'template' }: { view?: 'template' | 
   const brand = useBrand()
   const t = useT('split_payment_request')
   if (view === 'host-group') {
-    const link = `${links(brand).domain}/s/${booking.ref.replace('DTY-', '')}`
+    const link = `${links(brand).domain}/s/${booking.ref.replace('ACC-', '')}`
     return (
       <WaScreen peer={{ kind: 'group', name: 'Booth B3 squad 🍾', subtitle: 'Ama, Efua, Kojo, Yaw, Akosua' }} clock="12:31">
         <DateChip>Yesterday</DateChip>
