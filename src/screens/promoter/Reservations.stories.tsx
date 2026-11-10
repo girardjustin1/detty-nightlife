@@ -9,7 +9,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Bookings tab: filter by night and status, search by host, DTY reference or table. Rows show table, host, party, committed spend and payment state. The detail stories open booth B3 (Ama Owusu, the canonical consumer booking): timeline, bar prep checklist, guests and balance collection at the venue (MoMo / card / cash).',
+          'Bookings tab: filter by night and status, search by host, booking reference or table. Rows show table, host, party, committed spend and payment state. The detail stories open booth B3 (Ama Owusu, the canonical consumer booking): timeline, bar prep checklist, guests and balance collection at the venue (MoMo / card / cash).',
       },
     },
   },

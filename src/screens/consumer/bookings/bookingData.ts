@@ -93,7 +93,7 @@ function ticketBooking(over: Partial<Booking> & Pick<Booking, 'id' | 'ref' | 'ev
 /** Skyline cabana, MoMo prompt sent but not yet approved. */
 export const bAwaiting = tableBooking({
   id: 'b4',
-  ref: 'DTY-5R2N',
+  ref: 'ACC-5R2N',
   eventId: 'sunset-sessions',
   venueId: 'skyline',
   tableId: 'C2',
@@ -110,7 +110,7 @@ export const bAwaiting = tableBooking({
 /** Vault high-top for the throwback night: paid, but most guests haven't accepted. */
 export const bGuestsPending = tableBooking({
   id: 'b5',
-  ref: 'DTY-8H3D',
+  ref: 'ACC-8H3D',
   eventId: 'hiplife-throwback',
   venueId: 'vault',
   tableId: 'H2',
@@ -124,12 +124,12 @@ export const bGuestsPending = tableBooking({
   status: 'confirmed',
 })
 
-export const bNyeTickets = ticketBooking({ id: 'b6', ref: 'DTY-3N1Y', eventId: 'nye-countdown', venueId: 'vault', tickets: [{ tierId: 'vip', qty: 2 }], status: 'paid-in-full' })
+export const bNyeTickets = ticketBooking({ id: 'b6', ref: 'ACC-3N1Y', eventId: 'nye-countdown', venueId: 'vault', tickets: [{ tierId: 'vip', qty: 2 }], status: 'paid-in-full' })
 
 /** Past: a cancelled table (50% band) and refunded tickets. */
 export const bCancelled = tableBooking({
   id: 'b7',
-  ref: 'DTY-4K7C',
+  ref: 'ACC-4K7C',
   eventId: 'sunset-sessions',
   venueId: 'skyline',
   tableId: 'S3',
@@ -140,7 +140,7 @@ export const bCancelled = tableBooking({
   createdAt: '2026-12-08T18:20:00Z',
 })
 
-export const bRefunded = ticketBooking({ id: 'b8', ref: 'DTY-6T9R', eventId: 'sunset-sessions', venueId: 'skyline', tickets: [{ tierId: 'ga', qty: 2 }], status: 'refunded', paymentMethod: 'telecel-cash' })
+export const bRefunded = ticketBooking({ id: 'b8', ref: 'ACC-6T9R', eventId: 'sunset-sessions', venueId: 'skyline', tickets: [{ tierId: 'ga', qty: 2 }], status: 'refunded', paymentMethod: 'telecel-cash' })
 
 /** When bCancelled was cancelled: 29.5h before Sunset Sessions, so the 50% band. */
 export const cancelledAt = '2026-12-18T09:30:00Z'

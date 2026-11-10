@@ -1,7 +1,7 @@
 // SAMPLE DATA ONLY — promoter / venue companion app. Every person, company,
 // phone number and figure here is fictional. Money is derived from the shared
 // fixtures and src/lib/pricing.ts wherever possible, so the venue side shows
-// the same numbers as the consumer side (booth B3 = Ama Owusu, DTY-7Q4K).
+// the same numbers as the consumer side (booth B3 = Ama Owusu, ACC-7Q4K).
 import { bookings, eventById, events, tableTiers, venueById } from '@/data/fixtures'
 import { floorPlans } from '@/data/floorplans'
 import type { Line } from '@/lib/pricing'
@@ -109,7 +109,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-b1',
-    ref: 'DTY-4HXN',
+    ref: 'ACC-4HXN',
     tableId: 'B1',
     tierId: 'booth',
     host: 'Nana Yeboah',
@@ -132,7 +132,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-b2',
-    ref: 'DTY-8RVE',
+    ref: 'ACC-8RVE',
     tableId: 'B2',
     tierId: 'booth',
     host: 'Kofi Asamoah',
@@ -154,7 +154,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-b5',
-    ref: 'DTY-3KQW',
+    ref: 'ACC-3KQW',
     tableId: 'B5',
     tierId: 'booth',
     host: 'Abena Sarpong',
@@ -174,7 +174,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-b6',
-    ref: 'DTY-6TLB',
+    ref: 'ACC-6TLB',
     tableId: 'B6',
     tierId: 'booth',
     host: 'Edem Kpodo',
@@ -197,7 +197,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-h1',
-    ref: 'DTY-1PZD',
+    ref: 'ACC-1PZD',
     tableId: 'H1',
     tierId: 'hightop',
     host: 'Kwabena Ofori',
@@ -218,7 +218,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-h3',
-    ref: 'DTY-5WJC',
+    ref: 'ACC-5WJC',
     tableId: 'H3',
     tierId: 'hightop',
     host: 'Akua Mensima',
@@ -235,7 +235,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-h4',
-    ref: 'DTY-7FMS',
+    ref: 'ACC-7FMS',
     tableId: 'H4',
     tierId: 'hightop',
     host: 'Kwaku Danso',
@@ -256,7 +256,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-l1',
-    ref: 'DTY-9NGA',
+    ref: 'ACC-9NGA',
     tableId: 'L1',
     tierId: 'lounge',
     host: 'Selorm Agbeko',
@@ -279,7 +279,7 @@ const raw: Reservation[] = [
   },
   {
     id: 'r-l2',
-    ref: 'DTY-2DUY',
+    ref: 'ACC-2DUY',
     tableId: 'L2',
     tierId: 'lounge',
     host: 'Yaa Asantewaa',
@@ -448,8 +448,8 @@ export type ScanResult =
 
 export const scanResults: Record<'valid' | 'validTicket' | 'already' | 'wrongNight' | 'notFound', ScanResult> = {
   valid: { kind: 'valid', name: 'Efua Asante', what: 'VIP booth B3 · Ama Owusu’s table', ref: canonical.ref, party: { inNow: 4, of: 6 }, note: 'Birthday table — sparklers at midnight' },
-  validTicket: { kind: 'valid', name: 'Mawuli Kumah', what: 'General admission · Ticket 1 of 2', ref: 'DTY-T5520' },
-  already: { kind: 'already', name: 'Kwabena Ofori', what: 'High-top H1 · table host', ref: 'DTY-1PZD', at: '2026-12-18T22:01:00Z', by: 'Kofi' },
+  validTicket: { kind: 'valid', name: 'Mawuli Kumah', what: 'General admission · Ticket 1 of 2', ref: 'ACC-T5520' },
+  already: { kind: 'already', name: 'Kwabena Ofori', what: 'High-top H1 · table host', ref: 'ACC-1PZD', at: '2026-12-18T22:01:00Z', by: 'Kofi' },
   wrongNight: { kind: 'invalid', reason: 'wrong-night', name: 'Nhyira Appiah', what: 'Hiplife Throwback · GA', detail: 'This ticket is for Wed 23 Dec. Not valid tonight.' },
   notFound: { kind: 'invalid', reason: 'not-found', detail: 'Code not recognised. It may be a screenshot of an old code or a fake.' },
 }

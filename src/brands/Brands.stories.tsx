@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import type { ReactNode } from 'react'
 import { BrandProvider } from './BrandContext'
-import { brandList, type Brand } from './brands'
+import { archiveBrands as brandList, type Brand } from './brands'
 import { Discover } from '@/screens/consumer/discover/Discover'
 import { Badge, Button, Chip } from '@/components/ui/primitives'
 import { MinSpendMeter } from '@/components/app/domain'
@@ -91,7 +91,8 @@ function BrandCard({ brand }: { brand: Brand }) {
 function Overview() {
   return (
     <div className="min-h-screen bg-[#0d0d10] p-8 text-white">
-      <h1 className="text-3xl font-bold">Four brand directions</h1>
+      <div className="mb-4 max-w-3xl rounded-xl border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-sm text-amber-100"><b>Archived.</b> These earlier directions use a name and a black + gold look that are too close to an existing events app. The current work is under Brand / New Directions.</div>
+      <h1 className="text-3xl font-bold">The first brand directions</h1>
       <p className="mt-2 max-w-3xl text-white/70">
         Same product, same screens — only tokens, artwork and voice change. Logos and key art were generated with Higgsfield (Ideogram Vector for logos,
         GPT Image 2.6 for art), then split, compressed and tokenised. Use the <b>Brand</b> toolbar menu to see any screen in any direction.
@@ -99,7 +100,7 @@ function Overview() {
       <p className="mt-2 max-w-3xl text-white/70">
         <b className="text-white">New — Detty Gold</b> (5 Nov review): Detty’s Pidgin-friendly voice, without the purple; Aurum’s onyx + champagne for the elegant, regal feel; Vybe’s lime for live energy; terracotta for warm earth tones.
       </p>
-      <div className="mt-8 grid grid-cols-4 gap-6" style={{ minWidth: 1480 }}>
+      <div className="mt-8 grid grid-cols-5 gap-6" style={{ minWidth: 1850 }}>
         {brandList.map((b) => (
           <BrandCard key={b.id} brand={b} />
         ))}
@@ -116,7 +117,7 @@ function Phone({ children }: { children: ReactNode }) {
 
 function SameScreen() {
   return (
-    <div className="flex min-h-screen gap-10 bg-[#0d0d10] p-10" style={{ minWidth: 1780 }}>
+    <div className="flex min-h-screen gap-10 bg-[#0d0d10] p-10" style={{ minWidth: 2220 }}>
       {brandList.map((b) => (
         <div key={b.id} className="text-center">
           <div className="mb-3 text-sm font-semibold text-white/70">{b.name}</div>
@@ -134,7 +135,7 @@ function SameScreen() {
 }
 
 const meta = {
-  title: 'Brand/Directions',
+  title: 'Brand/Archive/First directions',
   parameters: { frame: 'raw', layout: 'fullscreen' },
 } satisfies Meta
 export default meta

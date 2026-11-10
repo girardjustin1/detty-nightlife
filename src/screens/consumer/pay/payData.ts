@@ -67,7 +67,7 @@ export function ticketPay(eventId = ticketEvent.id, selection = defaultTicketSel
       ...lines.map((l) => ({ label: `${l.qty} × ${l.tier.name}`, value: l.tier.price * l.qty })),
       { label: `Booking fee (${RULES.ticketFeePct}%)`, value: q.fee, muted: true },
     ],
-    ref: 'DTY-2M8P',
+    ref: 'ACC-2M8P',
   }
 }
 
@@ -84,7 +84,7 @@ export function tablePay(tier: TableTier = canonicalTier, lines: Line[] = canoni
     ],
     balanceAtVenue: q.balanceAtVenue,
     serviceAtVenue: q.serviceAtVenue,
-    ref: 'DTY-7Q4K',
+    ref: 'ACC-7Q4K',
   }
 }
 

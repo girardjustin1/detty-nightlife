@@ -9,7 +9,7 @@ import { canonicalTable, RULES, tableQuote, ticketQuote, type Line } from '@/lib
 
 const bookingByRef = (ref: string) => bookings.find((b) => b.ref === ref)!
 
-export const booking = bookingByRef('DTY-7Q4K')
+export const booking = bookingByRef('ACC-7Q4K')
 export const event = eventById(canonicalTable.eventId)
 export const venue = venueById(canonicalTable.venueId)
 export const tier = tableTiers[canonicalTable.venueId].find((t) => t.id === canonicalTable.tierId)!
@@ -27,7 +27,7 @@ export const itemise = (lines: Line[]) =>
 export const preOrderItems = itemise(canonicalTable.lines)
 
 /** Ticket booking used for "tickets delivered" (fixture b2). */
-export const ticketBooking = bookingByRef('DTY-2M8P')
+export const ticketBooking = bookingByRef('ACC-2M8P')
 export const ticketEvent = eventById(ticketBooking.eventId)
 export const ticketVenue = venueById(ticketBooking.venueId)
 export const ticketTier = ticketEvent.ticketTiers.find((t) => t.id === ticketBooking.tickets![0].tierId)!
@@ -50,9 +50,9 @@ export function maskPhone(e164: string) {
 }
 
 /** Placeholder domain per brand direction (the integration docs use detty.app). */
-export const domainFor = (brand: Brand) => `${brand.id === 'gold' || brand.id === 'gold2' ? 'detty' : brand.id}.app`
+export const domainFor = (brand: Brand) => brand.domain
 
-export const shortRef = booking.ref.replace('DTY-', '')
+export const shortRef = booking.ref.replace('ACC-', '')
 
 export const links = (brand: Brand) => {
   const d = domainFor(brand)
@@ -65,7 +65,7 @@ export const links = (brand: Brand) => {
     directions: `https://${d}/v/${venue.id}/map`,
     invite: `https://${d}/i/k9QpZ`,
     review: `https://${d}/review/${shortRef}`,
-    tickets: `https://${d}/t/${ticketBooking.ref.replace('DTY-', '')}`,
+    tickets: `https://${d}/t/${ticketBooking.ref.replace('ACC-', '')}`,
     help: `https://${d}/help`,
     prefs: `https://${d}/me/notifications`,
     unsubscribe: `https://news.${d}/u/one-click`,
@@ -83,13 +83,12 @@ export const support = {
 export const paystack = {
   depositRef: 'T658204913377',
   refundRef: 'RF-904417-7Q4K',
-  splitLink: 'https://paystack.shop/pay/dty-7q4k-efua',
+  splitLink: 'https://paystack.shop/pay/acc-7q4k-efua',
   checkoutLink: 'https://checkout.paystack.com/dty7q4kre',
 }
 
 export const addressPlaceholder = '[Legal entity name] · [Registered address], Accra, Ghana · [Business reg. no.]'
 
 /** Per-brand copy helper: pick a line in the brand's voice. */
-/** Per-brand copy. The Detty Gold directions share Detty's voice unless they have their own line. */
-export const voice = <T>(brand: Brand, v: Record<Exclude<Brand['id'], 'gold' | 'gold2'>, T> & { gold?: T; gold2?: T }) =>
-  brand.id === 'gold' || brand.id === 'gold2' ? (v[brand.id] ?? v.detty) : v[brand.id]
+/** Per-brand copy. Three voices are written out; each direction names the one it uses, or supplies its own line. */
+export const voice = <T>(brand: Brand, v: Record<Brand['voiceFamily'], T> & Partial<Record<Brand['id'], T>>) => v[brand.id] ?? v[brand.voiceFamily]

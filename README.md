@@ -1,4 +1,8 @@
-# Detty Nightlife
+# Accra nightlife booking (working title)
+
+> **Name:** the project started as “Detty Nightlife”. That name and its black + gold look turned out to be too close
+> to an existing events app, so the brand is being reworked (see below). The repository and its URLs keep the old
+> name until a new one is chosen.
 
 Mobile-first nightlife booking for Accra, Ghana: event tickets, VIP tables, bottle pre-orders toward a
 table minimum, guests, and deposits paid by mobile money. There is also a companion app for promoters
@@ -18,22 +22,22 @@ is **fictional sample data**.
 | ↳ WhatsApp · AI concierge (just type it) | https://girardjustin1.github.io/detty-nightlife/#/wa-ai/chat |
 | ↳ Consumer app, start to finish | https://girardjustin1.github.io/detty-nightlife/#/app/welcome |
 | **Storybook** (all screens, brands, emails, WhatsApp, promoter app) | https://girardjustin1.github.io/detty-nightlife/storybook/ |
-| ↳ Brand directions | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/brand-directions--side-by-side |
-| ↳ Brand evolution (3 directions → Detty Gold → Vybe type) | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/brand-evolution--three-directions-to-one |
+| ↳ Six brand directions | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/brand-new-directions--six-new-directions |
+| ↳ Why we moved, and the recommendation | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/brand-new-directions--why-we-moved-and-where-to |
+| ↳ Competitor research (Accra) | https://girardjustin1.github.io/detty-nightlife/storybook/?path=/story/research-accra-market--competitor-landscape |
 
 In the prototype every input is prefilled: tap whatever glows. On a laptop, a side panel shows taps,
 time, a brand switch and "Jump to". On a phone, use the **☰ Menu** pill at the top.
 
 ## What's inside
 
-- **Brand directions:**
-  - **Detty Gold × Vybe type** (the current look and the default): Detty Gold's onyx, champagne and lime,
-    with Vybe's Unbounded bold caps for display type
-  - Detty Gold (the consolidated look after the first review, with Playfair)
-  - The three original directions: Detty (loud, joyful), Aurum (luxe VIP) and Vybe (neon, music-first)
-
-  The **Brand** menu in the Storybook toolbar switches any screen between them, and the **Type** menu
-  tries other display fonts on any screen.
+- **Six brand directions** (10 Nov rebrand round): Jama, Fiada, Akonnwa, Kpanlogo, Harmattan and Anadwo. Each
+  has its own idea, name, colours, type, voice, logo and key art, shown on the same screens. The **Brand** menu in
+  the Storybook toolbar switches any screen between them; Jama is the default for now. See **Brand / New
+  Directions**, including the reasoning and a recommendation on **Why we moved**. The earlier directions are kept
+  under **Brand / Archive**.
+- **Competitor research:** 14 products and habits people in Accra use today to find a night, buy a ticket or book a
+  table, with sources, plus the screening of 30 candidate names. See **Research / Accra market**.
 - **Consumer app:**
   - Onboarding (phone number with a WhatsApp code)
   - Discover, with an events view and a clubs view

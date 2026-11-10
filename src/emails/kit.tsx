@@ -46,7 +46,7 @@ export function emailTheme(brand: Brand) {
     accent,
     accent2,
     accent3,
-    onAccent: bg,
+    onAccent: brand.id === 'jama' || brand.id === 'kpanlogo' ? '#FFFFFF' : bg,
     // Status colours are not in the palette; muted, readable on any of the three dark backgrounds.
     success: '#5FD39A',
     danger: '#FF7A7A',
@@ -59,9 +59,15 @@ export function emailTheme(brand: Brand) {
         vybe: { fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.01em' },
         gold: { fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 600, letterSpacing: '0' },
         gold2: { fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.01em' },
+        jama: { fontWeight: 800, letterSpacing: '-0.02em' },
+        fiada: { fontWeight: 700, letterSpacing: '-0.01em' },
+        akonnwa: { fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 600, letterSpacing: '0' },
+        kpanlogo: { fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.01em' },
+        harmattan: { fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 500, letterSpacing: '0' },
+        anadwo: { fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.03em' },
       } satisfies Record<Brand['id'], CSSProperties>
     )[brand.id] as CSSProperties,
-    radius: brand.id === 'aurum' ? 4 : brand.id === 'vybe' ? 6 : 14,
+    radius: ({ aurum: 4, vybe: 6, akonnwa: 4, anadwo: 0, kpanlogo: 8 } as Partial<Record<Brand['id'], number>>)[brand.id] ?? 14,
   }
 }
 export type EmailTheme = ReturnType<typeof emailTheme>

@@ -82,7 +82,7 @@ export function Reservations({ filter: initial = 'all', query = '', night = 'afr
         <div className="px-8 py-16 text-center">
           <Search className="mx-auto size-8 text-faint" />
           <p className="mt-3 font-semibold">{q ? `No bookings match “${query}”` : isTonight ? 'Nothing in this filter' : 'No table bookings yet for this night'}</p>
-          <p className="mt-1 text-sm text-dim">{q ? 'Try the host’s surname, the DTY reference or a table like B3.' : 'Share the event link to WhatsApp to get tables moving.'}</p>
+          <p className="mt-1 text-sm text-dim">{q ? 'Try the host’s surname, the booking reference or a table like B3.' : 'Share the event link to WhatsApp to get tables moving.'}</p>
         </div>
       ) : (
         <>

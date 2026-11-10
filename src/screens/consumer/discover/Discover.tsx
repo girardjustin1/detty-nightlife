@@ -113,7 +113,7 @@ export function Discover({
           )}
           {later.length > 0 && (
             <section>
-              <SectionHeader title="Detty December" />
+              <SectionHeader title="December in Accra" />
               <div className="divide-y divide-line px-5">
                 {later.map((e) => (
                   <EventCard key={e.id} event={e} variant="row" />

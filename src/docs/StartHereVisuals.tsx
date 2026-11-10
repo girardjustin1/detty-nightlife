@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react'
+import { brands, DEFAULT_BRAND, newBrands } from '@/brands/brands'
 
 /**
  * Visual blocks for the Start Here page. Screens are real screenshots of the
- * stories in this Storybook (Detty Gold × Vybe type, the current direction);
- * the atmosphere photos and the floor-plan art were made with Higgsfield.
- * Regenerate the screenshots after a look change; they are static images.
+ * stories in this Storybook, taken in the default direction; the atmosphere
+ * photos and the floor-plan art were made with Higgsfield. The screenshots are
+ * static: after a look change, retake them with scripts/start-here-shots.mjs.
  */
 
 const base = import.meta.env.BASE_URL
@@ -35,20 +36,21 @@ function StoryLink({ id, children }: { id: string; children: ReactNode }) {
 /** Dark, on-brand panel. Every visual block sits in one so the page reads like the app. */
 function Panel({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <div data-brand="gold2" className={`sb-unstyled my-6 overflow-hidden rounded-[20px] ${className}`}>
+    <div data-brand={DEFAULT_BRAND} className={`sb-unstyled my-6 overflow-hidden rounded-[20px] ${className}`}>
       {children}
     </div>
   )
 }
 
 export function Hero() {
+  const brand = brands[DEFAULT_BRAND]
   return (
     <Panel className="relative">
-      <img src={img('hero-rooftop')} alt="" className="absolute inset-0 h-full w-full object-cover object-left" />
-      <div className="absolute inset-0 bg-gradient-to-r from-bg/40 via-bg/70 to-bg" />
+      <img src={img('hero')} alt="" className="absolute inset-0 h-full w-full -scale-x-100 object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-bg/10" />
       <div className="relative grid grid-cols-[1fr_auto] items-center gap-6 px-9 py-10">
         <div className="max-w-[360px]">
-          <img src={`${base}brands/gold2-lockup.svg`} alt="Detty" className="h-8 w-auto" />
+          <img src={brand.logo.lockup} alt={brand.name} className="h-8 w-auto" />
           <h1 className="display mt-5 text-[34px] leading-[1.05] text-text">Accra’s night out, booked in a minute.</h1>
           <p className="mt-3 text-[15px] leading-relaxed text-dim">
             Tickets, VIP tables, bottles toward the table minimum, your squad and the deposit. In an app or right inside WhatsApp, built for slow
@@ -57,6 +59,7 @@ export function Hero() {
           <div className="mt-4 flex flex-wrap gap-1.5">
             <Pill>4 clickable prototypes</Pill>
             <Pill>400+ screen stories</Pill>
+            <Pill>6 brand directions</Pill>
             <Pill>Consumer + promoter apps</Pill>
             <Pill>Sample data only</Pill>
           </div>
@@ -68,7 +71,7 @@ export function Hero() {
         </div>
       </div>
       <div className="relative border-t border-line/60 bg-bg/80 px-9 py-2.5 text-[11px] text-faint">
-        Real screens from this Storybook, shown in the current direction (Detty Gold × Vybe type). Photos and floor-plan art made with Higgsfield.
+        Real screens from this Storybook, shown in {brand.name}, one of six brand directions being compared. Photos and floor-plan art made with Higgsfield.
       </div>
     </Panel>
   )
@@ -132,14 +135,14 @@ export function Prototypes() {
 
 const journey = [
   { shot: 'welcome', label: 'Welcome', note: 'One way in: your phone number, verified by a WhatsApp code.' },
-  { shot: 'discover', label: 'Discover', note: 'Tonight, this weekend and the Detty December run, by event or by club.' },
+  { shot: 'discover', label: 'Discover', note: 'Tonight, this weekend and the December run, by event or by club.' },
   { shot: 'event', label: 'Event', note: 'Lineup, music, dress code and entry, then tickets or a table.' },
   { shot: 'map', label: 'Pick a table', note: 'A map with prices on every table. 🔥 marks the ones going fast.' },
   { shot: 'bottles', label: 'Bottles', note: 'Pre-order until the minimum-spend meter fills, or decide at the venue.' },
   { shot: 'guests', label: 'Your squad', note: 'Add guests from your contacts. They get a WhatsApp invite.' },
   { shot: 'review', label: 'Review', note: 'Policy first: the exact refund in cedis, by the exact time.' },
   { shot: 'momo', label: 'Pay', note: 'A mobile money prompt on your phone. Card and Lightning (beta) too.' },
-  { shot: 'confirmed', label: 'You’re outside!', note: 'A QR that works offline, plus one tap to invite the squad.' },
+  { shot: 'confirmed', label: 'Confirmed', note: 'A QR that works offline, plus one tap to invite the squad.' },
   { shot: 'invite', label: 'Guest view', note: 'What a friend sees from the WhatsApp link, with their share to pay.' },
 ]
 
@@ -287,18 +290,11 @@ export function Features() {
   )
 }
 
-const brandLockups = [
-  { id: 'detty', label: 'Detty', note: 'Loud and joyful' },
-  { id: 'aurum', label: 'Aurum', note: 'Luxe VIP' },
-  { id: 'vybe', label: 'Vybe', note: 'Neon, music-first' },
-  { id: 'gold', label: 'Detty Gold', note: 'The blend' },
-  { id: 'gold2', label: 'Gold × Vybe type', note: 'Round 2' },
-]
 
 export function EmailsAndBrand() {
   return (
     <div className="sb-unstyled my-6 grid grid-cols-[1fr_1.35fr] gap-4">
-      <div data-brand="gold2" className="flex flex-col overflow-hidden rounded-[20px] bg-bg p-5">
+      <div data-brand={DEFAULT_BRAND} className="flex flex-col overflow-hidden rounded-[20px] bg-bg p-5">
         <div className="text-[11px] font-bold tracking-widest text-accent-2 uppercase">Emails</div>
         <div className="display mt-1 text-[20px] text-text">The receipt is the contract</div>
         <p className="mt-2 text-[13px] leading-relaxed text-dim">
@@ -312,37 +308,37 @@ export function EmailsAndBrand() {
           <StoryLink id="emails-booking-confirmed--paid-with-mo-mo">Booking confirmed email →</StoryLink>
         </div>
       </div>
-      <div data-brand="gold2" className="flex flex-col overflow-hidden rounded-[20px] bg-bg p-5">
+      <div data-brand={DEFAULT_BRAND} className="flex flex-col overflow-hidden rounded-[20px] bg-bg p-5">
         <div className="text-[11px] font-bold tracking-widest text-accent-2 uppercase">Brand</div>
-        <div className="display mt-1 text-[20px] text-text">Three directions, narrowing to one</div>
+        <div className="display mt-1 text-[20px] text-text">Six new directions, one to choose</div>
         <p className="mt-2 text-[13px] leading-relaxed text-dim">
-          Logos and looks made with Higgsfield, then tested on the real screens. The first review blended them into Detty Gold. Round 2 tries Vybe’s
-          bold caps type on it. Switch any screen with <b className="text-text">Toolbar → Brand</b>.
+          The first look and name turned out too close to an existing events app, so the brand started again: six directions, each with its own idea,
+          name, colours, type, voice and Higgsfield artwork. Switch any screen with <b className="text-text">Toolbar → Brand</b>.
         </p>
-        <div className="mt-4 grid grid-cols-5 gap-2">
-          {brandLockups.map((b) => (
-            <div key={b.id} data-brand={b.id} className="flex flex-col items-center justify-center gap-2 rounded-xl border border-line px-2 py-4 text-center">
-              <img src={`${base}brands/${b.id}-app-icon.svg`} alt="" className="size-11" />
-              <img src={`${base}brands/${b.id}-lockup.svg`} alt={b.label} className="h-4 w-auto max-w-full" />
-              <div className="text-[10.5px] leading-tight text-dim">{b.note}</div>
+        <div className="mt-4 grid grid-cols-3 gap-2">
+          {newBrands.map((b) => (
+            <div key={b.id} data-brand={b.id} className="flex items-center gap-2.5 rounded-xl border border-line px-3 py-2.5">
+              <img src={b.logo.appIcon} alt="" className="size-9 shrink-0" />
+              <div className="min-w-0">
+                <div className="display truncate text-[13px] text-text">{b.name}</div>
+                <div className="truncate text-[10.5px] text-dim">{b.tagline}</div>
+              </div>
             </div>
           ))}
         </div>
         <div className="mt-5 text-[11px] font-bold tracking-wider text-faint uppercase">Still to decide</div>
         <ul className="mt-2 space-y-1.5 text-[12.5px] leading-snug text-dim">
           <li>
-            <b className="text-text">Display type:</b> Playfair (Detty Gold) or Unbounded bold caps (round 2). Try both with Toolbar → Type.
+            <b className="text-text">Which direction.</b> The recommendation and the reasoning are on Brand / New Directions / Why we moved.
           </li>
           <li>
-            <b className="text-text">Wordmark:</b> A (ivory with a champagne starburst, in use) or B (champagne with a lime sun).
-          </li>
-          <li>
-            <b className="text-text">Name:</b> Detty, or a new one once the look is set.
+            <b className="text-text">The name.</b> All six were screened for obvious clashes only. None is legally cleared.
           </li>
         </ul>
-        <div className="mt-auto flex gap-4 pt-4 text-[12.5px]">
-          <StoryLink id="brand-directions--side-by-side">Directions →</StoryLink>
-          <StoryLink id="brand-evolution--three-directions-to-one">Evolution →</StoryLink>
+        <div className="mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-4 text-[12.5px]">
+          <StoryLink id="brand-new-directions--six-new-directions">Six directions →</StoryLink>
+          <StoryLink id="brand-new-directions--why-we-moved-and-where-to">Why we moved →</StoryLink>
+          <StoryLink id="research-accra-market--competitor-landscape">Competitors →</StoryLink>
         </div>
       </div>
     </div>
@@ -350,8 +346,9 @@ export function EmailsAndBrand() {
 }
 
 const storyMap: [string, string][] = [
-  ['Brand / Directions', 'All four directions side by side, and the same screen in each'],
-  ['Brand / Evolution', 'How three directions became Detty Gold, plus round 2 (Vybe’s type)'],
+  ['Brand / New Directions', 'Six new brand directions on the real screens, why we moved, and the recommendation'],
+  ['Brand / Archive', 'The earlier directions and how they evolved, kept for reference'],
+  ['Research / Accra market', 'Competitor landscape for Accra, and the screening of 30 candidate names'],
   ['Components', 'Floor plan, SeatGeek-style venue map, cards, meters'],
   ['Consumer / 01 Onboarding', 'Welcome, phone number with a WhatsApp code, profile, preferences'],
   ['Consumer / 02 Discover', 'Events and Clubs & lounges views, search, filters, map'],

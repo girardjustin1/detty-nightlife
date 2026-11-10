@@ -10,7 +10,7 @@ import { arrivalSlots, bookingCtx, occasions, type Occasion } from './data'
 
 const icons: Record<Occasion, ReactNode> = {
   Birthday: <Cake className="size-4" />,
-  'Detty December': <PartyPopper className="size-4" />,
+  'December in Accra': <PartyPopper className="size-4" />,
   Anniversary: <Heart className="size-4" />,
   Corporate: <Briefcase className="size-4" />,
   Proposal: <Gem className="size-4" />,

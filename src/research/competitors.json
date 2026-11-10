@@ -1,0 +1,591 @@
+{
+ "checkedOn": "2026-11-10",
+ "competitors": [
+  {
+   "name": "Detty",
+   "url": "https://www.thedettyapp.com",
+   "category": "events-discovery",
+   "summary": "A going-out app operated by Betacarry LLC: event discovery, group plans with voting, tickets with QR entry, a 'Split the table' flow where a table is only issued once every share is paid, and a 'Passport' of door-verified nights. Organisers get event pages, ticket tiers, sales analytics, staff roles and door scanning.",
+   "accraCoverage": {
+    "level": "some",
+    "evidence": "Accra is named in the site's city ticker and page title, but on 2026-11-10 the events page showed 160 upcoming events of which 4 were in Accra (Survivor Series watch party 28 Nov, Baptism 5 Dec, The Reading Press Tearoom 12 Dec, Accra House Fest 22 Dec) against 98 in Lagos and 15 in Abuja. No Accra table inventory was visible on the web listing."
+   },
+   "features": {
+    "tickets": true,
+    "tables": true,
+    "bottles": "unknown",
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": "unknown",
+    "whatsapp": "unknown",
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "Not stated. Terms of Use say only that ticket purchases are subject to the organiser's own terms and refund policies. Support page asks for the Paystack reference on payment issues, so Paystack is the processor.",
+   "look": "Near-black background (#050505) with metallic gold (#D4AF37) accents and pill buttons, Sora/Inter type, editorial night photography; confident, slangy tone ('we're outside', 'Certified Outside').",
+   "strengths": [
+    "Group planning and split-pay table flow built around how friends actually go out",
+    "Full organiser stack (ticket tiers, staff roles, QR door scanning, CSV export) in the same app",
+    "iOS and Android apps with regular releases (App Store version 1.0.9 dated Jul 29; first version 1.0.1 dated 11/13/2025)"
+   ],
+   "gaps": [
+    "Thin Accra supply: 4 of 160 listed events on the day checked; prices mostly in naira",
+    "No stated mobile money, WhatsApp channel, bottle pre-order or minimum-spend handling",
+    "No venue-side table management for Accra clubs visible; tables appear as a split-pay feature rather than venue inventory"
+   ],
+   "sources": [
+    "https://www.thedettyapp.com",
+    "https://www.thedettyapp.com/events",
+    "https://www.thedettyapp.com/support",
+    "https://www.thedettyapp.com/terms",
+    "https://apps.apple.com/us/app/detty-nightlife-events/id6753609172",
+    "https://play.google.com/store/apps/details?id=com.betacarry.thedettyapp"
+   ]
+  },
+  {
+   "name": "Accraaa",
+   "url": "https://www.accraaa.com",
+   "category": "table-booking",
+   "summary": "An Accra-specific app for discovering and reserving tables at restaurants, bars, lounges and clubs (plus salon appointments), with deposits, split bills, bottle-service bookings, loyalty points and a venue-side reservation dashboard. This is the closest direct competitor found.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Built only for Accra/Ghana. The website lists 30+ named Accra venues (e.g. Sky Bar 25, Kōzo, Polo Club Restaurant & Lounge, SOHO, Santoku, Bella Dolce Vita, Movenpick Ambassador Hotel). App Store listing shows version 1.0.64 dated Nov 2 with frequent releases through 2026. The named venues skew to restaurants and lounges; which nightclubs are live was not verified."
+   },
+   "features": {
+    "tickets": "unknown",
+    "tables": true,
+    "bottles": true,
+    "guestList": true,
+    "deposits": true,
+    "mobileMoney": true,
+    "whatsapp": "unknown",
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "Venue commission by subscription tier, per its Terms: Free 4%, Basic 2%, Premium 1%, Enterprise 0% platform commission on each guest payment; Paystack's processing fee comes out of the venue's share. Subscription prices themselves are not stated. Website says 'Start free' for venues.",
+   "look": "White pages with black sections and the same metallic gold (#D4AF37) as Detty, Playfair serif headings and square buttons; polished 'finest tables' fine-dining tone.",
+   "strengths": [
+    "Deposits by mobile money or card, with deposit applied toward minimum spend and stated refund/no-show rules",
+    "Mature reservation mechanics: split bill by link or QR for non-users, waitlist, running-late notice, SMS updates, offline reservations",
+    "Published, low commission tiers and a venue dashboard with payouts and analytics"
+   ],
+   "gaps": [
+    "Dining-led: positioned around restaurants and salons as much as clubs; no event ticketing stated",
+    "No WhatsApp booking channel stated (SMS and in-app only)",
+    "No promoter tooling (promoter links, commissions, promoter-owned guest lists) stated"
+   ],
+   "sources": [
+    "https://www.accraaa.com",
+    "https://www.accraaa.com/terms",
+    "https://apps.apple.com/us/app/accraaa/id6754570414",
+    "https://play.google.com/store/apps/details?id=com.company.accraaa"
+   ]
+  },
+  {
+   "name": "Resarvo",
+   "url": "https://www.resarvo.com",
+   "category": "table-booking",
+   "summary": "A Ghana reservation app and website for restaurants, beach clubs, lounges and clubs with date/time/party-size search, real-time availability, 'Notify Me' alerts, in-app messaging with venues and loyalty points. It describes itself as 'Ghana's first restaurant, lounge, and club reservation app'.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Site lists Accra areas (East Legon, Osu, Cantonments, Airport Residential, Labone, Spintex, Tema) and venues including nightlife names Ace, Mad Club, Kruna, Mood Bar, Frontback, Exhale Lounge and Sky Bar 25. Accra venues promote 'Book your table on @resarvo' on Instagram. App Store shows first release 1.0.5 dated Sep 3 and version 1.1.11 dated Oct 4; 1 rating on the US storefront."
+   },
+   "features": {
+    "tickets": "unknown",
+    "tables": true,
+    "bottles": "unknown",
+    "guestList": "unknown",
+    "deposits": false,
+    "mobileMoney": "unknown",
+    "whatsapp": "unknown",
+    "venueTools": "unknown",
+    "nativeApp": true
+   },
+   "fees": "Not stated. The website says 'No payment needed to book' and offers 5% off a first reservation.",
+   "look": "Light, warm cream background (#FDF8F3) with terracotta (#B85233) buttons and dark brown text; calm, OpenTable-style utility tone rather than a nightlife look.",
+   "strengths": [
+    "Already lists recognisable Accra clubs and lounges alongside restaurants",
+    "Familiar date/time/party-size availability search with last-minute alerts",
+    "Being pushed by venues and nightlife media pages on Instagram and TikTok"
+   ],
+   "gaps": [
+    "Free booking with no deposit, so no protection against no-shows and no minimum-spend handling stated",
+    "No tickets, bottle pre-order, guest lists or mobile money stated",
+    "No WhatsApp channel or promoter tools stated; very new (first release dated Sep 3)"
+   ],
+   "sources": [
+    "https://www.resarvo.com",
+    "https://apps.apple.com/us/app/resarvo-discover-reserve/id6761283612",
+    "https://www.instagram.com/p/Dd14xaXjLMe/",
+    "https://www.instagram.com/reel/Db1wN6kIfQV/"
+   ]
+  },
+  {
+   "name": "eGotickets",
+   "url": "https://egotickets.com",
+   "category": "ticketing",
+   "summary": "Ghana's long-running event discovery and ticketing platform ('since 2013'), selling tickets on the web, by USSD, by WhatsApp, inside the MTN MoMo app and through its Cityloop app. Organisers get a dashboard, analytics and a Checkpoint scanning app.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Homepage tagline is 'Where Ghana goes out'. On 2026-11-10 the category list showed 142 events under Nightlife, Party & Concert, and the homepage showed '3 events tonight' and 29 for the weekend of 14-15 Nov in Ghana. Its own page claims 50,000+ events hosted and 10,000+ organisers paid out (company claims, not independently verified)."
+   },
+   "features": {
+    "tickets": true,
+    "tables": "unknown",
+    "bottles": false,
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": true,
+    "whatsapp": true,
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "Its pricing page shows a Pro plan at 7.5%, with free publishing for free events. A third-party comparison (Ticket Fairy) reports an Essential plan at 5% with booking and payment-processing fees separate; that lower tier was not confirmed on eGotickets' own page. Organiser page also lists optional event insurance at GH₵1 per ticket.",
+   "look": "Bright white layout with orange (#FF5722) buttons, MTN-yellow accents and Inter type; friendly mass-market tone covering concerts, parties, conferences and church.",
+   "strengths": [
+    "Deepest local distribution: MTN MoMo app listing, USSD (*713*33#), WhatsApp and partner outlets",
+    "Largest visible nightlife/party ticket inventory in Ghana of the platforms checked",
+    "Thirteen years of organiser relationships and a scanning app"
+   ],
+   "gaps": [
+    "Ticket-centric: no venue table reservations, minimum spend or bottle pre-order stated",
+    "Generalist brand (church to concerts), not a nightlife experience",
+    "No promoter-specific tools or guest-list management stated"
+   ],
+   "sources": [
+    "https://egotickets.com",
+    "https://egotickets.com/organizers",
+    "https://egotickets.com/pricing",
+    "https://www.ticketfairy.com/compare/ticketing"
+   ]
+  },
+  {
+   "name": "Ayatickets",
+   "url": "https://ayatickets.com",
+   "category": "ticketing",
+   "summary": "A Ghanaian ticketing platform for finding events, buying tickets and running an event, with tickets delivered by email, SMS and in its app. Organisers get a sales dashboard, payouts and a check-in app.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Ghana-based (site metadata: coverage Ghana, Ghana phone number) with a dedicated 'Event Tickets in Accra' page and Ghana cedi pricing. The number of live Accra listings was not counted."
+   },
+   "features": {
+    "tickets": true,
+    "tables": "unknown",
+    "bottles": false,
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": true,
+    "whatsapp": "unknown",
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "'Flat 5% of your gross ticket sales' organiser commission on paid events; no setup fee; free events are free; attendees pay a processing fee at checkout (amount not stated).",
+   "look": "Off-white background with crimson (#C3073F) buttons and Space Grotesk type; straightforward, organiser-facing tone.",
+   "strengths": [
+    "Lowest clearly published commission of the Ghana ticketing platforms checked (5%)",
+    "Wide payment choice: MTN, Telecel and AirtelTigo mobile money, card, Apple Pay, PayPal and USSD *365*88#",
+    "Buyer app plus separate check-in app"
+   ],
+   "gaps": [
+    "No table reservations, minimum spend or bottle pre-order stated",
+    "No WhatsApp booking channel stated",
+    "Generic ticketing brand, not nightlife-specific"
+   ],
+   "sources": [
+    "https://ayatickets.com/en/help-center/article/how-ayatickets-works",
+    "https://ayatickets.com/en/page/pricing-and-fees",
+    "https://ayatickets.com/en/events-in-accra",
+    "https://apps.apple.com/gh/app/ayatickets/id6446704765"
+   ]
+  },
+  {
+   "name": "Tix Africa",
+   "url": "https://tix.africa",
+   "category": "ticketing",
+   "summary": "A Nigeria-founded self-service ticketing platform with event pages, discount codes, check-in apps and a discovery page, operating in several African countries and (from 2026) the UK.",
+   "accraCoverage": {
+    "level": "some",
+    "evidence": "Ghana is a selectable country on the discovery page and Tix announced it was live in Ghana (TechLabari; Tix Instagram). On 2026-11-10 the default discovery view showed about 15 events, all in Nigeria (Lagos, Abuja, Ibadan) and no Ghana events; the Ghana-filtered view was not inspected."
+   },
+   "features": {
+    "tickets": true,
+    "tables": false,
+    "bottles": false,
+    "guestList": "unknown",
+    "deposits": false,
+    "mobileMoney": true,
+    "whatsapp": "unknown",
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "Ghana: 7.5% + GH¢5 per paid ticket, free for free events (Tix blog, published 25 Aug 2025). Nigeria: 8% + ₦100 per paid ticket (pricing page, checked 2026-11-10). Fees can be passed to attendees.",
+   "look": "Clean white pages with a bright orange (#FC6435) accent and Avenir type; simple, product-led SaaS tone.",
+   "strengths": [
+    "Transparent published pricing including a Ghana rate",
+    "Supports invite-only events, mobile money and USSD payments",
+    "Polished organiser tooling and check-in apps"
+   ],
+   "gaps": [
+    "Supply is Nigeria-heavy; little visible Accra inventory on the day checked",
+    "Pricing page mentions no table or reservation features",
+    "No WhatsApp booking or nightlife-specific flows stated"
+   ],
+   "sources": [
+    "https://tix.africa/pricing",
+    "https://tix.africa/discover",
+    "https://blog.tix.africa/how-to-sell-event-tickets-online-in-ghana/",
+    "https://techlabari.com/tix-africa-is-now-operational-and-live-in-ghana/"
+   ]
+  },
+  {
+   "name": "Akwaaba App",
+   "url": "https://akwaaba.app",
+   "category": "events-discovery",
+   "summary": "A Ghana travel-and-events app aimed at visitors and locals: curated tours and full trip planning, an events feed with ticketing, a directory of restaurants and venues, and business tools for organisers and venues. Its social posts advertise booking an 'Accra nightlife experience' in the app.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Ghana-only product with an 'Events across Ghana' feed showing Accra events priced in US dollars (e.g. $5, $8) and an events page describing Detty December parties and nightlife. iOS and Android apps are listed."
+   },
+   "features": {
+    "tickets": true,
+    "tables": "unknown",
+    "bottles": "unknown",
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": "unknown",
+    "whatsapp": true,
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "Not stated. Its own explainer says business listings and Akwaaba for Business tools 'have separate pricing — contact the team'.",
+   "look": "White pages with gold (#D4A035) buttons on deep navy (#141B2E) and Lexend/Outfit type; warm, welcoming tourist-guide tone ('Akwaaba means welcome').",
+   "strengths": [
+    "Owns the diaspora/visitor planning moment before December travel",
+    "Combines tours, events and venue directory in one app",
+    "WhatsApp chat link for trip-planning help"
+   ],
+   "gaps": [
+    "Tourism-first; nightlife is one category among tours and packages",
+    "USD pricing and no stated mobile money, which suits visitors more than Accra residents",
+    "No stated table minimum spend, bottle pre-order or promoter guest-list tools"
+   ],
+   "sources": [
+    "https://akwaaba.app",
+    "https://akwaaba.app/what-is-akwaaba-app/",
+    "https://akwaaba.app/events",
+    "https://apps.apple.com/us/app/akwaaba-explore-ghana/id6452192630",
+    "https://www.instagram.com/reel/DboFacgoHii/"
+   ]
+  },
+  {
+   "name": "AfroFuture (Future Club)",
+   "url": "https://www.afrofuture.com",
+   "category": "ticketing",
+   "summary": "The festival brand sells directly from its own website rather than through a marketplace. For December 2026 it is selling 'Future Club' memberships and day passes for a permanent venue at 1 Shiashie, Accra, opening 16 December 2026, with ticket links going to a Hustlesasa-hosted shop.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Homepage (checked 2026-11-10) announces Future Club Membership for Detty December 2026 in Accra with dated shows (20, 22, 28, 29 Dec). FAQ says tickets are available online at AfroFuture.com with physical outlets announced on social media."
+   },
+   "features": {
+    "tickets": true,
+    "tables": "unknown",
+    "bottles": "unknown",
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": "unknown",
+    "whatsapp": "unknown",
+    "venueTools": false,
+    "nativeApp": "unknown"
+   },
+   "fees": "Not stated on the pages viewed.",
+   "look": "White background with electric blue (#4101F6), red and orange accents and heavy display type; loud, festival-poster energy.",
+   "strengths": [
+    "The biggest December brand in Accra controls its own checkout and customer data",
+    "Membership model covering a whole season plus a year",
+    "Diaspora reach built over several festival editions"
+   ],
+   "gaps": [
+    "Single organiser, not a platform other venues or promoters can use",
+    "No table or bottle booking flow visible on the pages viewed",
+    "No stated mobile money or WhatsApp booking"
+   ],
+   "sources": [
+    "https://www.afrofuture.com/",
+    "https://www.afrofuture.com/events",
+    "https://www.afrofuture.com/utility/faqs"
+   ]
+  },
+  {
+   "name": "Eventbrite",
+   "url": "https://www.eventbrite.com/d/ghana--accra/events/",
+   "category": "global-platform",
+   "summary": "The global self-service ticketing marketplace. Accra promoters do list club nights and parties on it alongside conferences and workshops.",
+   "accraCoverage": {
+    "level": "some",
+    "evidence": "The Accra city page (snapshot cached 2026-11-09) showed nightlife listings such as 'THE TURNUP @ ENZO' (Friday 8pm), 'Saturday Private Affairs - Bella Red Room' (recurring Saturdays) and December parties on 22 and 28 Dec, mixed with business workshops and expos."
+   },
+   "features": {
+    "tickets": true,
+    "tables": false,
+    "bottles": false,
+    "guestList": "unknown",
+    "deposits": false,
+    "mobileMoney": "unknown",
+    "whatsapp": false,
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "Not stated for Ghana on the page viewed. Tix Africa's blog claims Eventbrite has no mobile money support in Ghana; that is a competitor's claim and was not verified on Eventbrite's own site.",
+   "look": "White with Eventbrite's orange (#F6682F) accent and a generic grid of event cards; neutral global-marketplace tone.",
+   "strengths": [
+    "Known to diaspora and international visitors who already have accounts",
+    "Free to list and easy to share links",
+    "Some Accra club nights are already there weekly"
+   ],
+   "gaps": [
+    "Not localised: listings show 'Check ticket price on event' and mobile money support is unconfirmed",
+    "No tables, minimum spend, bottles or deposits",
+    "Nightlife is buried among conferences and workshops"
+   ],
+   "sources": [
+    "https://www.eventbrite.com/d/ghana--accra/events/",
+    "https://blog.tix.africa/how-to-sell-event-tickets-online-in-ghana/"
+   ]
+  },
+  {
+   "name": "SevenRooms",
+   "url": "https://www.sevenrooms.com",
+   "category": "global-platform",
+   "summary": "A global reservation and guest-management system that individual restaurants and lounges license and embed as their own booking widget. It is venue software, not a consumer discovery app for Accra.",
+   "accraCoverage": {
+    "level": "some",
+    "evidence": "Live SevenRooms reservation pages exist for Accra venues Kōzo (126 Osu Badu Crescent), POMONA (13th Lane, Osu), The Mix (Osu) and El Padrino Lounge (Ghana phone number). These are upscale dining/lounge venues; no Accra nightclub page was found."
+   },
+   "features": {
+    "tickets": "unknown",
+    "tables": true,
+    "bottles": "unknown",
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": "unknown",
+    "whatsapp": "unknown",
+    "venueTools": true,
+    "nativeApp": "unknown"
+   },
+   "fees": "Not stated.",
+   "look": "Plain white-label booking widget (date, guests, time, Search) carrying an 'Experience by SEVENROOMS' mark; no brand personality of its own.",
+   "strengths": [
+    "Proves top Accra venues will pay for proper reservation software",
+    "Venue keeps its own brand and guest data",
+    "Established global product"
+   ],
+   "gaps": [
+    "No consumer marketplace or discovery for Accra",
+    "No evidence of mobile money deposits or WhatsApp in the Accra pages seen",
+    "Not built around promoters, guest lists or bottle packages for clubs"
+   ],
+   "sources": [
+    "https://www.sevenrooms.com/reservations/kozo",
+    "https://www.sevenrooms.com/reservations/pomona",
+    "https://www.sevenrooms.com/reservations/themix",
+    "https://www.sevenrooms.com/explore/elpadrinolounge/reservations/create/search"
+   ]
+  },
+  {
+   "name": "Discotech",
+   "url": "https://discotech.me",
+   "category": "global-platform",
+   "summary": "A US nightlife app for browsing club events, joining free guest lists, booking bottle-service tables and buying tickets. It is the closest global model for the product, but it does not operate in Accra.",
+   "accraCoverage": {
+    "level": "none",
+    "evidence": "The city list on its homepage (checked 2026-11-10) covers US cities plus places such as London, Ibiza, Dubai, Paris, Tokyo and Sydney; neither Accra, Lagos nor any other African city is listed."
+   },
+   "features": {
+    "tickets": true,
+    "tables": true,
+    "bottles": true,
+    "guestList": true,
+    "deposits": "unknown",
+    "mobileMoney": false,
+    "whatsapp": "unknown",
+    "venueTools": "unknown",
+    "nativeApp": true
+   },
+   "fees": "Not stated on the homepage; it advertises free and discounted guest lists and promo codes.",
+   "look": "White website with muted blue (#2D5C88) and green (#38B771) accents and Open Sans type; functional, deal-driven tone.",
+   "strengths": [
+    "Combines guest list, tables with floor plans and bottle menus, and tickets in one app",
+    "Table pricing shown up front",
+    "Proven model in mature nightlife markets"
+   ],
+   "gaps": [
+    "No Accra or African coverage",
+    "No mobile money or WhatsApp-first flow",
+    "Card-and-app model assumes US payment habits"
+   ],
+   "sources": [
+    "https://discotech.me/",
+    "https://apps.apple.com/us/app/discotech-nightlife/id688089181"
+   ]
+  },
+  {
+   "name": "Reisty",
+   "url": "https://www.reisty.com",
+   "category": "table-booking",
+   "summary": "A Nigerian restaurant reservation app and reservation-management tool for restaurants. It is a regional reference point, not an Accra competitor today.",
+   "accraCoverage": {
+    "level": "none",
+    "evidence": "Its site and metadata refer only to Lagos ('Discover and Book Top Restaurants in Lagos'); no mention of Accra or Ghana was found on 2026-11-10."
+   },
+   "features": {
+    "tickets": "unknown",
+    "tables": true,
+    "bottles": "unknown",
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": "unknown",
+    "whatsapp": "unknown",
+    "venueTools": true,
+    "nativeApp": true
+   },
+   "fees": "Not stated.",
+   "look": "Light grey background with deep red (#BC172F) and Lato type; conventional restaurant-booking tone.",
+   "strengths": [
+    "Shows the reservation-app model working with West African restaurants",
+    "Consumer app plus restaurant-side reservation and waitlist tools",
+    "Clear single-city focus"
+   ],
+   "gaps": [
+    "Lagos only",
+    "Restaurants, not clubs or bottle service",
+    "No stated deposits, guest lists or WhatsApp channel"
+   ],
+   "sources": [
+    "https://www.reisty.com/",
+    "https://www.reisty.com/blog/reisty-mobile-app-how-to-make-reservations-on-the-go"
+   ]
+  },
+  {
+   "name": "Venue-direct booking",
+   "url": "https://acenightclubgh.com",
+   "category": "informal",
+   "summary": "Top Accra clubs take table bookings themselves through a web enquiry form or a phone number. Ace Nightclub (Labone) has a 'Make a Reservation' form asking for name, email, phone, date and guest count; ENZO publishes fixed bottle-service table packages and a number to call.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Ace Nightclub's site has a VIP table reservation form plus a phone number. ENZO's site lists table packages at GHS 10K (Prime, 6 tickets), 20K (Elite, 10 tickets), 30K (Ultra, 12 tickets) and 50K (Supreme, 15 tickets), each with named bottles and mixers, and a 'Call' button. Both checked 2026-11-10."
+   },
+   "features": {
+    "tickets": true,
+    "tables": true,
+    "bottles": true,
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": "unknown",
+    "whatsapp": "unknown",
+    "venueTools": false,
+    "nativeApp": false
+   },
+   "fees": "No booking fee stated. ENZO's published package prices are GHS 10K / 20K / 30K / 50K per table.",
+   "look": "Black backgrounds with gold (Ace uses #CDAD58 with red accents) or amber-orange (ENZO), serif or all-caps headings and words like 'luxury', 'exclusive', 'opulence'.",
+   "strengths": [
+    "Venue owns the customer relationship and pays no commission",
+    "Package pricing with bottles bundled is already familiar to guests (ENZO)",
+    "Trusted because it is the venue itself"
+   ],
+   "gaps": [
+    "An enquiry form or phone call is not a confirmed booking; no live availability or instant confirmation",
+    "No online deposit or mobile money payment visible on either site",
+    "Event content goes stale (Ace's site still headlines 2023–2024 events; ENZO showed no upcoming events)"
+   ],
+   "sources": [
+    "https://acenightclubgh.com/",
+    "https://enzoaccra.com/"
+   ]
+  },
+  {
+   "name": "DM and phone booking",
+   "url": "https://www.instagram.com/",
+   "category": "informal",
+   "summary": "Most nights out are discovered on Instagram and TikTok flyers and reels, and tables are booked by sending a DM, calling or messaging a phone number in the caption, or messaging the promoter directly. Payment and confirmation then happen in the chat.",
+   "accraCoverage": {
+    "level": "strong",
+    "evidence": "Public posts from Accra venues and promoters tell guests to book a table by direct message or by calling or messaging a number in the caption; one December Amapiano night says table reservations are available by direct message to the promoter. This comes from search-result excerpts of the posts (the posts could not be opened by the research tool), so the wording is paraphrased and phone numbers are left out."
+   },
+   "features": {
+    "tickets": "unknown",
+    "tables": true,
+    "bottles": "unknown",
+    "guestList": "unknown",
+    "deposits": "unknown",
+    "mobileMoney": "unknown",
+    "whatsapp": "unknown",
+    "venueTools": false,
+    "nativeApp": false
+   },
+   "fees": "Not stated; no platform fee because there is no platform.",
+   "look": "Dark, high-contrast event flyers and reels with phone numbers in the caption; hype tone ('Be there or hear about it').",
+   "strengths": [
+    "Zero friction and zero cost for venues and promoters, on apps everyone already uses",
+    "Personal relationship with a promoter or host who can bend rules",
+    "Discovery and booking happen in the same feed"
+   ],
+   "gaps": [
+    "No visible price, minimum spend or availability before you message",
+    "No receipt, deposit protection or dispute trail",
+    "No record for the venue of which promoter brought which table"
+   ],
+   "sources": [
+    "https://www.instagram.com/reel/DfSfY0QoKNV/",
+    "https://www.instagram.com/p/DfSRXypAM4P/",
+    "https://www.instagram.com/reel/DfOU0rGBGe-/",
+    "https://www.tiktok.com/@labanrobert/video/7703632038410079510"
+   ]
+  }
+ ],
+ "synthesis": {
+  "patterns": [
+   "Tickets and tables live in separate products. eGotickets, Ayatickets and Tix Africa sell event tickets; Accraaa and Resarvo reserve tables; none of the Ghana products checked states both a ticketing marketplace and club table inventory in one flow.",
+   "Mobile money is table stakes for ticketing but not yet for tables. All three ticketing platforms state mobile money (eGotickets also USSD and the MTN MoMo app; Ayatickets USSD *365*88#). Among table products only Accraaa states mobile money deposits; Resarvo says no payment is needed to book.",
+   "The real competitor is the caption phone number. Clubs and promoters publicly tell guests to DM, call or message a number to reserve, and club websites offer an enquiry form or a 'Call' button rather than a confirmed booking.",
+   "Two Accra-specific reservation apps (Accraaa, Resarvo) arrived recently and both lead with dining, while published take rates sit in a narrow band. Ticketing: Ayatickets 5%, eGotickets Pro 7.5%, Tix Africa 7.5% + GH¢5 in Ghana. Table bookings: Accraaa 0–4% venue commission depending on tier.",
+   "Pan-African and global players are present by name but thin on the ground. Detty showed 4 Accra events out of 160; Tix Africa's default discovery view showed none; Discotech and Reisty do not cover Accra at all.",
+   "December is a measurable peak. Ghana recorded 141,186 international arrivals in December 2025, up 11.35% from 126,791 in December 2024, according to the 2025 Ghana Tourism Report as reported by ATTA on 11 Jun 2026. AfroFuture is opening a permanent Accra venue on 16 December 2026 and selling season memberships."
+  ],
+  "whiteSpace": [
+   "A WhatsApp-native booking channel. No product checked states that a guest can complete a table booking and deposit inside WhatsApp, even though that is where bookings actually happen. eGotickets sells tickets over WhatsApp; nobody does this for tables.",
+   "Promoter tooling. No product checked states promoter links, promoter-owned guest lists or commission tracking; organiser tools everywhere are built for event organisers selling tickets, and venue tools for restaurants taking reservations.",
+   "Transparent club table pricing with minimum spend and bottle pre-order in one checkout. ENZO publishes packages but takes the booking by phone; Accraaa mentions bottle-service bookings but is positioned around dining.",
+   "One flow that covers ticket, guest list and table for the same night at the same venue, paid with a mobile money deposit.",
+   "A local-first product that is also ready for the December diaspora surge: cedi and mobile money for residents, card for visitors. Akwaaba prices in dollars for visitors; the ticketing platforms are built for residents."
+  ],
+  "overusedBrandPatterns": [
+   "Black and gold. Detty uses #050505 with gold #D4AF37; Accraaa uses the identical gold #D4AF37 with black; Ace Nightclub uses black with gold #CDAD58; Akwaaba uses gold #D4A035 on navy. Gold-on-dark is the default 'premium Accra night' look and will not stand out.",
+   "The word 'Detty'. An existing app is listed on the App Store as 'Detty: Nightlife & Events' (Betacarry LLC) at thedettyapp.com with a 'Detty Black and gold' redesign; AfroFuture and others also market 'Detty December'. A new product using 'Detty' in its name would collide directly with it.",
+   "Luxury vocabulary: 'finest', 'premier', 'exclusive', 'luxury', 'opulence', 'VIP experience' appear across Accraaa, Ace and ENZO.",
+   "Ticket-platform orange. eGotickets (#FF5722), Tix Africa (#FC6435) and Eventbrite (#F6682F) all use near-identical orange on white.",
+   "Names built from the city or from 'reserve/ticket': Accraaa, Resarvo, Reisty, Ayatickets, eGotickets, Akwaaba (the standard Ghanaian welcome word, used by a travel app)."
+  ],
+  "implications": [
+   "Position as the product that joins up the night — ticket, guest list, table, bottles and deposit for one venue on one date — because every local competitor does only one half.",
+   "Make WhatsApp and mobile money the front door, not an add-on: meet the DM-and-phone-number habit where it already is, then add what it lacks (shown prices, confirmed availability, receipts, deposit rules).",
+   "Win promoters as a distinct customer. A companion app that credits each table and guest-list entry to a promoter is the clearest feature no competitor states.",
+   "Be visibly nightlife-first to separate from Accraaa and Resarvo, which read as restaurant reservation apps, and price venue commission with Accraaa's published 0–4% tiers in mind.",
+   "Avoid black-and-gold, ticketing orange and the 'Detty' name; a distinct colour and a name not already attached to an events app will do more for recognition than another 'premium' look."
+  ]
+ },
+ "caveats": [
+  "All pages were read on 2026-11-10 through a web-scraping tool, not a logged-in browser or a device in Ghana; listing counts and prices are snapshots and will change. The Eventbrite Accra page was a cached snapshot from 2026-11-09.",
+  "Colours are hex values extracted from each site's live styles by the scraping tool, plus the page copy; no screenshots were reviewed by eye.",
+  "App Store facts (ratings counts, version dates, seller names) are from the US storefront. Version dates are shown without a year on the listings; Detty's 5 ratings, Accraaa's 3 and Resarvo's 1 are too few to say anything about quality. No download counts are reported because none were verified.",
+  "Detty's own site is inconsistent: the homepage says '25 cities' and the events page '24 cities'; its '340k+ going' figure is a company claim. The tool's summary of the events page named four Accra events.",
+  "Instagram and TikTok posts could not be opened directly; the informal-booking evidence is quoted from search-result excerpts of those public posts and should be re-checked by hand before publishing the quotes.",
+  "TicketMiller: NOT included. ticketmiller.com timed out and www.ticketmiller.com failed DNS on 2026-11-10. Its Facebook and X accounts exist and a Facebook excerpt references an event on 20/12/2025, so it may still operate, but this could not be verified.",
+  "'Afrotix' could not be found as a product. AfroFuture sells through its own site with links to a Hustlesasa-hosted shop; Hustlesasa itself was not profiled.",
+  "Not verified and therefore not profiled: Tukio, Quicket, Shoobs (only an old blog post about Ghana Christmas events dated around December 2021 was found), Tablelist, Resy, OpenTable (a search result titled 'Experiences in Ghana' exists on opentable.com but was not opened), Dineplan, Eat'n'Go, VeniVibe.",
+  "UrbanPulse (urbanpulse.app) was seen but left out: the site claims '1000+ events, 500+ venues' yet showed only sample events dated Dec 2025 and Jan 2026, a generic Google Play link and 'iOS coming soon', so it does not look active.",
+  "eGotickets' lower 'Essential 5%' plan comes from a third-party comparison page, not from eGotickets' own pricing page, where only 'Pro 7.5%' was confirmed.",
+  "Feature flags are true only where the company's own page or store listing states the feature, false where its own page states the opposite or the product clearly does not apply, and 'unknown' otherwise. 'Unknown' does not mean absent.",
+  "Accraaa's guest-list feature is a guest list for a table party (invite friends to a reservation), which is not the same as a promoter's club-door guest list.",
+  "The December arrivals figures are national, not Accra-only, and come from a trade-association summary (ATTA) of the 2025 Ghana Tourism Report rather than the report itself."
+ ]
+}

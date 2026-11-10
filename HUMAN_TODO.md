@@ -3,6 +3,16 @@
 Things only the owner can decide or do. The build keeps going with sensible defaults meanwhile.
 
 ## REQUIRED (decide soon)
+
+### Rebrand (10 Nov 2026)
+- **Pick a brand direction** from the six in Storybook → Brand / New Directions (Jama, Fiada, Akonnwa, Kpanlogo,
+  Harmattan, Anadwo). Recommendation and reasoning: the "Why we moved" page. Jama is the default until you choose.
+- **Clear the name properly.** Names were screened for obvious clashes only (Research / Accra market → Name
+  screening). Still needed: a trademark search, app-store and social-handle checks, and a read by a Ga speaker and a
+  Twi speaker. "Akonnwa" had only one quick search and its meaning is unconfirmed.
+- **Rename the repository and site URL** once a name is chosen. They still say `detty-nightlife`.
+- **Re-check the informal-booking evidence by hand** before quoting it anywhere: the research tool could not open
+  the Instagram and TikTok posts, so that profile is paraphrased from search excerpts.
 - [ ] **Confirm the brand**: Detty Gold (the blend) or one of Detty / Aurum / Vybe. See Brand / Evolution. See Storybook → Brand / Directions.
   Also run a trademark search on the chosen name for Ghana and the main diaspora markets.
 - [ ] **Share the "previous experience"** you mentioned (screens, links or a deck). It wasn't attached,

@@ -1,0 +1,757 @@
+{
+ "checkedOn": "2026-11-10",
+ "method": "Quick knock-out screen only: web searches (incl. site:apps.apple.com / site:play.google.com queries) plus a single HTTPS fetch of <name>.com, <name>.app, get<name>.com and <name>accra.com. 'no response' means the domain did not answer an HTTPS request from this machine; it does NOT mean the domain is unregistered or available. No trademark registers were searched.",
+ "names": [
+  {
+   "name": "Jama",
+   "meaning": "Ghanaian 'jama' (also called 'morale'): group cheer/chant songs used to hype teams and schools. Stated meaning is right. Note much circulating jama is gospel/praise jama, so the word is not purely secular. Unverified (not checked): similarity to Hausa/Arabic 'jama'a' (congregation/community) and 'Jama/Juma' mosque usage; Jama is also a common Somali personal name.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "http://pancocojams.blogspot.com/2026/06/information-about-ghana-west-africas.html?m=1",
+    "https://www.facebook.com/addojunr/posts/how-about-some-original-jama-music-from-some-of-ghanas-finest-schools-to-prep-yo/2557567947698792/"
+   ],
+   "collisions": [
+    {
+     "what": "Jama - JustAnotherMomentsAlbum: disposable-camera app for events/nights out (adjacent category)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/us/app/jama-justanothermomentsalbum/id6778847179"
+    },
+    {
+     "what": "Jama - Food Delivery (restaurant ordering app)",
+     "where": "Apple App Store (Ecuador listing)",
+     "url": "https://apps.apple.com/ec/app/jama-food-delivery/id1525620892?l=en-GB"
+    },
+    {
+     "what": "Jama (delegate app for an event, by Verge Labs)",
+     "where": "Google Play",
+     "url": "https://play.google.com/store/apps/details?id=com.vergelabs.jama_app"
+    },
+    {
+     "what": "Jama For Parents (parenting community app)",
+     "where": "Google Play",
+     "url": "https://play.google.com/store/apps/details?id=com.jamaapp.newdevelopment&hl=en"
+    },
+    {
+     "what": "Jama (JAMA-M retail promotions app, Poland)",
+     "where": "App Store / Google Play",
+     "url": "https://apps.apple.com/us/app/jama/id1443453396"
+    }
+   ],
+   "bigBrands": [
+    "JAMA - Journal of the American Medical Association (jama.com redirects to jamanetwork.com)",
+    "Jama Software (requirements-management software; from general knowledge, not re-checked today)"
+   ],
+   "domains": "jama.com -> redirects to jamanetwork.com (JAMA journal). jama.app -> for sale on GoDaddy (make offer). getjama.com, jamaaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "No nightlife/ticketing app called Jama found in Ghana/Nigeria, but the bare word is owned in search by the JAMA medical journal and the app stores already hold several unrelated 'Jama' apps; usable only with a modifier (e.g. Jama Accra / getjama)."
+  },
+  {
+   "name": "Gbeke / Gbɛkɛ",
+   "meaning": "Gbɛkɛ = evening in Ga: correct. BUT the near-identical gbekɛ = child (gbekɛbii = children; gbekɛ nuu = boy, gbekɛ yoo = girl). Typed without diacritics, 'Gbeke' is indistinguishable and is commonly read as 'child/children'. Unverified: Gbeke also appears as a Yoruba given-name element.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.facebook.com/iSpeakGa/posts/gb%C9%9Bk%C9%9B-eveningthe-ga-word-for-evening-is-gb%C9%9Bk%C9%9Btag-someone-and-shareoyiwalad%C9%94%C5%8B%C5%8Btha/339337296795063/",
+    "https://mylittlewordland.com/course/313202/ga-language",
+    "https://www.facebook.com/LaTvGh/posts/in-ga-the-term-gbeke-which-refers-to-children-is-derived-from-the-word-meaning-v/647691455071876/"
+   ],
+   "collisions": [],
+   "bigBrands": [],
+   "domains": "gbeke.com -> Squarespace 'Coming Soon' parking page (registered by someone). gbeke.app, getgbeke.com, gbekeaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "Without the ɛ characters the name reads as the Ga word for 'child', a bad association for an alcohol/nightlife brand, and the 'gb' onset is hard for visitors."
+  },
+  {
+   "name": "Section",
+   "meaning": "English; 'section' is widely used in nightlife for a reserved VIP table area (app-store listings for other nightlife apps use it that way). West-Africa-specific usage not separately verified.",
+   "meaningVerified": false,
+   "collisions": [
+    {
+     "what": "SECTIONS: TABLES & EVENTS - nightlife app for discovering events, browsing tables and managing reservations (same category, near-identical name; developer site sectionsapp.com)",
+     "where": "Google Play",
+     "url": "https://play.google.com/store/apps/details?id=com.sections.app"
+    }
+   ],
+   "bigBrands": [
+    "Generic English word; unbrandable in search. Section (business/AI education company) and Section.io exist (general knowledge, not re-checked today)."
+   ],
+   "domains": "section.com -> listed lease-to-own (LeaseToOwn.com). getsection.com -> responds 200, content not identified. section.app, sectionaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "A live tables-and-events nightlife app already trades as SECTIONS, and the word is too generic to own."
+  },
+  {
+   "name": "Vim",
+   "meaning": "'Vim' = energy/drive; it is standard (if dated) English as well as popular Ghanaian usage ('More vim'). Stated meaning is right. No negative meaning found.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.tiktok.com/@kwakuddoabodie4gmail.com/video/7656200834694270226"
+   ],
+   "collisions": [
+    {
+     "what": "VIM! - recurring party/event brand (Los Angeles)",
+     "where": "Instagram",
+     "url": "https://www.instagram.com/vim.vim.vim.vim/?hl=en"
+    },
+    {
+     "what": "DJ Vim Tinz - active Accra nightlife DJ (Republic Bar Osu, Kruna)",
+     "where": "Accra",
+     "url": "https://www.tiktok.com/@republicbar/video/7695213703779618055"
+    },
+    {
+     "what": "Vim Studios Ghana - event/flyer design studio",
+     "where": "Ghana (Instagram)",
+     "url": "https://www.instagram.com/reel/DVbDMysCIqC/"
+    }
+   ],
+   "bigBrands": [
+    "Vim text editor / Neovim (vim.app is a Neovim site)",
+    "Vim cleaning products (Unilever; general knowledge)",
+    "Vim - healthcare AI platform (getvim.com -> getvim.ai)"
+   ],
+   "domains": "vim.com -> active site titled 'vim'. vim.app -> 'Neovim Cell'. getvim.com -> Vim healthcare (getvim.ai). vimaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "Three large unrelated Vims (editor, cleaner, health-tech) own search and every obvious domain."
+  },
+  {
+   "name": "Harmattan",
+   "meaning": "The dry, dusty West African trade wind of roughly late November to mid-March: correct. Brand downsides: associated with dust, haze and dry/cracked skin, and it is seasonal.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.threads.com/@the_oladele/post/Dee3sBmgU2U/heading-to-ghana-or-lagos-for-detty-december-its-harmattan-season-late-nov-to/",
+    "https://www.asele.tech/post/harmattan-skincare/"
+   ],
+   "collisions": [
+    {
+     "what": "Harmattan - 'Let the Wind Trim Your Spend' (active software product on the .app domain)",
+     "where": "web",
+     "url": "https://www.harmattan.app/"
+    },
+    {
+     "what": "Harmattan Festival (Dec 23 - Jan 1, near Tamale, ticketed)",
+     "where": "Northern Ghana",
+     "url": "https://www.facebook.com/100063533652410/posts/-_harmattan-festival-2023-tickets-out-now_-%EF%B8%8F-_dates_-23rd-dec-1st-jan-_location_/864925298968584/"
+    },
+    {
+     "what": "FK's Harmattan Party (ticketed party)",
+     "where": "ticketing listing",
+     "url": "https://www.jetronticket.com/fks-harmattan-party"
+    }
+   ],
+   "bigBrands": [
+    "L'Harmattan (large French publisher; general knowledge, not re-checked today)"
+   ],
+   "domains": "harmattan.com -> active Wix site 'Harmattan' (wildlife/landscape imagery). harmattan.app -> active product site. getharmattan.com, harmattanaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "No nightlife app found under the name, but both .com and .app are in use, the word is a common event title each December, and it carries dust/dry-season baggage."
+  },
+  {
+   "name": "Anadwo",
+   "meaning": "Twi for night (night-time): correct. Pronounced roughly 'ah-na-jo' ('dw' sounds like 'j'), which visitors will not guess from the spelling. No negative meaning found.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://learnakan.com/times-of-day-in-twi/",
+    "https://www.facebook.com/studytwi/photos/anadwomeaning-night-night-timepronunciation-ah-na-jo%EF%B8%8Fthe-letters-dw-together-mak/136004234511556/"
+   ],
+   "collisions": [
+    {
+     "what": "Anadwo Chop Bar (night food spot at Kula Bistro, East Legon)",
+     "where": "Accra",
+     "url": "https://www.tiktok.com/@anadwo.chopbar/video/7698014814643211521"
+    },
+    {
+     "what": "Anadwo Hausa Koko / Anadwo Waakye (night-food vendors using the word descriptively)",
+     "where": "Kumasi / Accra",
+     "url": "https://www.instagram.com/reel/DSd34XxCP1p/"
+    },
+    {
+     "what": "'ANADWO' single by Rk Jay'son",
+     "where": "music",
+     "url": "https://www.modernghana.com/blogs/1468487/rk-jayson-drops-new-single-anadwo-featuring.html"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "anadwo.com -> for sale on GoDaddy at $4,999. anadwo.app, getanadwo.com, anadwoaccra.com -> no response. No app-store listing found for 'Anadwo'.",
+   "verdict": "clear-ish",
+   "reason": "No app, ticketing or tech company found; existing uses are small night-food vendors using the word literally. Main weakness is visitor pronunciation."
+  },
+  {
+   "name": "Saa",
+   "meaning": "Twi 'saa' = so / like that / that way (seen in the 'ɛyɛ saa pɛpɛɛpɛ' phrase). Not confirmed against a dictionary. Unverified: Hausa 'sa'a' (luck/hour).",
+   "meaningVerified": false,
+   "collisions": [],
+   "bigBrands": [
+    "SAA acronym: Southern Auto Auction owns saa.com; South African Airways is SAA (general knowledge)"
+   ],
+   "domains": "saa.com -> Southern Auto Auction. saa.app -> responds 200, content not identified. getsaa.com, saaaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "Three-letter acronym collisions and a filler-word meaning; no nightlife collision found but nothing to own."
+  },
+  {
+   "name": "Enne / Ɛnnɛ",
+   "meaning": "Ɛnnɛ = today in Twi: correct. Caution: 'ɛnne' (different vowels) = voice/sound in Twi, so the unaccented spelling is ambiguous. App-store collisions were NOT specifically searched for this name.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.reddit.com/r/ghana/comments/rlnovh/twi_translation_help_needed/",
+    "https://curriculumresources.edu.gh/wp-content/uploads/2025/01/Asante-Twi-Teacher-manual-Y1-bk-1-online.pdf"
+   ],
+   "collisions": [],
+   "bigBrands": [
+    "'enne' is the Italian name of the letter N (general knowledge)"
+   ],
+   "domains": "enne.app -> for sale (Atom). enne.com, getenne.com, enneaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "Only partly screened; ambiguous without diacritics and unclear pronunciation for visitors."
+  },
+  {
+   "name": "Kpanlogo",
+   "meaning": "Ga recreational dance, rhythm and drum from the Accra area: correct. No negative meaning found.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.instagram.com/p/C-wK2vFqYYl/?hl=en",
+    "https://www.instagram.com/deroelixt/reel/Dc4ILfsBLuS/?hl=fi"
+   ],
+   "collisions": [],
+   "bigBrands": [],
+   "domains": "kpanlogo.com -> responds 200, content not identified. kpanlogo.app, getkpanlogo.com, kpanlogoaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "No brand collision found, but the 'kp' onset and three syllables are hard for visitors and it names a shared cultural form rather than a distinctive mark."
+  },
+  {
+   "name": "Dusk Accra",
+   "meaning": "English; no meaning issue.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "DUSK - Drinks, Deals & Rewards: UK 'free drink' bar-discovery app ('Make the night'), active on both stores",
+     "where": "UK (App Store / Google Play / dusk.app)",
+     "url": "https://www.dusk.app/"
+    }
+   ],
+   "bigBrands": [
+    "DUSK app (UK nightlife)"
+   ],
+   "domains": "dusk.app -> DUSK (UK). duskapp.com -> responds 200. duskaccra.com, duskaccra.app, getduskaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "DUSK is an established bar/nightlife app in the UK, exactly where the Ghanaian diaspora audience is."
+  },
+  {
+   "name": "Osu After Dark",
+   "meaning": "English + Osu (Accra nightlife district); no meaning issue.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "'Accra After Dark' tour package sold by Akwaaba App",
+     "where": "Ghana",
+     "url": "https://akwaaba.app/packages/accra-after-dark"
+    },
+    {
+     "what": "'Accra After Dark: Cuisine, Clubs & Culture Tour' (Culture Seekers Africa)",
+     "where": "Ghana",
+     "url": "https://www.wetravel.com/trips/accra-after-dark-cuisine-clubs-culture-tour-culture-seekers-africa-81336414"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "osuafterdark.com, osuafterdark.app, getosuafterdark.com -> no response.",
+   "verdict": "caution",
+   "reason": "No exact-name business found, but 'Accra/Osu after dark' is a stock phrase already used by tours and content, it is long, and it ties the brand to one neighbourhood."
+  },
+  {
+   "name": "Outside",
+   "meaning": "English; 'we outside' is current party slang in Accra/Lagos event promotion. No negative meaning.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "WE OUTSIDE APP (18+ lifestyle app, weoutside app llc)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/ca/app/we-outside-app/id6476189329"
+    },
+    {
+     "what": "WE OUTSIDE - BeyondTheShore (ticketed Accra event, 5 Dec 2026)",
+     "where": "Accra (eGotickets)",
+     "url": "https://egotickets.com/events/we-outside"
+    },
+    {
+     "what": "Outside We Outside (Lagos beach-club party)",
+     "where": "Lagos",
+     "url": "https://www.instagram.com/p/DSSIFyPjaH8/"
+    }
+   ],
+   "bigBrands": [
+    "Outside (Outside Inc. / Outside magazine; outside.app is an active outdoor-adventures product)"
+   ],
+   "domains": "outside.app -> active ('Family Outdoor Adventures & Weekly Quests | Outside'). getoutside.com -> Outside Expeditions. outsideaccra.com -> responds 200, content not identified (someone has it). outside.com -> no response to our fetch.",
+   "verdict": "avoid",
+   "reason": "Generic word, a large media brand, an existing 'We Outside' app and events, and outsideaccra.com is already taken."
+  },
+  {
+   "name": "Tabl",
+   "meaning": "Clipped 'table'; no meaning issue.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "TABL. - restaurant table-booking app (Norway), on both stores",
+     "where": "App Store / Google Play / tabl.no",
+     "url": "https://apps.apple.com/me/app/tabl/id6738166188"
+    },
+    {
+     "what": "Tabl (tabl.com, dining/supper-club platform; site says 'Operations Paused')",
+     "where": "UK",
+     "url": "https://tabl.com/"
+    },
+    {
+     "what": "tabl.gg restaurant booking (Guernsey)",
+     "where": "Guernsey",
+     "url": "https://www.facebook.com/BailiwickGuernsey/posts/tablgg-covers-57-restaurants-already-across-a-variety-of-different-styles-and-pr/1691249973003358/"
+    },
+    {
+     "what": "TabL Menu (QR ordering for restaurants)",
+     "where": "web",
+     "url": "http://www.tablmenu.com/"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "tabl.com -> 'Tabl - Operations Paused'. gettabl.com -> 'Coming Soon'. tabl.app, tablaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "Several reservation products already use exactly this name."
+  },
+  {
+   "name": "Rope",
+   "meaning": "English ('velvet rope'); also carries a noose/hanging connotation (judgement, not sourced).",
+   "meaningVerified": false,
+   "collisions": [
+    {
+     "what": "Rope (active product on rope.app)",
+     "where": "web",
+     "url": "https://rope.app/"
+    },
+    {
+     "what": "Velvet Rope Vegas / 'The Velvet Rope app' (guest list & bottle service)",
+     "where": "Las Vegas",
+     "url": "https://www.velvetropevegas.com/"
+    }
+   ],
+   "bigBrands": [
+    "Generic word; rope.com and getrope.com are rope retailers; 'Cut the Rope' game"
+   ],
+   "domains": "rope.com -> rope retailer. rope.app -> active site 'Rope'. getrope.com -> rope retailer. ropeaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "No direct nightlife app called Rope found, but the word is generic, all domains are used, and the connotation is risky."
+  },
+  {
+   "name": "Afterglow",
+   "meaning": "English; no meaning issue.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "AfterGlow: Event Camera (shared photo roll for events/nights out)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/hu/app/afterglow-event-camera/id6768387435"
+    },
+    {
+     "what": "AfterGlow ('spicy chat' app with local events / meet IRL)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/om/app/afterglow/id6742759641?platform=ipad"
+    }
+   ],
+   "bigBrands": [
+    "Very common brand word across apps, cosmetics and music (general knowledge)"
+   ],
+   "domains": "afterglow.com -> responds 200, content not identified. afterglow.app -> for sale (Spaceship). getafterglow.com -> for sale (HugeDomains). afterglowaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "Crowded name with existing event/social apps and no local character."
+  },
+  {
+   "name": "Nkommo",
+   "meaning": "Nkɔmmɔ = conversation/chat in Twi; consistent with its use as a talk-show title ('Ahenfie Nkommo') but not checked against a dictionary. It means talk, not night or party.",
+   "meaningVerified": false,
+   "collisions": [
+    {
+     "what": "Ahenfie Nkommo (popular Twi talk show, Ahenfie TV / 106.1 FM)",
+     "where": "Ghana",
+     "url": "https://www.tiktok.com/@oheneniadazoaofficial/video/7662417015650520340"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "nkommo.com, nkommo.app, getnkommo.com, nkommoaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "No app collision found, but the meaning (conversation) fits a chat or media product better than nightlife and the 'nk' onset is awkward for visitors."
+  },
+  {
+   "name": "Ahomka",
+   "meaning": "Twi for a pleasant/good feeling (as in 'Ahomka Ginger'); stated meaning not checked against a dictionary.",
+   "meaningVerified": false,
+   "collisions": [
+    {
+     "what": "Ahomka Beverages Limited - Ghanaian alcohol producer (bitters, ginger liqueur)",
+     "where": "Ghana",
+     "url": "https://www.judy.legal/case/eric-amankwah-v-ahomka-beverages-limited-82fe1"
+    },
+    {
+     "what": "AHOMKA Mobile Health Network (hypertension mHealth)",
+     "where": "Ghana",
+     "url": "https://www.ahomka.org/"
+    }
+   ],
+   "bigBrands": [
+    "Ahomka Ginger - well-known Ghanaian ginger candy"
+   ],
+   "domains": "ahomka.com -> responds 200, content not identified. ahomka.org -> AHOMKA health network. ahomka.app, getahomka.com -> no response.",
+   "verdict": "avoid",
+   "reason": "The name belongs in Ghanaian minds to a ginger sweet and to an existing alcoholic-drinks company."
+  },
+  {
+   "name": "Kasa",
+   "meaning": "Twi 'kasa' = speak/language (general knowledge; not sourced today).",
+   "meaningVerified": false,
+   "collisions": [
+    {
+     "what": "Kasa - tech-enabled hotel / apart-hotel brand with 75+ properties (hospitality)",
+     "where": "US (kasa.com)",
+     "url": "https://kasa.com/"
+    }
+   ],
+   "bigBrands": [
+    "Kasa (hospitality)",
+    "TP-Link Kasa Smart home devices (general knowledge)"
+   ],
+   "domains": "kasa.com -> Kasa hospitality. kasa.app -> for sale (GoDaddy). getkasa.com, kasaaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "A well-funded hospitality company already owns the name and kasa.com."
+  },
+  {
+   "name": "Wossop",
+   "meaning": "Ghanaian Pidgin spelling of 'what's up': correct.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.reddit.com/r/ghana/comments/d9xvt7/hey_guys_i_got_a_lovely_ghanian_friend_who_told/"
+   ],
+   "collisions": [
+    {
+     "what": "wossop.com - active blog/news site ('Truth And Relevant Information Only')",
+     "where": "web",
+     "url": "https://wossop.com/"
+    },
+    {
+     "what": "Wossop Ghana (Facebook page, #wossopgh)",
+     "where": "Ghana",
+     "url": "https://m.facebook.com/wossopghana/videos/ghana-we-dey-joke-wossopgh-wossop/1631731087159655/"
+    }
+   ],
+   "bigBrands": [
+    "Sounds like WhatsApp, a channel the product itself uses (confusion risk; judgement)"
+   ],
+   "domains": "wossop.com -> active site. wossop.app, getwossop.com, wossopaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "Authentic and friendly, but the .com is taken and it will be heard as 'WhatsApp' in a product that sells through WhatsApp."
+  },
+  {
+   "name": "Bloom Night",
+   "meaning": "English; no meaning issue.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "Bloom Night Club (Da Nang, Vietnam)",
+     "where": "Vietnam",
+     "url": "https://www.tiktok.com/discover/the-bloom-night-club"
+    },
+    {
+     "what": "The Bloom Night Club (Garchy, France)",
+     "where": "France",
+     "url": "https://evendo.com/locations/france/centre-val-de-loire/nightclub/the-bloom-night-club?currency=NGN"
+    },
+    {
+     "what": "Bloom Night Out (women's party, Dallas)",
+     "where": "US",
+     "url": "https://www.instagram.com/reel/Da6PHRPxQQs/"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "bloomnight.com -> for sale (Atom). bloomnight.app, getbloomnight.com, bloomnightaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "Only scattered club names abroad, but it is generic and has no Accra identity."
+  },
+  {
+   "name": "Lowkey",
+   "meaning": "English slang; no meaning issue.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "Lowkey - Private Group Chat (chat, plan events, hang out)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/us/app/lowkey-private-group-chat/id1521276224"
+    },
+    {
+     "what": "Lowkey | Feedback and Chat",
+     "where": "Google Play",
+     "url": "https://play.google.com/store/apps/details?id=lowkey.app"
+    },
+    {
+     "what": "Lowkey (music mood-sharing social app)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/us/app/lowkey/id6753359216?l=es-MX"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "lowkey.com -> redirects to a 'lowkey Official' Linktree. lowkey.app -> responds 200, content not identified. getlowkey.com, lowkeyaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "At least three social apps already ship under exactly this name."
+  },
+  {
+   "name": "Moonlite",
+   "meaning": "English respelling; no meaning issue.",
+   "meaningVerified": true,
+   "collisions": [
+    {
+     "what": "MoonLite (candle-making tracking tool)",
+     "where": "moonlite.app",
+     "url": "https://moonlite.app/"
+    }
+   ],
+   "bigBrands": [
+    "Moonlite Storytime - children's story projector and app (Spin Master)",
+    "Moonlite Bar-B-Q Inn (moonlite.com)"
+   ],
+   "domains": "moonlite.com -> Moonlite Bar-B-Q Inn. moonlite.app -> MoonLite. getmoonlite.com -> parked. moonliteaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "The dominant Moonlite is a children's bedtime product, the wrong neighbour for a nightlife brand, and the domains are gone."
+  },
+  {
+   "name": "Noko",
+   "meaning": "Ga for 'something': correct. Caution: the everyday phrase 'noko fio(o)' ('something small') is documented as the expression for a small informal payment/tip in Ghana.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.tiktok.com/@naatsoolo/video/7652283631758626068",
+    "https://www.in-formality.com/wiki/index.php?title=Nokofio_(Ghana)"
+   ],
+   "collisions": [
+    {
+     "what": "Noko (restaurant, Nashville; nationally covered)",
+     "where": "US",
+     "url": "https://www.cbsnews.com/video/the-dish-nashvilles-noko-on-being-a-new-southern-restaurant-with-a-mission-beyond-the-menu/"
+    }
+   ],
+   "bigBrands": [
+    "Noko time-tracking software (general knowledge, not re-checked today)"
+   ],
+   "domains": "noko.com -> active site behind a bot check (owner not identified). noko.app, getnoko.com, nokoaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "Short and local, but tied to the 'something small' tipping/bribe idiom and noko.com is in use."
+  },
+  {
+   "name": "Pɛpɛɛpɛ / Pepeepe",
+   "meaning": "Twi for 'exactly / precisely / just right': correct; also used in the Twi Bible for 'uprightly'. No vulgar meaning found. In English it can be misheard as 'pee-pee' (judgement).",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.tiktok.com/@abigail8osei/video/7129816912309046571",
+    "https://www.bible.com/bible/1861/PSA.15.2.ASW"
+   ],
+   "collisions": [],
+   "bigBrands": [],
+   "domains": "pepeepe.com -> responds 200 (a WordPress site, content not identified). pepeepe.app, getpepeepe.com, pepeepeaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "No collision found, but it is hard to spell, loses its letters without diacritics, and sounds childish in English."
+  },
+  {
+   "name": "Akwaaba Nights",
+   "meaning": "Akwaaba = welcome (Twi): correct.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://akwaaba.app/"
+   ],
+   "collisions": [
+    {
+     "what": "Akwaaba App - Ghana travel/events platform that lists and tickets events and nightlife, with 'Akwaaba Events' and an 'Accra After Dark' package",
+     "where": "Ghana (akwaaba.app, @akwaaba.app)",
+     "url": "https://akwaaba.app/events"
+    },
+    {
+     "what": "Akwaaba App expansion: 'Akwaaba Events' and 'Akwaaba Services'",
+     "where": "press release",
+     "url": "https://www.openpr.com/news/4194755/akwaaba-app-expands-with-akwaaba-events-akwaaba-services"
+    }
+   ],
+   "bigBrands": [
+    "Akwaaba is used by countless Ghanaian tourism and hospitality businesses"
+   ],
+   "domains": "akwaabanights.com, akwaabanights.app, getakwaabanights.com -> no response. akwaaba.app -> Akwaaba App (active).",
+   "verdict": "avoid",
+   "reason": "An active Ghanaian events-and-nightlife app already trades as Akwaaba."
+  },
+  {
+   "name": "Fiada",
+   "suggestedBy": "researcher (new suggestion)",
+   "meaning": "Twi for Friday (also written Efiada). Verified. No negative meaning found; day names are neutral, everyday words.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://polyglotclub.com/wiki/Language/Twi/Vocabulary/Days-of-the-Week",
+    "https://k4all.org/project/twi-language/"
+   ],
+   "collisions": [
+    {
+     "what": "FIADA - Florida Independent Automobile Dealers Association (trade body, unrelated category)",
+     "where": "US (fiada.com)",
+     "url": "https://www.fiada.com/"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "fiada.com -> FIADA (Florida auto dealers). fiada.app, getfiada.com, fiadaaccra.com, fiada.co -> no response. No app-store listing found for 'Fiada'.",
+   "verdict": "clear-ish",
+   "reason": "Only collision found is an unrelated US trade association; short, phonetic for visitors ('fee-AH-da') and says 'the weekend starts here'."
+  },
+  {
+   "name": "Feeli",
+   "suggestedBy": "researcher (new suggestion)",
+   "meaning": "From Ghanaian slang 'feeli feeli': see it with your own eyes / for real / live and in person. Verified. No negative meaning found.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://theculturetrip.com/africa/ghana/articles/20-slang-words-that-will-make-you-sound-like-a-ghanaian",
+    "https://www.reddit.com/r/ghana/comments/rlnovh/twi_translation_help_needed/"
+   ],
+   "collisions": [
+    {
+     "what": "Feeli - communication aid app for children with autism/speech delays (unrelated category, same exact name)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/my/app/feeli/id6759603636"
+    },
+    {
+     "what": "Sendwave 'Feeli Feeli' cashback campaign for transfers to Ghana (campaign name, not a product)",
+     "where": "Ghana diaspora marketing",
+     "url": "https://www.instagram.com/reel/CoaZIYvLlAK/"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "feeli.com, feeli.app, getfeeli.com, feeliaccra.com, feeli.co -> no response.",
+   "verdict": "caution",
+   "reason": "Strong, short and local with no nightlife collision, but one small App Store app already has the exact name, so the store listing would need a suffix (e.g. 'Feeli: Accra Nights')."
+  },
+  {
+   "name": "Agoro",
+   "suggestedBy": "researcher (new suggestion)",
+   "meaning": "Twi agorɔ = play / game / performance; in the proverb 'Agorɔ bɛsɔ a, efiri anɔpa' it is glossed as festival/party. Verified. Unverified: Agoro is also a Yoruba surname/title.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.scribd.com/document/705860228/Twi-Proverbs"
+   ],
+   "collisions": [
+    {
+     "what": "Agoro (18+ Entertainment app by Peter Davis; function not checked)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/us/app/agoro/id6535691958"
+    },
+    {
+     "what": "Agoro - Ghana NLA lottery draw-results app",
+     "where": "Google Play",
+     "url": "https://play.google.com/store/apps/details?id=com.wtfconsult.agoroo"
+    },
+    {
+     "what": "Agoro Bounce / Agoro Pocket (games)",
+     "where": "Apple App Store",
+     "url": "https://apps.apple.com/hu/app/agoro-bounce/id6803698533?platform=ipad"
+    },
+    {
+     "what": "Agoro - licensed precious-metal collectibles retailer",
+     "where": "agoro.com",
+     "url": "https://www.agoro.com/"
+    }
+   ],
+   "bigBrands": [
+    "Agoro Carbon Alliance (Yara-founded soil-carbon company)"
+   ],
+   "domains": "agoro.com -> active collectibles shop. agoro.app, getagoro.com, agoroaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "Right meaning and easy to say, with no ticketing/nightlife collision, but several unrelated apps and two companies already use the exact word."
+  },
+  {
+   "name": "Yenko",
+   "suggestedBy": "researcher (new suggestion)",
+   "meaning": "Yɛnkɔ = 'let's go' in Twi. Verified.",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.instagram.com/p/C-UHyzZPmp7/?hl=en"
+   ],
+   "collisions": [
+    {
+     "what": "Yenko: We Move Africa (e-mobility / shared rides app)",
+     "where": "App Store / Google Play",
+     "url": "https://apps.apple.com/us/app/yenko-we-move-africa/id6739333722"
+    },
+    {
+     "what": "Yenko Data (Ghana data/airtime app)",
+     "where": "Apple App Store (Ghana)",
+     "url": "https://apps.apple.com/gh/app/yenko-data/id6779577642"
+    },
+    {
+     "what": "Yenko - The Delivery Hub",
+     "where": "yenko.app",
+     "url": "https://www.yenko.app/"
+    },
+    {
+     "what": "Yenko Festival (music and dance event, Accra)",
+     "where": "Accra",
+     "url": "https://www.facebook.com/LesVeli/posts/sneak-peak-of-yenko-festival-it-was-a-delightful-moment-with-incredible-and-awes/1347102005454366/"
+    }
+   ],
+   "bigBrands": [
+    "Yenko Chevrolet muscle cars (general knowledge)"
+   ],
+   "domains": "yenko.app -> active delivery product. getyenko.com -> expired-domain sale page. yenko.com, yenkoaccra.com -> no response.",
+   "verdict": "avoid",
+   "reason": "Already used by several Ghanaian apps and an Accra music event."
+  },
+  {
+   "name": "Ohene",
+   "suggestedBy": "researcher (new suggestion)",
+   "meaning": "Ɔhene = king/chief in Twi. Verified. It is a living chieftaincy title, a very common surname, and is used devotionally ('Yesu yɛ Ɔhene' = Jesus is King).",
+   "meaningVerified": true,
+   "meaningSources": [
+    "https://www.facebook.com/msimpsghana/posts/ohene-aniwa-kings-eye-ohene-means-king-and-aniwa-means-eyes-the-adinkra-symbol-i/4627708023948704/"
+   ],
+   "collisions": [
+    {
+     "what": "Ohene - 'A mirror for your inner life' (active product)",
+     "where": "ohene.app",
+     "url": "https://ohene.app/"
+    }
+   ],
+   "bigBrands": [],
+   "domains": "ohene.app -> active product. ohene.com -> redirects to nbosi.org (NBOSI, 'Ghana's Thinking Center'). getohene.com, oheneaccra.com -> no response.",
+   "verdict": "caution",
+   "reason": "Would have been the VIP/royalty option, but it is a chieftaincy and religious term (risk of seeming disrespectful on a bottle-service brand) and the .app is in use."
+  }
+ ],
+ "recommendedSix": [
+  {
+   "name": "Anadwo",
+   "why": "Direction: the night itself (Twi). Cleanest primary: no app or tech collision found, anadwo.com is purchasable ($4,999 listed). Teach the pronunciation ('ah-na-jo')."
+  },
+  {
+   "name": "Fiada",
+   "why": "Direction: the weekend ritual (Twi for Friday). Replaces Gbeke as the time-of-day/time-of-week name. Only collision found is an unrelated Florida car-dealer association; easy for visitors to say."
+  },
+  {
+   "name": "Feeli",
+   "why": "Direction: be there live, in person ('feeli feeli' slang). Replaces Vim as the slang/energy name. No nightlife collision; one unrelated App Store app shares the name, so plan a suffix on the store listing."
+  },
+  {
+   "name": "Jama",
+   "why": "Direction: squad energy. Kept as caution: no nightlife collision in Ghana/Nigeria, but JAMA (medical journal) owns search and jama.com, so it needs a modifier (Jama Accra, getjama)."
+  },
+  {
+   "name": "Harmattan",
+   "why": "Direction: December season. Kept as caution: no nightlife app found, but harmattan.com and harmattan.app are both in use, it is a common party title, and it is seasonal and dusty."
+  },
+  {
+   "name": "Agoro",
+   "why": "Direction: play / the party (Twi agorɔ). Replaces Section. Caution: no ticketing collision, but unrelated Agoro apps and companies exist. Backup with zero collisions found but harder pronunciation: Kpanlogo."
+  }
+ ],
+ "caveats": [
+  "This is a knock-out screen from web search and single page fetches on 2026-11-10, not legal clearance. No trademark registers (Ghana Registrar-General, ARIPO, UKIPO, USPTO, EUIPO, WIPO) were searched.",
+  "App Store / Google Play were checked through web search results, not the stores' own search, so smaller or region-locked apps can be missed.",
+  "'no response' for a domain only means it did not answer an HTTPS request; it may still be registered. Check a registrar before relying on any domain.",
+  "No clean name was found for the VIP-table direction: Section, Tabl and Rope are knocked out or weak, and the screened substitute Ohene is a chieftaincy/religious term. Agoro fills the sixth slot as a different direction.",
+  "Items marked 'general knowledge' (Jama Software, L'Harmattan, Vim/Unilever, TP-Link Kasa, Noko time tracking, Yenko Chevrolet, South African Airways) were not re-verified today.",
+  "Meanings marked meaningVerified=false (Section, Saa, Rope, Nkommo, Ahomka, Kasa) were not confirmed against a source. Hausa, Ewe and Nigerian Pidgin secondary meanings were not systematically checked for any name; have a Ga speaker and a Twi speaker sanity-check the shortlist.",
+  "Enne and the alternates Saa, Kpanlogo, Nkommo and Pepeepe had lighter collision searches than the primaries.",
+  "Social handles (Instagram, TikTok, X) were not checked."
+ ]
+}

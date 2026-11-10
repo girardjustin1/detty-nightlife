@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { BrandProvider } from '@/brands/BrandContext'
-import { brands, type BrandId } from '@/brands/brands'
+import { brands, DEFAULT_BRAND, newBrands, type BrandId } from '@/brands/brands'
 import { ProtoCtx, type ExperienceId, type ProtoApi } from './ProtoContext'
 import { experiences } from './experiences'
 import { Launcher } from './Launcher'
@@ -14,7 +14,12 @@ const parseHash = (): Route => {
 }
 const toHash = (r: Route) => (r.exp ? `#/${r.exp}${r.step ? `/${r.step}` : ''}` : '#/')
 
-const PROTO_BRANDS: BrandId[] = ['gold2', 'gold', 'aurum', 'detty', 'vybe']
+const PROTO_BRANDS: BrandId[] = newBrands.map((b) => b.id)
+/** A saved choice only counts if it is one of the current directions (older visits saved archived ones). */
+const savedBrand = () => {
+  const b = localStorage.getItem('proto-brand') as BrandId | null
+  return b && PROTO_BRANDS.includes(b) ? b : null
+}
 
 /**
  * Clickable prototype: a menu of four booking experiences (three WhatsApp
@@ -24,7 +29,7 @@ const PROTO_BRANDS: BrandId[] = ['gold2', 'gold', 'aurum', 'detty', 'vybe']
 export function Prototype({ embedded = false, initialBrand }: { embedded?: boolean; initialBrand?: BrandId }) {
   const [route, setRoute] = useState<Route>(() => (embedded ? { exp: null } : parseHash()))
   const [history, setHistory] = useState<string[]>([])
-  const [brand, setBrand] = useState<BrandId>(() => initialBrand ?? ((localStorage.getItem('proto-brand') as BrandId) || 'gold2'))
+  const [brand, setBrand] = useState<BrandId>(() => initialBrand ?? (savedBrand() ?? DEFAULT_BRAND))
   const [hints, setHints] = useState(() => localStorage.getItem('proto-hints') !== 'off')
   const [run, setRun] = useState(0)
   const [taps, setTaps] = useState(0)
@@ -232,7 +237,7 @@ function SidePanel({
         <div className="flex flex-wrap gap-1.5">
           {PROTO_BRANDS.map((b) => (
             <button key={b} onClick={() => onBrand(b)} className={`rounded-full px-3 py-1.5 text-sm ${b === brand ? 'bg-white font-semibold text-black' : 'border border-white/20 text-white/80'}`}>
-              {b === 'gold' ? 'Detty Gold' : b === 'gold2' ? 'Gold × Vybe type' : brands[b].name}
+              {brands[b].name}
             </button>
           ))}
         </div>

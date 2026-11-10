@@ -11,6 +11,6 @@ export const host = { name: inviteBooking.guests[0].name, first: inviteBooking.g
 /** The guest opening the link. */
 export const guestMe = { name: 'Efua Asante', first: 'Efua', phone: '+233 54 555 0123', phoneMasked: '054 ••• 0123' }
 
-export const inviteLink = (brandName: string) => `${brandName.toLowerCase()}.app/i/${inviteBooking.ref.slice(4).toLowerCase()}`
+export const inviteLink = (brandName: string) => `${brandName.toLowerCase()}.example/i/${inviteBooking.ref.slice(4).toLowerCase()}`
 
 export { hostGuestRows, plusOneRequests }

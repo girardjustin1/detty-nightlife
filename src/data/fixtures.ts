@@ -336,7 +336,7 @@ export const guests: Guest[] = [
 export const bookings: Booking[] = [
   {
     id: 'b1',
-    ref: 'DTY-7Q4K',
+    ref: 'ACC-7Q4K',
     kind: 'table',
     eventId: 'afrobeats-til-dawn',
     venueId: 'vault',
@@ -363,7 +363,7 @@ export const bookings: Booking[] = [
   },
   {
     id: 'b2',
-    ref: 'DTY-2M8P',
+    ref: 'ACC-2M8P',
     kind: 'tickets',
     eventId: 'tidal-beach-rave',
     venueId: 'tidal',
@@ -381,7 +381,7 @@ export const bookings: Booking[] = [
   },
   {
     id: 'b3',
-    ref: 'DTY-9C1A',
+    ref: 'ACC-9C1A',
     kind: 'table',
     eventId: 'koko-jazz-supper',
     venueId: 'koko',

@@ -19,7 +19,7 @@ export function TemplateCatalogue() {
     <div className="mx-auto max-w-[1400px] text-text">
       <h1 className="display text-2xl">WhatsApp template catalogue</h1>
       <p className="mt-1 max-w-3xl text-sm text-dim">
-        Every message we plan to send on WhatsApp, from docs/integrations/whatsapp.md §3. Sample values come from the canonical booking (DTY-7Q4K) and{' '}
+        Every message we plan to send on WhatsApp, from docs/integrations/whatsapp.md §3. Sample values come from the canonical booking (ACC-7Q4K) and{' '}
         <code>tableQuote</code>. Names and wording are drafts until Meta approves them. Business display name: <strong>{brand.name}</strong>.
       </p>
       <div className="mt-5 overflow-x-auto rounded-card border border-line">

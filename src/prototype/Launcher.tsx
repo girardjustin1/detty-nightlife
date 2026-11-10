@@ -1,6 +1,6 @@
 import { ArrowRight, Bot, LayoutList, MessageCircle, Smartphone, SquareMousePointer } from 'lucide-react'
 import type { ReactNode } from 'react'
-import { brands, type BrandId } from '@/brands/brands'
+import { brands, newBrands, type BrandId } from '@/brands/brands'
 import { useBrand } from '@/brands/BrandContext'
 import { StatusBar } from '@/components/app/chrome'
 import { Toggle } from '@/components/ui/primitives'
@@ -107,13 +107,13 @@ export function Launcher({ brand, onBrand, onStart, hints, onHints }: { brand: B
 
         <h2 className="display mt-8 text-xl">Brand</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {(['gold2', 'gold', 'aurum', 'detty', 'vybe'] as BrandId[]).map((id) => (
+          {newBrands.map(({ id }) => (
             <button
               key={id}
               onClick={() => onBrand(id)}
               className={`rounded-control border px-3.5 py-2 text-sm font-semibold ${id === brand ? 'border-accent bg-accent text-on-accent' : 'border-line text-text'}`}
             >
-              {id === 'gold' ? 'Detty Gold' : id === 'gold2' ? 'Gold × Vybe type' : brands[id].name}
+              {brands[id].name}
             </button>
           ))}
         </div>

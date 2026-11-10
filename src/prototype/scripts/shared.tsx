@@ -19,7 +19,7 @@ export const refundNow = Math.round((quote.deposit * RULES.refund[1].pct) / 100)
 export const refundCutoff = time(new Date(Date.parse(event.startsAt) - RULES.refund[1].hoursBefore * 3_600_000).toISOString())
 export const momoNumber = '024 ••• 0142'
 export const guestNames = ['Kojo', 'Efua', 'Yaw', 'Akosua', 'Adwoa']
-export const ref = 'DTY-7Q4K'
+export const ref = 'ACC-7Q4K'
 
 export const summaryText = (brandName: string) =>
   [
